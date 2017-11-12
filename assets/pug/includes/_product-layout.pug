@@ -1,0 +1,27 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0")
+        title Изготовление и монтаж лестниц от производителя
+        meta(name="description" content="Изготовление и монтаж лестниц от производителя")
+        link(rel="stylesheet" href="./libs/jquery.fancybox.min.css")
+        link(rel="stylesheet" href="./css/main.css")
+    body
+        #wrapper
+            //header
+            header#header
+                include _header
+                include _header-product
+            block content
+            //footer
+            include _footer
+            include _modals
+            a(href="#header").top-link
+                i.icon-arrow
+                span Наверх
+        script(src="//code.jquery.com/jquery-3.2.1.min.js")
+        script(src="./libs/jquery.fancybox.min.js")
+        script(src="./libs/slick.min.js")
+        script(src="./js/main.js")

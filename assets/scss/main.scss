@@ -1,0 +1,43 @@
+/*----
+Fonts
+----*/
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Roboto:100,100i,300,300i,400,500,700');
+
+/*----
+Custom libraries
+----*/
+@import "import/font/style";
+@import "import/libs/slick";
+@import "import/libs/animate";
+
+/*----
+Template presets and settings
+----*/
+@import "import/presets/presets";
+@import "import/presets/template";
+@import "import/presets/grid";
+
+/*----
+Template parts
+----*/
+@import "import/template_parts/header";
+@import "import/template_parts/footer";
+@import "import/template_parts/calculator";
+@import "import/template_parts/modals";
+
+/*----
+Template pages
+----*/
+
+/*---- Product ----*/
+@import "import/template_pages/product/media";
+@import "import/template_pages/product/product";
+
+/*---- Index ----*/
+@import "import/template_pages/index/index";
+
+/*---- Works ----*/
+@import "import/template_pages/works/works";
+
+/*---- Tech pages ----*/
+@import "import/template_pages/tech_page/tech-page";

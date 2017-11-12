@@ -1,0 +1,21 @@
+extends includes/_layout
+
+block content
+    main#main-content
+        .tech-page
+            .container
+                .tech-page__align-block
+                    .tech-page__picture
+                        img(src='./img/errors/giphy.gif' alt="#" width='260' height='260')
+                    h2.tech-page__title Упс! Что-то пошло не так
+                    p.tech-page__subtitle Запрошенный материал не найден
+                    .tech-callback
+                        p.tech-callback__title: strong Мы на связи
+                        p.tech-callback__phone: a(href="tel:88005551927").phone 8 800 555 19 27
+                        p.tech-callback__text Звонок бесплатный по РФ
+                        p.tech-callback__mail: a(href="mailto:order@tnpgroup.ru").mail
+                            i.icon-mail
+                            span order@tnpgroup.ru
+                    a(href="/").btn.btn-black-transparent.tech-page__btn
+                        i.icon-arrow-2
+                        | Вернуться на главную

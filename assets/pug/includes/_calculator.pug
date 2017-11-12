@@ -1,0 +1,402 @@
+#calculator.calculator
+    .calc-step-1.light
+        .container
+            .calc-step-1-block
+                h2 Рассчитайте стоимость
+                p Мы уже создали для вас интересные предложения,
+                    br
+                    | осталось ввести площадь чтобы выбрать!
+                .calc-form
+                    p Площадь
+                    .calc-form-inline
+                        input(type="number" name="area-step-1" min='0' max='10000' placeholder='0').calc-area-input
+                        span м
+                            sup 2
+                        button.btn.btn-red Рассчитать
+    .calc-step-2
+        .calc-header
+            .container
+                .calc-step-header-row.light
+                    h2 Расчет стоимости
+                    .calc-top-settings
+                        .calc-area-block
+                            p Площадь
+                            input(type="number" name="area-step-2" min='0' max='10000' placeholder='0').calc-area-input
+                            span м
+                                sup 2
+                        .calc-color-block
+                            .calc-current-color
+                                p Цвет
+                                p.current-color-item(style="background-color: #9da3a6") RAL 7040
+                                i.icon-arrow
+                            .calc-change-color
+                                .color-col-2.row
+                                    .col-sm-6: a(href="javascript:;" style="background-color: #9da3a6").color-item.active RAL 7040
+                                        span &nbsp;Базовый
+                                    .col-sm-6: a(href="javascript:;" style="background-color: #ffffff").color-item.color-item-dark.color-item-bd RAL 9003
+                                        span &nbsp;Белый
+                                .color-col-3.row
+                                    .col-sm-4: a(href="javascript:;" style="background-color: #efebdc").color-item.color-item-dark RAL 9001
+                                    .col-sm-4: a(href="javascript:;" style="background-color: #e9e5ce").color-item.color-item-dark RAL 1013
+                                    .col-sm-4: a(href="javascript:;" style="background-color: #eadebd").color-item.color-item-dark RAL 1015
+                                    .col-sm-4: a(href="javascript:;" style="background-color: #ded09f").color-item RAL 1014
+                                    .col-sm-4: a(href="javascript:;" style="background-color: #d1bc8a").color-item RAL 1001
+                                    .col-sm-4: a(href="javascript:;" style="background-color: #d2b773").color-item RAL 1002
+                                    .col-sm-4: a(href="javascript:;" style="background-color: #ddded4").color-item.color-item-dark RAL 9002
+                                    .col-sm-4: a(href="javascript:;" style="background-color: #cfd0cf").color-item.color-item-dark RAL 7047
+                                    .col-sm-4: a(href="javascript:;" style="background-color: #cbd0cc").color-item.color-item-dark RAL 7035
+                                    .col-sm-4: a(href="javascript:;" style="background-color: #bdbdb2").color-item RAL 7047
+                                    .col-sm-4: a(href="javascript:;" style="background-color: #b4b8b0").color-item RAL 7038
+                                    .col-sm-4: a(href="javascript:;" style="background-color: #b4b8b0").color-item RAL 7001
+                                    .col-sm-4: a(href="javascript:;" style="background-color: #8f9695").color-item RAL 7042
+                                    .col-sm-4: a(href="javascript:;" style="background-color: #91969a").color-item RAL 7045
+                                    .col-sm-4: a(href="javascript:;" style="background-color: #82898e").color-item RAL 7046
+                                    .col-sm-4: a(href="javascript:;" style="background-color: #7e8b92").color-item RAL 7000
+                                    .col-sm-4: a(href="javascript:;" style="background-color: #7c7f7e").color-item RAL 7037
+                                    .col-sm-4: a(href="javascript:;" style="background-color: #6b695f").color-item RAL 7039
+                                    .col-sm-4: a(href="javascript:;" style="background-color: #7b5141").color-item RAL 8002
+                                    .col-sm-4: a(href="javascript:;" style="background-color: #8f4e35").color-item RAL 8004
+                                    .col-sm-4: a(href="javascript:;" style="background-color: #2e3032").color-item Черный
+                                .color-col-4.row
+                                    .col-sm-3: a(href="javascript:;" style="background-color: #f3e03b").color-item.color-item-dark RAL 1018
+                                    .col-sm-3: a(href="javascript:;" style="background-color: #f0ca00").color-item.color-item-dark RAL 1023
+                                    .col-sm-3: a(href="javascript:;" style="background-color: #2874b2").color-item RAL 5015
+                                    .col-sm-3: a(href="javascript:;" style="background-color: #154889").color-item RAL 5005
+                                    .col-sm-3: a(href="javascript:;" style="background-color: #f3752c").color-item RAL 2008
+                                    .col-sm-3: a(href="javascript:;" style="background-color: #ab2524").color-item RAL 3000
+                                    .col-sm-3: a(href="javascript:;" style="background-color: #48a43f").color-item RAL 6018
+                                    .col-sm-3: a(href="javascript:;" style="background-color: #48a43f").color-item RAL 6024
+                                .color-another.dark
+                                    p  Не нашли нужный цвет?
+                                    .another-group
+                                        input(type="text" name="another-color" placeholder="Укажите цвет")
+                                        i.icon-quote
+                                        button.btn.btn-small.btn-green-transparent Готово
+                                    p.another-color-desc Колеровка возможна от 6-ти комплектов. При уточнении заказа менеджер определит возможность колировки в определенный цвет, а также стоимость.
+        .calc-content
+            .calc-content-row
+                .container
+                    .calc-type-info
+                        .calc-type-item
+                            p
+                                b Для легких нагрузок
+                                span 2 мм
+                            .calc-type-icons
+                                i.icon-calc-item-1
+                                i.icon-calc-item-3
+                        .calc-type-item
+                            .calc-type-price
+                                p.price-result 30 678&nbsp;
+                                    i.icon-rub
+                                p.price-area 775&nbsp;
+                                    i.icon-rub
+                                    | &nbsp;за м
+                                    sup 2
+                            .calc-show-more-info
+                                p Свернуть
+                                i.icon-arrow
+                    .calc-type-info-more
+                        .info-table-block
+                            p.text-center Стоимость материалов
+                            .info-table-row-head
+                                .info-table-item: p Этап работ
+                                .info-table-item: p Материал
+                                .info-table-item: p Расход на м
+                                    sup 2
+                                .info-table-item: p Цена за кг
+                                .info-table-item: p Итого
+                            .info-table-row
+                                .info-table-item
+                                    i.icon-layer-top
+                                        span.path1
+                                        span.path2
+                                        span.path3
+                                        span.path4
+                                    p Грунтовочный слой
+                                .info-table-item: p Тэпинг Р1155 Грунт
+                                .info-table-item: p 0,30  кг
+                                .info-table-item: p 356,10&nbsp;
+                                    span руб.
+                                .info-table-item: p 53 415&nbsp;
+                                    span руб.
+                            .info-table-row
+                                .info-table-item
+                                    i.icon-layer-middle
+                                        span.path1
+                                        span.path2
+                                        span.path3
+                                        span.path4
+                                    p Базовый&nbsp;армирующий&nbsp;слой
+                                .info-table-item
+                                    p Тэпинг Пол 205 АС Антистатический
+                                    p Кв. песок фр. 0.1-0.3 мм
+                                .info-table-item
+                                    p 0,22 кг
+                                    p 0,08 кг
+                                .info-table-item
+                                    p 295,90&nbsp;
+                                        span руб.
+                                    p 33&nbsp;
+                                        span руб.
+                                .info-table-item
+                                    p 32 549&nbsp;
+                                        span руб.
+                                    p 1 320&nbsp;
+                                        span руб.
+                            .info-table-row
+                                .info-table-item
+                                    i.icon-layer-bottom
+                                        span.path1
+                                        span.path2
+                                        span.path3
+                                        span.path4
+                                    p Финишный (лицевой) слой
+                                .info-table-item
+                                    p Тэпинг Пол 205 С
+                                    p Кв. песок фр. 0.1-0.3 мм
+                                .info-table-item
+                                    p 1,91  кг
+                                    p 1,29  кг
+                                .info-table-item
+                                    p 356&nbsp;
+                                        span руб.
+                                    p 33&nbsp;
+                                        span руб.
+                                .info-table-item
+                                    p 339 980&nbsp;
+                                        span руб.
+                                    p 21 285&nbsp;
+                                        span руб.
+                        .info-result-block
+                            .info-result-price
+                            .info-result-desc
+                                p Бесплатная доставка до терминала ТК «Деловые Линии» в Санкт-Петербурге
+                            .info-result-btns
+                                a(href="#").btn.btn-black-transparent
+                                    i.icon-download
+                                    | Скачать расчет
+                                a(data-src="#modal-order-calculate" href="javascript:;" data-fancybox).btn.btn-red Заказать
+            .calc-content-row
+                .container
+                    .calc-type-info
+                        .calc-type-item
+                            p
+                                b Для средних нагрузок
+                                span 3 мм
+                            .calc-type-icons
+                                i.icon-calc-item-1
+                                i.icon-calc-item-3
+                                i.icon-calc-item-2
+                                i.icon-calc-item-4
+                        .calc-type-item
+                            .calc-type-price
+                                p.price-result 67 533&nbsp;
+                                    i.icon-rub
+                                p.price-area 775&nbsp;
+                                    i.icon-rub
+                                    | &nbsp;за м
+                                    sup 2
+                            .calc-show-more-info
+                                p Свернуть
+                                i.icon-arrow
+                    .calc-type-info-more
+                        .info-table-block
+                            p.text-center Стоимость материалов
+                            .info-table-row-head
+                                .info-table-item: p Этап работ
+                                .info-table-item: p Материал
+                                .info-table-item: p Расход на м
+                                    sup 2
+                                .info-table-item: p Цена за кг
+                                .info-table-item: p Итого
+                            .info-table-row
+                                .info-table-item
+                                    i.icon-layer-top
+                                        span.path1
+                                        span.path2
+                                        span.path3
+                                        span.path4
+                                    p Грунтовочный слой
+                                .info-table-item: p Тэпинг Р1155 Грунт
+                                .info-table-item: p 0,30  кг
+                                .info-table-item: p 356,10&nbsp;
+                                    span руб.
+                                .info-table-item: p 53 415&nbsp;
+                                    span руб.
+                            .info-table-row
+                                .info-table-item
+                                    i.icon-layer-middle
+                                        span.path1
+                                        span.path2
+                                        span.path3
+                                        span.path4
+                                    p Базовый&nbsp;армирующий&nbsp;слой
+                                .info-table-item
+                                    p Тэпинг Пол 205 АС Антистатический
+                                    p Кв. песок фр. 0.1-0.3 мм
+                                .info-table-item
+                                    p 0,22 кг
+                                    p 0,08 кг
+                                .info-table-item
+                                    p 295,90&nbsp;
+                                        span руб.
+                                    p 33&nbsp;
+                                        span руб.
+                                .info-table-item
+                                    p 32 549&nbsp;
+                                        span руб.
+                                    p 1 320&nbsp;
+                                        span руб.
+                            .info-table-row
+                                .info-table-item
+                                    i.icon-layer-bottom
+                                        span.path1
+                                        span.path2
+                                        span.path3
+                                        span.path4
+                                    p Финишный (лицевой) слой
+                                .info-table-item
+                                    p Тэпинг Пол 205 С
+                                    p Кв. песок фр. 0.1-0.3 мм
+                                .info-table-item
+                                    p 1,91  кг
+                                    p 1,29  кг
+                                .info-table-item
+                                    p 356&nbsp;
+                                        span руб.
+                                    p 33&nbsp;
+                                        span руб.
+                                .info-table-item
+                                    p 339 980&nbsp;
+                                        span руб.
+                                    p 21 285&nbsp;
+                                        span руб.
+                        .info-result-block
+                            .info-result-price
+                            .info-result-desc
+                                p Бесплатная доставка до терминала ТК «Деловые Линии» в Санкт-Петербурге
+                            .info-result-btns
+                                a(href="#").btn.btn-black-transparent
+                                    i.icon-download
+                                    | Скачать расчет
+                                a(data-src="#modal-order-calculate" href="javascript:;" data-fancybox).btn.btn-red Заказать
+            .calc-content-row
+                .container
+                    .calc-type-info
+                        .calc-type-item
+                            p
+                                b Для тяжелых нагрузок
+                                span 5 мм
+                            .calc-type-icons
+                                i.icon-calc-item-1
+                                i.icon-calc-item-3
+                                i.icon-calc-item-2
+                                i.icon-calc-item-4
+                                i.icon-calc-item-5
+                                i.icon-calc-item-6
+                        .calc-type-item
+                            .calc-type-price
+                                p.price-result 451 399&nbsp;
+                                    i.icon-rub
+                                p.price-area 775&nbsp;
+                                    i.icon-rub
+                                    | &nbsp;за м
+                                    sup 2
+                            .calc-show-more-info
+                                p Свернуть
+                                i.icon-arrow
+                    .calc-type-info-more
+                        .info-table-block
+                            p.text-center Стоимость материалов
+                            .info-table-row-head
+                                .info-table-item: p Этап работ
+                                .info-table-item: p Материал
+                                .info-table-item: p Расход на м
+                                    sup 2
+                                .info-table-item: p Цена за кг
+                                .info-table-item: p Итого
+                            .info-table-row
+                                .info-table-item
+                                    i.icon-layer-top
+                                        span.path1
+                                        span.path2
+                                        span.path3
+                                        span.path4
+                                    p Грунтовочный слой
+                                .info-table-item: p Тэпинг Р1155 Грунт
+                                .info-table-item: p 0,30  кг
+                                .info-table-item: p 356,10&nbsp;
+                                    span руб.
+                                .info-table-item: p 53 415&nbsp;
+                                    span руб.
+                            .info-table-row
+                                .info-table-item
+                                    i.icon-layer-middle
+                                        span.path1
+                                        span.path2
+                                        span.path3
+                                        span.path4
+                                    p Базовый&nbsp;армирующий&nbsp;слой
+                                .info-table-item
+                                    p Тэпинг Пол 205 АС Антистатический
+                                    p Кв. песок фр. 0.1-0.3 мм
+                                .info-table-item
+                                    p 0,22 кг
+                                    p 0,08 кг
+                                .info-table-item
+                                    p 295,90&nbsp;
+                                        span руб.
+                                    p 33&nbsp;
+                                        span руб.
+                                .info-table-item
+                                    p 32 549&nbsp;
+                                        span руб.
+                                    p 1 320&nbsp;
+                                        span руб.
+                            .info-table-row
+                                .info-table-item
+                                    i.icon-layer-bottom
+                                        span.path1
+                                        span.path2
+                                        span.path3
+                                        span.path4
+                                    p Финишный (лицевой) слой
+                                .info-table-item
+                                    p Тэпинг Пол 205 С
+                                    p Кв. песок фр. 0.1-0.3 мм
+                                .info-table-item
+                                    p 1,91  кг
+                                    p 1,29  кг
+                                .info-table-item
+                                    p 356&nbsp;
+                                        span руб.
+                                    p 33&nbsp;
+                                        span руб.
+                                .info-table-item
+                                    p 339 980&nbsp;
+                                        span руб.
+                                    p 21 285&nbsp;
+                                        span руб.
+                        .info-result-block
+                            .info-result-price
+                                p.price-result
+                                    span Итого
+                                    | 451 399&nbsp;
+                                    i.icon-rub
+                                p.price-area 775&nbsp;
+                                    i.icon-rub
+                                    | &nbsp;за м
+                                    sup 2
+                            .info-result-desc
+                                p
+                                    a(href="#") Бесплатная доставка&nbsp;
+                                    | до терминала ТК «Деловые Линии» в Санкт-Петербурге
+                            .info-result-btns
+                                a(href="#").btn.btn-black-transparent
+                                    i.icon-download
+                                    | Скачать расчет
+                                a(data-src="#modal-order-calculate" href="javascript:;" data-fancybox).btn.btn-red Заказать
+        .calc-footer
+            .container
+                .calc-footer-row
+                    p Бесплатная консультация по телефону: 8&nbsp;(800)&nbsp;555-1927

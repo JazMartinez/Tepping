@@ -1,0 +1,240 @@
+extends includes/_layout
+
+block content
+    main
+        .intro
+            .intro-inline
+                .intro-about
+                    h1.intro-about__title
+                        i.icon-title
+                        | TNP Group – производитель полимерных полов Teping
+                    .intro-about__links
+                        a(href="#").intro__link Наливные полимерные полы
+                        a(href="#").intro__link Краски для бетона и металла
+                        a(href="#").intro__link Покрытия для детских и спортивных площадок
+                    .intro-about__btns
+                        a(href="#").btn.btn-red-transparent
+                            i.icon-menu-item-7
+                            | Посмотреть акции
+                        a(href="#").btn.btn-black-transparent
+                            | В каталог
+                            i.icon-arrow-2
+                    .intro-video
+                        .intro-video__block
+                            a(href="https://www.youtube.com/embed/irRKhNBX5qs" data-fancybox)
+                                i.icon-play
+                                img(src="./img/video.png" alt="#")
+                        p Наливной пол наносится на деревянное основание, на керамическую плитку, на цементную стяжку или даже
+                    //.intro-about__picture
+                        img(src='#' alt="#")
+                .intro-services
+                    .intro-services__item
+                        .intro-services__image
+                            img(src='./img/index/intro/1.jpg')
+                        h2.intro-services__title Покрытия для полов и стен промышленного назначения
+                        .intro-services__desc
+                            .intro-services__text
+                                p Покрытия для полов и стен промышленного назначения
+                                .intro-services__links
+                                    a(href="#").intro-services__link Склад
+                                        i.icon-arrow-2
+                                    a(href="#").intro-services__link Паркинг, гараж
+                                        i.icon-arrow-2
+                                    a(href="#").intro-services__link Производство
+                                        i.icon-arrow-2
+                                    a(href="#").intro-services__link Объект атомной энергетики
+                                        i.icon-arrow-2
+                                    a(href="#").intro-services__link Фермерство и животновотство
+                                        i.icon-arrow-2
+                                    a(href="#").intro-services__link Пути эвакуации
+                                        i.icon-arrow-2
+                            .intro-services__btn
+                                a(href="#").btn.btn-white-transparent
+                                    | Подобрать покрытие
+                                    i.icon-arrow-2
+                    .intro-services__item
+                        .intro-services__image
+                            img(src='./img/index/intro/2.jpg')
+                        h2.intro-services__title Полимерные полы для квартир и общественных помещений
+                        .intro-services__desc
+                            .intro-services__text
+                                p Полимерные полы для квартир и общественных помещений
+                                .intro-services__links
+                                    a(href="#").intro-services__link Склад
+                                        i.icon-arrow-2
+                                    a(href="#").intro-services__link Паркинг, гараж
+                                        i.icon-arrow-2
+                                    a(href="#").intro-services__link Производство
+                                        i.icon-arrow-2
+                                    a(href="#").intro-services__link Объект атомной энергетики
+                                        i.icon-arrow-2
+                                    a(href="#").intro-services__link Фермерство и животновотство
+                                        i.icon-arrow-2
+                                    a(href="#").intro-services__link Пути эвакуации
+                                        i.icon-arrow-2
+                            .intro-services__btn
+                                a(href="#").btn.btn-white-transparent
+                                    | Подобрать покрытие
+                                    i.icon-arrow-2
+                    .intro-services__item
+                        .intro-services__image
+                            img(src='./img/index/intro/3.jpg')
+                        h2.intro-services__title Покрытия для детских и спортивных площадок
+                        .intro-services__desc
+                            .intro-services__text
+                                p Покрытия для детских и спортивных площадок
+                                .intro-services__links
+                                    a(href="#").intro-services__link Склад
+                                        i.icon-arrow-2
+                                    a(href="#").intro-services__link Паркинг, гараж
+                                        i.icon-arrow-2
+                                    a(href="#").intro-services__link Производство
+                                        i.icon-arrow-2
+                                    a(href="#").intro-services__link Объект атомной энергетики
+                                        i.icon-arrow-2
+                                    a(href="#").intro-services__link Фермерство и животновотство
+                                        i.icon-arrow-2
+                                    a(href="#").intro-services__link Пути эвакуации
+                                        i.icon-arrow-2
+                            .intro-services__btn
+                                a(href="#").btn.btn-white-transparent
+                                    | Подобрать покрытие
+                                    i.icon-arrow-2
+        .works.block
+            .container
+                h2 Наши клиенты
+                .works-inline
+                    .works__desc
+                        p Наши клиенты представляют совершенно разные по размеру и направлениям деятельности компании, от малого бизнеса до транснациональных корпораций. Сейчас в нашей базе уже 6940*  клиентов
+                        p * на июль 2017 года
+                        .works__file.download-file
+                            i.icon-pdf
+                            .download-file__caption
+                                p Референц-лист TNP Group
+                                a(href="#") скачать .pdf
+                    .works__partners.partners.row
+                        .partners__item
+                            img(src="./img/index/partners/1.png")
+                        .partners__item
+                            img(src="./img/index/partners/2.png")
+                        .partners__item
+                            img(src="./img/index/partners/3.png")
+                        .partners__item
+                            img(src="./img/index/partners/4.png")
+                        .partners__item
+                            img(src="./img/index/partners/5.png")
+                        .partners__item
+                            img(src="./img/index/partners/6.png")
+                        .partners__item
+                            img(src="./img/index/partners/7.png")
+                        .partners__item
+                            img(src="./img/index/partners/8.png")
+                include includes/_works-list
+        .steps.block
+            .container
+                h2 Как мы решаем проблемы с полами?
+                .steps__items
+                    .steps__item
+                        .steps__icon
+                            i.icon-money
+                        .steps__desc
+                            p: strong Подбираем покрытие под ваш бюджет
+                            p С нами вы выберите наилучшее покрытие для вашего объекта. Менеджеры помогут вам выбрать покрытие подходящее именно под ваши задачи и даже самый небольшой бюджет.
+                            .steps__advantages
+                                p.advantages_item
+                                    i.icon-quote
+                                    | Выезд специалиста на объект с образцами продукции
+                                p.advantages__headset
+                                    i.icon-headset
+                                    | Всегда на связи
+                                    br
+                                    | 8 800 222-78-76
+                    .steps__item
+                        .steps__icon
+                            i.icon-microscope
+                        .steps__desc
+                            p: strong Производим и контролируем качество
+                            p Для изготовления заказа нам потребуется от 1 до 5 дней. Если вам нужен популярный материал из линейки Teping Пол 205 С, 7040 и .... то материал мы отгрузим уже на следующий день после оплаты.
+                            .steps__advantages
+                                p.advantages_item
+                                    i.icon-quote
+                                    | Только после проверки качества, партия будет отгружена
+                                p.advantages__headset
+                                    i.icon-headset
+                                    | Всегда на связи
+                                    br
+                                    | 8 800 222-78-76
+                    .steps__item
+                        .steps__icon
+                            i.icon-truck-tnp
+                        .steps__desc
+                            p: strong Организуем доставку в ваш город
+                            p До терминала транспортной компании 1 , мы доставляем материал бесплатно. В дальние регионы России, в Белоруссию и Казахстан мы отправляем материал любыми транспортными компаниями.
+                            .steps__advantages
+                                p.advantages_item
+                                    i.icon-quote
+                                    | Бесплатно доставим заказ до терминала деловых линий
+                                p.advantages__headset
+                                    i.icon-headset
+                                    | Всегда на связи
+                                    br
+                                    | 8 800 222-78-76
+                    .steps__item
+                        .steps__icon
+                            i.icon-docs
+                        .steps__desc
+                            p: strong Организуем доставку в ваш город
+                            p До терминала транспортной компании 1 , мы доставляем материал бесплатно. В дальние регионы России, в Белоруссию и Казахстан мы отправляем материал любыми транспортными компаниями.
+                            .steps__advantages
+                                p.advantages__headset
+                                    i.icon-headset
+                                    | Всегда на связи
+                                    br
+                                    | 8 800 222-78-76
+                    .steps__item.steps__item_last
+                        .steps__icon
+                            i.icon-headset
+                        .steps__desc
+                            p: strong Поддержка и консультация
+                            p После того, как вы получите материал, мы будем на связи с вами. Вы можете позвонить и получить консультацию по любому вопросу
+                            .steps__advantages
+                                a(href="#").btn.btn-green Начать сотрудничество
+        #production.production.production_main.block
+            .container
+                .production-inline
+                    .production__desc
+                        h2 Производство
+                            i.icon-title
+                        p Наше производство и склад находятся по адресу:
+                        p
+                            i.icon-pin-map-TNP
+                            | Санкт-Петербург, Уткин проспект 15, литер Е (м. Ладожская)
+                        a(href="#").map-link Посмотреть на карте
+                        .production-line
+                            .production__title: p Импортное сырье
+                            .production__desc-line: p Мы работаем на импортных смолах и добавках DER, Bic, Kumho, Name, Name и др. Сыпучие компоненты используем российские. В итоге вы получаете качество мирового уровня по приятной цене. Показатели подтверждаем реальными протоколами испытаний.
+                        .production-line
+                            .production__title: p ISO
+                            .production__desc-line: p Производство сертифицировано по ISO (9001:2015)
+                        .production-line
+                            .production__title: i.icon-menu-item-2
+                            .production__desc-line: p Мы любим природу, поэтому сделали производство безотходным.
+                        .production-line
+                            .production__title: p Наличие на складе
+                            .production__desc-line
+                                p Всегда в наличии материалы серого цвета RAL 7040, можно купить любое количество. Убирать полы придется реже, цвет скрывает грязь. Заказные позиции выполним за 3–5 рабочих дней. Колеруем по каталогу RAL.
+                                p Если у вас индивидуальная задача мы адаптируем рецептуру в лаборатории.
+                    .production-image.production-image_index
+                        img(src="./img/production.png" alt="#")
+                        .production-sertificat
+                            a(href="./img/production-sert.pdf" target="_blank")
+                                img(src="./img/production-sert.jpg" alt="#")
+                                span Открыть оригинал
+                                    i.icon-zoom
+                            p Наше производство сертифицировано по&nbsp;ISO (9001:2015)
+        .callback
+            .container
+                .callback-block
+                    img(src="./img/callback.png" alt="#")
+                    h2.text-center Не нашли, что искали?
+                    a(data-fancybox data-src="#modal-question" href="").btn.btn-green Задать вопрос

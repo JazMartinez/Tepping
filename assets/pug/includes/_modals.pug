@@ -1,0 +1,333 @@
+//.permissions
+    .container
+        .permissions-block
+            //p Данный сайт может собирать статистику о Вашем посещении, в том числе Ваши персональные данные при отправке электронных форм или навигации по страницам. Использование персональных данных нашей компанией полностью соответствует федеральному закону &laquo;О персональных данных&raquo; №152-ФЗ от 27.07.2006 г.
+            p Пользуясь данным сайтом, Вы выражаете согласие на обработку, хранение и использование персональных данных. Все предоставленные Вами данные защищены&nbsp;
+                a(href="#") политикой конфиденциальности
+            a(href="javascript:;").btn.btn-red-transparent.btn-small Согласен
+div(style="display: none;")
+    #modal-question.modal
+        form(method='post').form-send
+            p: b Напишите нам
+            .form-group
+                textarea(name="comment" placeholder="Здесь вы можете задать интересующий вас вопрос, уточнить о наличии товара на складе или просто пожелать нам хорошего настроения")
+            .form-group
+                label.form-group-input
+                    span Почта
+                    input(type="text" name="email" placeholder="Andrey@mail.ru")
+                p
+            .form-group
+                label.form-group-input
+                    span Телефон
+                    input(type="tel" name="phone" placeholder="8 934 234 34 33")
+                p
+            .form-group
+                label.form-group-input
+                    span Имя
+                    input(type="text" name="name" placeholder="Андрей")
+                p
+            .form-group
+                label.form-group-check
+                    input(type='checkbox' name="confirm" checked)
+                    span.check-new-box
+                    span.check-text Я согласен с&nbsp;
+                        a(href="#") политикой конфиденциальности
+            .form-group.form-group-btn
+                input(type="hidden" name="info")
+                button(type="submit").btn.btn-green Отправить
+    #modal-order.modal
+        .modal-inline
+            .modal-product
+                .modal-product-image
+                    img(src="./img/product-item.png" alt="Негорючая краска класса КМ0")
+                p.modal-product-name
+                    i.icon-title
+                    | Пол 205 C
+                p.modal-product-price
+                    span Стоимость за кг
+                    | 399
+                    i.icon-rub
+                p.modal-product-pice-desc 5 475&nbsp;
+                    i.icon-rub
+                    | &nbsp;за комплект
+            form(method='post').form-send
+                p: b Оформление заказа
+                .form-group
+                    label.form-group-input
+                        span Площадь
+                        input(type="text" name="area" placeholder="100 кв. м.")
+                    p
+                .form-group
+                    label.form-group-input
+                        span Почта
+                        input(type="text" name="email" placeholder="Andrey@mail.ru")
+                    p
+                .form-group
+                    label.form-group-input
+                        span Телефон
+                        input(type="tel" name="phone" placeholder="8 934 234 34 33")
+                    p
+                .form-group
+                    label.form-group-input
+                        span Имя
+                        input(type="text" name="name" placeholder="Андрей")
+                    p
+                .form-group
+                    label
+                        span Комментарий
+                        textarea(name="comment" placeholder="Опишите нужный вам цвет, или укажите определенный номер цвета по каталогу RAL")
+                .form-group
+                    ul
+                        li
+                            i.icon-quote
+                            | Бесплатная доставка до ТК «Деловые Линии»
+                        li
+                            i.icon-quote
+                            | Консультация технолога
+                    .form-group
+                        label.form-group-check
+                            input(type='checkbox' name="confirm" checked)
+                            span.check-new-box
+                            span.check-text Я согласен с&nbsp;
+                                a(href="#") политикой конфиденциальности
+                .form-group.form-group-btn
+                    input(type="hidden" name="order")
+                    button(type="submit").btn.btn-green Отправить
+    #modal-order-calculate.modal
+        .modal-inline
+            .modal-product
+                .modal-product-image
+                    img(src="./img/product-item.png" alt="Негорючая краска класса КМ0")
+                p.modal-product-name
+                    i.icon-title
+                    | Пол 205 C
+                p.modal-product-color(style="background-color: #9da3a6") RAL 7040
+                p.modal-product-price
+                    span Стоимость материалов
+                    | 451 399
+                    i.icon-rub
+                p.modal-product-pice-desc на площадь 10 330 м
+                    sup 2
+            form(method='post').form-send
+                p: b Оформление заказа
+                .form-group
+                    label.form-group-input
+                        span Почта
+                        input(type="text" name="email" placeholder="Andrey@mail.ru")
+                    p
+                .form-group
+                    label.form-group-input
+                        span Телефон
+                        input(type="tel" name="phone" placeholder="8 934 234 34 33")
+                    p
+                .form-group
+                    label.form-group-input
+                        span Имя
+                        input(type="text" name="name" placeholder="Андрей")
+                    p
+                .form-group
+                    label
+                        span Комментарий
+                        textarea(name="comment" placeholder="Опишите нужный вам цвет, или укажите определенный номер цвета по каталогу RAL")
+                .form-group
+                    ul
+                        li
+                            i.icon-quote
+                            | Бесплатная доставка до ТК «Деловые Линии»
+                        li
+                            i.icon-quote
+                            | Консультация технолога
+                    .form-group
+                        label.form-group-check
+                            input(type='checkbox' name="confirm" checked)
+                            span.check-new-box
+                            span.check-text Я согласен с&nbsp;
+                                a(href="#") политикой конфиденциальности
+                .form-group.form-group-btn
+                    input(type="hidden" name="order")
+                    button(type="submit").btn.btn-green Отправить
+    #modal-send-sert.modal
+        .modal-inline
+            .modal-sert
+                .modal-sert-image
+                    img(src="./img/modal-sert.png" alt="#")
+                .form-group
+                    ul
+                        li
+                            i.icon-quote
+                            | Сертификаты
+                        li
+                            i.icon-quote
+                            | Протоколы испытаний
+            form(method='post').form-send
+                p: b Куда отправить сертификаты?
+                .form-group
+                    label.form-group-input
+                        span Почта
+                        input(type="text" name="email" placeholder="Andrey@mail.ru")
+                    p
+                .form-group
+                    label.form-group-input
+                        span Телефон
+                        input(type="tel" name="phone" placeholder="8 934 234 34 33")
+                    p
+                .form-group
+                    label.form-group-input
+                        span Имя
+                        input(type="text" name="name" placeholder="Андрей")
+                    p
+                .form-group
+                    label.form-group-check
+                        input(type='checkbox' name="confirm" checked)
+                        span.check-new-box
+                        span.check-text Я согласен с&nbsp;
+                            a(href="#") политикой конфиденциальности
+                .form-group.form-group-btn
+                    input(type="hidden" name="info")
+                    button(type="submit").btn.btn-green Получить сертификаты
+    #modal-send-price.modal
+        form(method='post').form-send
+            p: b Куда отправить стоимость?
+            .form-group
+                label.form-group-input
+                    span Площадь
+                    input(type="text" name="area" placeholder="100 кв. м.")
+                p
+            .form-group
+                label.form-group-input
+                    span Почта
+                    input(type="text" name="email" placeholder="Andrey@mail.ru")
+                p
+            .form-group
+                label.form-group-input
+                    span Телефон
+                    input(type="tel" name="phone" placeholder="8 934 234 34 33")
+                p
+            .form-group
+                label.form-group-input
+                    span Имя
+                    input(type="text" name="name" placeholder="Андрей")
+                p
+            .form-group
+                label.form-group-check
+                    input(type='checkbox' name="confirm" checked)
+                    span.check-new-box
+                    span.check-text Я согласен с&nbsp;
+                        a(href="#") политикой конфиденциальности
+            .form-group.form-group-btn
+                input(type="hidden" name="info")
+                button(type="submit").btn.btn-green Получить характеристики
+    #modal-send-color.modal
+        form(method='post').form-send
+            p: b Какой цвет вам нужен?
+            .form-group
+                textarea(name="comment" placeholder="Опишите нужный вам цвет, или укажите определенный номер цвета по каталогу RAL")
+            .form-group
+                label.form-group-input
+                    span Площадь
+                    input(type="text" name="area" placeholder="100 кв. м.")
+                p
+            .form-group
+                label.form-group-input
+                    span Почта
+                    input(type="text" name="email" placeholder="Andrey@mail.ru")
+                p
+            .form-group
+                label.form-group-input
+                    span Телефон
+                    input(type="tel" name="phone" placeholder="8 934 234 34 33")
+                p
+            .form-group
+                label.form-group-input
+                    span Имя
+                    input(type="text" name="name" placeholder="Андрей")
+                p
+            .form-group
+                label.form-group-check
+                    input(type='checkbox' name="confirm" checked)
+                    span.check-new-box
+                    span.check-text Я согласен с&nbsp;
+                        a(href="#") политикой конфиденциальности
+            .form-group.form-group-btn
+                input(type="hidden" name="info")
+                button(type="submit").btn.btn-green Отправить
+    #modal-delivery.modal
+        .modal-inline
+            .modal-delivery(style='background-image: url("./img/map-part.png");')
+            form(method='post').form-send
+                p: b В какой город нужна доставка?
+                .form-group
+                    label.form-group-input
+                        span Город
+                        input(type="text" name="city" placeholder="Новосибирск")
+                    p
+                .form-group
+                    label.form-group-input
+                        span Почта
+                        input(type="text" name="email" placeholder="Andrey@mail.ru")
+                    p
+                .form-group
+                    label.form-group-input
+                        span Телефон
+                        input(type="tel" name="phone" placeholder="8 934 234 34 33")
+                    p
+                .form-group
+                    label.form-group-input
+                        span Имя
+                        input(type="text" name="name" placeholder="Андрей")
+                    p
+                .form-group
+                    label
+                        span Комментарий
+                        textarea(name="comment" placeholder="Опишите нужный вам цвет, или укажите определенный номер цвета по каталогу RAL")
+                    .form-group
+                        label.form-group-check
+                            input(type='checkbox' name="confirm" checked)
+                            span.check-new-box
+                            span.check-text Я согласен с&nbsp;
+                                a(href="#") политикой конфиденциальности
+                .form-group.form-group-btn
+                    input(type="hidden" name="info")
+                    button(type="submit").btn.btn-green Узнать стоимость и сроки доставки
+    #modal-callback.modal
+        form(method='post').form-send
+            p: b В какое время вам перезвонить?
+            .form-group
+                .select-time
+                    p Удобное время для звонка
+                    .select-time-block
+                        a(href="javascript:;").select-time-val
+                            i.icon-time
+                            span В ближайшее время
+                            i.icon-arrow
+                        .select-time-change
+                            a(href="javascript:;").select-time-item
+                                | с 13
+                                sup 00
+                                |  до 18
+                                sup 00
+                                |  МСК
+                            a(href="javascript:;").select-time-item
+                                | с 9
+                                sup 00
+                                |  до 13
+                                sup 00
+                                |  МСК
+            .form-group
+                label.form-group-input
+                    span Телефон
+                    input(type="tel" name="phone" placeholder="8 934 234 34 33")
+            .form-group
+                label.form-group-input
+                    span Имя
+                    input(type="text" name="name" placeholder="Андрей")
+                .form-group
+                    label.form-group-check
+                        input(type='checkbox' name="confirm" checked)
+                        span.check-new-box
+                        span.check-text Я согласен с&nbsp;
+                            a(href="#") политикой конфиденциальности
+            .form-group.form-group-btn
+                input(type="hidden" name="callback")
+                input(type="hidden" name='select-time')
+                button(type="submit" value="").btn.btn-green Заказать звонок

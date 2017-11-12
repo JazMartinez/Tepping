@@ -1,0 +1,166 @@
+$fg-columns: 12 !default;
+$fg-gutter: 15px !default;
+
+$fg-class-row: 'row' !default;
+$fg-class-col: 'col' !default;
+$fg-class-off: 'off' !default;
+
+$fg-breakpoints: (
+                (xs),
+                (sm, $screen-sm),
+                (md, $screen-md),
+                (lg, $screen-lg)
+) !default;
+
+@function get-col-percent($column-num) {
+
+  @return $column-num / $fg-columns * 100%;
+
+}
+
+@mixin spacing( $value, $type: margin, $orientation: vertical ) {
+  @if $orientation == vertical {
+    #{ $type }-top: $value;
+    #{ $type }-bottom: $value;
+  } @else {
+    #{ $type }-left: $value;
+    #{ $type }-right: $value;
+  }
+}
+
+.#{ $fg-class-row } {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  //@include spacing((-$fg-gutter), margin, horizontal);
+}
+
+%#{ $fg-class-col } {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  min-height: 1px;
+  //@include spacing(($fg-gutter), padding, horizontal);
+}
+
+%#{ $fg-class-col }-flex {
+  @extend %#{ $fg-class-col };
+  flex-grow: 1;
+  flex-basis: 0;
+  max-width: 100%;
+}
+
+@mixin grid-base( $namespace ) {
+  .#{ $fg-class-col }-#{$namespace} {
+    @extend %#{ $fg-class-col }-flex;
+  }
+
+  @for $i from 1 through $fg-columns {
+    .#{ $fg-class-col }-#{$namespace}-#{$i} {
+      @extend %#{ $fg-class-col };
+    }
+  }
+}
+
+@mixin grid-sizes( $namespace ) {
+
+  @for $i from 1 through $fg-columns {
+    .#{ $fg-class-col }-#{$namespace}-#{$i} {
+      flex-basis: get-col-percent($i);
+      max-width: get-col-percent($i);
+    }
+  }
+
+  @for $i from 1 through $fg-columns {
+
+    @if ($i != $fg-columns) {
+      .#{ $fg-class-off }-#{$namespace}-#{$i} {
+        margin-left: get-col-percent($i);
+      }
+    }
+
+  }
+
+  .#{ $fg-class-off }-#{$namespace}-reset {
+    margin-left: 0;
+  }
+
+}
+
+@each $val in $fg-breakpoints {
+
+  $namespace: nth($val, 1);
+  @include grid-base($namespace);
+
+}
+
+@each $val in $fg-breakpoints {
+  @if length($val) == 1 {
+
+    $namespace: nth($val, 1);
+    @include grid-sizes($namespace);
+
+  } @else {
+
+    $namespace: nth($val, 1);
+    $size: nth($val, 2);
+
+    @media only screen and (min-width: #{$size}) {
+      @include grid-sizes($namespace);
+    }
+  }
+}
+
+//justify
+.start-xs {
+  justify-content: flex-start;
+}
+
+.end-xs {
+  justify-content: flex-end;
+}
+
+.center-xs {
+  justify-content: center;
+}
+
+.around-xs {
+  justify-content: space-around;
+}
+
+.between-xs {
+  justify-content: space-between;
+}
+
+.evenly-xs {
+  justify-content: space-evenly;
+}
+
+//align
+.top-xs {
+  align-items: flex-start;
+}
+
+.bottom-xs {
+  align-items: flex-end;
+}
+
+.middle-xs {
+  align-items: center;
+}
+
+//direction
+.column {
+  flex-direction: column;
+}
+
+.column-reverse {
+  flex-direction: column-reverse;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}

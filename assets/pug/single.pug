@@ -1,0 +1,556 @@
+extends includes/_product-layout
+
+block content
+    main#main-content
+        .product
+            .container
+                .product-inline
+                    .product-info
+                        .product-image.for-teping
+                            .product-image-block
+                                img(src="./img/product-item.png" alt="")
+                            .product-tags
+                                p.tag-weight 14,8 кг
+                                p.tag-own
+                                    i.icon-like
+                                    span собственное производство
+                        .product-desc
+                            h1.product-title
+                                i.icon-title
+                                | Пол 205 C
+                            p Универсальный эпоксидный наливной пол. Используется&nbsp;в&nbsp;промышленных и жилых помещениях. Выдерживает серьезные механизированные нагрузки. Можно полировать.
+                            ul
+                                li
+                                    i.icon-quote
+                                    | Обеспыливает
+                                li
+                                    i.icon-quote
+                                    | Защитает  пол
+                                li
+                                    i.icon-quote
+                                    | Декоративный
+                            p.product-price
+                                span 367
+                                    i.icon-rub
+                                | за кг
+                            p 5 475 ₽ за комплект 14,8 кг.
+                            .product-desc-btns
+                                a(href="#calculator").btn.btn-black-transparent
+                                    i.icon-calculator
+                                    | Рассчитать стоимость
+                                a(data-src="#modal-order" href="javascript:;" data-fancybox).btn.btn-red Заказать
+                    .product-apply
+                        p.apply-title: b Применяется на объектах
+                        .apply-inline.row
+                            .apply-column.col-md-6.col-xs-12
+                                .apply-item
+                                    i.icon-production
+                                    p Производства
+                                .apply-item
+                                    i.icon-parking
+                                    p Паркинги, гаражи
+                                .apply-item
+                                    i.icon-stock
+                                    p Склады
+                                .apply-item
+                                    i.icon-office
+                                    p Квартиры и офисы
+                                .apply-item
+                                    i.icon-metro
+                                    p Аэропорты, вокзалы, метро
+                            .apply-column.col-md-6.col-xs-12
+                                .apply-item
+                                    i.icon-book
+                                    p Школы, ВУЗы,  дет. сады
+                                .apply-item
+                                    i.icon-trade
+                                    p Торговые комплексы
+                                .apply-item
+                                    i.icon-medical
+                                    p Здравоохранение, фармацевтика
+                                .apply-item
+                                    i.icon-lightning
+                                    p Объекты атомной энергетики, ТЭЦ
+        #characteristics.characteristics.block
+            .container
+                .characteristics-inline.row
+                    .char-block
+                        h2 Характеристики
+                        .char-acordeon
+                            .char-acordeon-item
+                                .acordeon-item-header
+                                    p.acordeon-title: b Адгезия к бетону
+                                    p.acordeon-value 4 МПа
+                                        i.icon-arrow
+                                .acordeon-item-content
+                                    p
+                                        img(src="./img/adezia.jpg" alt="#")
+                                        | Адгезия (от лат. adhaesio — прилипание) в физике — сцепление поверхностей разнородных твёрдых и/или жидких тел. Адгезия обусловлена межмолекулярными взаимодействиями (Ван-дер-Ваальсовыми, полярными, иногда — взаимной диффузией)
+                                    p Адгезия существенно влияет на природу трения соприкасающихся поверхностей: так, при взаимодействии поверхностей с низкой адгезией трение минимально. В качестве примера можно привести политетрафторэтилен (тефлон), который в силу низкого значения адгезии в сочетании с большинством материалов обладает низким коэффициентом трения. Некоторые вещества со слоистой кристаллической решёткой (графит, дисульфид молибдена), характеризующиеся одновременно низкими значениями адгезии и когезии, применяются в качестве твёрдых смазок.
+                            .char-acordeon-item
+                                .acordeon-item-header
+                                    p.acordeon-title: b Износостойкость по Таберу
+                                    p.acordeon-value 38 мг
+                                        i.icon-arrow
+                                .acordeon-item-content
+                                    p
+                                        img(src="./img/adezia.jpg" alt="#")
+                                        | Адгезия (от лат. adhaesio — прилипание) в физике — сцепление поверхностей разнородных твёрдых и/или жидких тел. Адгезия обусловлена межмолекулярными взаимодействиями (Ван-дер-Ваальсовыми, полярными, иногда — взаимной диффузией)
+                                    p Адгезия существенно влияет на природу трения соприкасающихся поверхностей: так, при взаимодействии поверхностей с низкой адгезией трение минимально. В качестве примера можно привести политетрафторэтилен (тефлон), который в силу низкого значения адгезии в сочетании с большинством материалов обладает низким коэффициентом трения. Некоторые вещества со слоистой кристаллической решёткой (графит, дисульфид молибдена), характеризующиеся одновременно низкими значениями адгезии и когезии, применяются в качестве твёрдых смазок.
+                            .char-acordeon-item
+                                .acordeon-item-header
+                                    p.acordeon-title: b Сухой остаток
+                                    p.acordeon-value 100%
+                                        i.icon-arrow
+                                .acordeon-item-content
+                                    p
+                                        img(src="./img/adezia.jpg" alt="#")
+                                        | Адгезия (от лат. adhaesio — прилипание) в физике — сцепление поверхностей разнородных твёрдых и/или жидких тел. Адгезия обусловлена межмолекулярными взаимодействиями (Ван-дер-Ваальсовыми, полярными, иногда — взаимной диффузией)
+                                    p Адгезия существенно влияет на природу трения соприкасающихся поверхностей: так, при взаимодействии поверхностей с низкой адгезией трение минимально. В качестве примера можно привести политетрафторэтилен (тефлон), который в силу низкого значения адгезии в сочетании с большинством материалов обладает низким коэффициентом трения. Некоторые вещества со слоистой кристаллической решёткой (графит, дисульфид молибдена), характеризующиеся одновременно низкими значениями адгезии и когезии, применяются в качестве твёрдых смазок.
+                            .char-acordeon-item
+                                .acordeon-item-header
+                                    p.acordeon-title: b Время высыхания
+                                    p.acordeon-value 24 ч
+                                        i.icon-arrow
+                                .acordeon-item-content
+                                    p
+                                        img(src="./img/adezia.jpg" alt="#")
+                                        | Адгезия (от лат. adhaesio — прилипание) в физике — сцепление поверхностей разнородных твёрдых и/или жидких тел. Адгезия обусловлена межмолекулярными взаимодействиями (Ван-дер-Ваальсовыми, полярными, иногда — взаимной диффузией)
+                                    p Адгезия существенно влияет на природу трения соприкасающихся поверхностей: так, при взаимодействии поверхностей с низкой адгезией трение минимально. В качестве примера можно привести политетрафторэтилен (тефлон), который в силу низкого значения адгезии в сочетании с большинством материалов обладает низким коэффициентом трения. Некоторые вещества со слоистой кристаллической решёткой (графит, дисульфид молибдена), характеризующиеся одновременно низкими значениями адгезии и когезии, применяются в качестве твёрдых смазок.
+                            .char-acordeon-item
+                                .acordeon-item-header
+                                    p.acordeon-title: b Расход
+                                    p.acordeon-value 1,5 кг
+                                        i.icon-arrow
+                                .acordeon-item-content
+                                    p
+                                        img(src="./img/adezia.jpg" alt="#")
+                                        | Адгезия (от лат. adhaesio — прилипание) в физике — сцепление поверхностей разнородных твёрдых и/или жидких тел. Адгезия обусловлена межмолекулярными взаимодействиями (Ван-дер-Ваальсовыми, полярными, иногда — взаимной диффузией)
+                                    p Адгезия существенно влияет на природу трения соприкасающихся поверхностей: так, при взаимодействии поверхностей с низкой адгезией трение минимально. В качестве примера можно привести политетрафторэтилен (тефлон), который в силу низкого значения адгезии в сочетании с большинством материалов обладает низким коэффициентом трения. Некоторые вещества со слоистой кристаллической решёткой (графит, дисульфид молибдена), характеризующиеся одновременно низкими значениями адгезии и когезии, применяются в качестве твёрдых смазок.
+                            .char-acordeon-item
+                                .acordeon-item-header
+                                    p.acordeon-title: b Стойкость к нефтехимии
+                                    p.acordeon-value ДА
+                                        i.icon-arrow
+                                .acordeon-item-content
+                                    p
+                                        img(src="./img/adezia.jpg" alt="#")
+                                        | Адгезия (от лат. adhaesio — прилипание) в физике — сцепление поверхностей разнородных твёрдых и/или жидких тел. Адгезия обусловлена межмолекулярными взаимодействиями (Ван-дер-Ваальсовыми, полярными, иногда — взаимной диффузией)
+                                    p Адгезия существенно влияет на природу трения соприкасающихся поверхностей: так, при взаимодействии поверхностей с низкой адгезией трение минимально. В качестве примера можно привести политетрафторэтилен (тефлон), который в силу низкого значения адгезии в сочетании с большинством материалов обладает низким коэффициентом трения. Некоторые вещества со слоистой кристаллической решёткой (графит, дисульфид молибдена), характеризующиеся одновременно низкими значениями адгезии и когезии, применяются в качестве твёрдых смазок.
+                            .char-acordeon-item
+                                .acordeon-item-header
+                                    p.acordeon-title: b Класс пожароопасности
+                                    p.acordeon-value КМ 2
+                                        i.icon-arrow
+                                .acordeon-item-content
+                                    p
+                                        img(src="./img/adezia.jpg" alt="#")
+                                        | Адгезия (от лат. adhaesio — прилипание) в физике — сцепление поверхностей разнородных твёрдых и/или жидких тел. Адгезия обусловлена межмолекулярными взаимодействиями (Ван-дер-Ваальсовыми, полярными, иногда — взаимной диффузией)
+                                    p Адгезия существенно влияет на природу трения соприкасающихся поверхностей: так, при взаимодействии поверхностей с низкой адгезией трение минимально. В качестве примера можно привести политетрафторэтилен (тефлон), который в силу низкого значения адгезии в сочетании с большинством материалов обладает низким коэффициентом трения. Некоторые вещества со слоистой кристаллической решёткой (графит, дисульфид молибдена), характеризующиеся одновременно низкими значениями адгезии и когезии, применяются в качестве твёрдых смазок.
+                        a(href="./insruction.pdf" target="_blank").btn.btn-red-transparent
+                            i.icon-pdf
+                            | Скачать характеристики и инструкцию
+                    .sertificats
+                        h2 Сертификаты
+                        .sertificats-slider
+                            .slide
+                                .sertificats-image
+                                    a(href="./img/sertificats/1.pdf" target="_blank")
+                                        img(src="./img/sertificats/2.jpg")
+                                        span Открыть оригинал
+                                            i.icon-zoom
+                                .sertificats-desc
+                                    p.sertificats-title Пожарный сертификат соответствия
+                                    p Пройдено обязательная сертификация. Класс пожароопасности КМ2
+                            .slide
+                                .sertificats-image
+                                    a(href="./img/sertificats/2.pdf" target="_blank")
+                                        img(src="./img/sertificats/3.jpg")
+                                        span Открыть оригинал
+                                            i.icon-zoom
+                                .sertificats-desc
+                                    p.sertificats-title Пожарный сертификат соответствия
+                                    p Пройдено обязательная сертификация. Класс пожароопасности КМ2
+                            .slide
+                                .sertificats-image
+                                    a(href="./img/sertificats/3.pdf" target="_blank")
+                                        img(src="./img/sertificats/4.jpg")
+                                        span Открыть оригинал
+                                            i.icon-zoom
+                                .sertificats-desc
+                                    p.sertificats-title Пожарный сертификат соответствия
+                                    p Пройдено обязательная сертификация. Класс пожароопасности КМ2F
+                            .slide
+                                .sertificats-image
+                                    a(href="./img/sertificats/4.pdf" target="_blank")
+                                        img(src="./img/sertificats/1.jpg")
+                                        span Открыть оригинал
+                                            i.icon-zoom
+                                .sertificats-desc
+                                    p.sertificats-title Пожарный сертификат соответствия
+                                    p Пройдено обязательная сертификация. Класс пожароопасности КМ2
+                        a(data-src="#modal-send-sert" href="javascript:;" data-fancybox).btn.btn-black-transparent Скачать сертификаты
+        include includes/_calculator
+        #objects.objects
+            h2.text-center Объекты с Teping Пол 205 C
+            .objects-slider
+                .slide
+                    .objects-image
+                        img(src="./img/gallery/1.jpg" alt="#")
+                        .objects-desc
+                            .desc-item.light
+                                p Пешие дорожки в Сочи. Олимпиада 2014 Чем меньше показатель - тем более стойкий материал.
+                                p Teping Пол 205 С
+                                    span 234 м
+                                        sup 2
+                            .desc-item
+                                a(data-src="#modal-send-price" href="javascript:;" data-fancybox).btn.btn-white-transparent Сколько стоит сделать также?
+                .slide
+                    .objects-image
+                        img(src="./img/gallery/2.jpg" alt="#")
+                        .objects-desc
+                            .desc-item.light
+                                p Пешие дорожки в Сочи. Олимпиада 2014 Чем меньше показатель - тем более стойкий материал.
+                                p Teping Пол 205 С
+                                    span 234 м
+                                        sup 2
+                            .desc-item
+                                a(data-src="#modal-send-price" href="javascript:;" data-fancybox).btn.btn-white-transparent Сколько стоит сделать также?
+                .slide
+                    .objects-image
+                        img(src="./img/gallery/3.jpg" alt="#")
+                        .objects-desc
+                            .desc-item.light
+                                p Пешие дорожки в Сочи. Олимпиада 2014 Чем меньше показатель - тем более стойкий материал.
+                                p Teping Пол 205 С
+                                    span 234 м
+                                        sup 2
+                            .desc-item
+                                a(data-src="#modal-send-price" href="javascript:;" data-fancybox).btn.btn-white-transparent Сколько стоит сделать также?
+                .slide
+                    .objects-image
+                        img(src="./img/gallery/4.jpg" alt="#")
+                        .objects-desc
+                            .desc-item.light
+                                p Пешие дорожки в Сочи. Олимпиада 2014 Чем меньше показатель - тем более стойкий материал.
+                                p Teping Пол 205 С
+                                    span 234 м
+                                        sup 2
+                            .desc-item
+                                a(data-src="#modal-send-price" href="javascript:;" data-fancybox).btn.btn-white-transparent Сколько стоит сделать также?
+                .slide
+                    .objects-image
+                        img(src="./img/gallery/5.jpg" alt="#")
+                        .objects-desc
+                            .desc-item.light
+                                p Пешие дорожки в Сочи. Олимпиада 2014 Чем меньше показатель - тем более стойкий материал.
+                                p Teping Пол 205 С
+                                    span 234 м
+                                        sup 2
+                            .desc-item
+                                a(data-src="#modal-send-price" href="javascript:;" data-fancybox).btn.btn-white-transparent Сколько стоит сделать также?
+
+
+
+        #materials.materials.block
+            .container
+                .materials-inline.row
+                    .steps-block
+                        h2 Этапы укладки
+                        .steps-item
+                            p.step-count 1
+                            .step-desc
+                                p: b Шлифование и обеспыливание
+                                p Необходимо снять слой цементного молочка и пыли. Это обеспечит необходимое сцепление материала.
+                        .steps-item
+                            p.step-count 2
+                            .step-desc
+                                p: b Грунтование
+                                p Используйте Тэпинг Р 1155 Грунт.  Запечатывает поры, пропитывает верхний слой основания.
+                        .steps-item
+                            p.step-count 3
+                            .step-desc
+                                p: b Нанесение промежуточного слоя
+                                p Окончательно выравниваем и запечатываем поры, заполняем рытвины. Дополнительно упрочняем основание.
+                        .steps-item
+                            p.step-count 4
+                            .step-desc
+                                p: b Нанесение финишного слоя
+                                p Толщина от 1 до 3 мм. Придает декоративный вид полу и нужную фактуру.
+                        .steps-btns
+                            a(href="./insruction.pdf" target="_blank").btn.btn-red-transparent
+                                i.icon-pdf
+                                | Скачать инструкцию
+                            a(href="https://www.youtube.com/embed/irRKhNBX5qs" data-fancybox).btn.btn-black-transparent
+                                i.icon-play
+                                | Смотреть видео инструкцию
+                        .step-change
+                            p: b Какую толщину выбрать?
+                            .change-thicknees-item
+                                i.icon-calc-item-1
+                                p.count 2 – 3
+                                    small мм
+                                p Пешеходные нагрузки
+                            .change-thicknees-item
+                                i.icon-calc-item-4
+                                p.count 3 – 5
+                                    small мм
+                                p Промышленные механизированные нагрузки
+                            .change-thicknees-item
+                                i.icon-calc-item-6
+                                p.count 5 – 10
+                                    small мм
+                                p Сверхтяжелые интенсивные нагрузки
+                        p: b Справлюсь ли я?
+                        p Мы сделали всё для удобства работы. Материал специально поставляется в комплектах. В большое ведро выливаем содержимое малого. Ошибиться с пропорциями сложно.
+                        p В ведре мы оставили место для добавления кварцевого песка. Дополнительная тара не понадобится.&nbsp;
+                            a(href='#') Поэтапная инструкция&nbsp;
+                            | поможет.
+                    .material-block
+                        h2 Вам понадобится
+                        p: b Материалы
+                        .material-item
+                            i.icon-banks
+                                span.path1
+                                span.path2
+                                span.path3
+                                span.path4
+                                span.path5
+                                span.path6
+                                span.path7
+                                span.path8
+                                span.path9
+                            p Наливной пол Teping Пол 205 С
+                        .material-item
+                            i.icon-banks
+                                span.path1
+                                span.path2
+                                span.path3
+                                span.path4
+                                span.path5
+                                span.path6
+                                span.path7
+                                span.path8
+                                span.path9
+                            p Грунтовка&nbsp;
+                                a(href="#") Тэпинг Р 1155 Грунт
+                        .material-item
+                            i.icon-bag-20kg
+                            p Кварцевый песок фракции 0,1 – 0,3 мм.
+                        p: b Инструменты
+                        .tools-block.row
+                            .tools-item.col-sm-6.col-xs-12
+                                a(href="javascript:;")
+                                    i.icon-roller-needle
+                                    span Игольчатый валик
+                                    .tools-item-about
+                                        .tools-item-about-desc
+                                            img(src="./img/tools/1.jpg" alt="#")
+                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных.
+                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных наливных полов: правила выбора размера шипов.
+                            .tools-item.col-sm-6.col-xs-12
+                                a(href="javascript:;")
+                                    i.icon-notched-trowel
+                                    span Зубчатый шпатель
+                                    .tools-item-about
+                                        .tools-item-about-desc
+                                            img(src="./img/tools/2.jpg" alt="#")
+                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных.
+                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных наливных полов: правила выбора размера шипов.
+                            .tools-item.col-sm-6.col-xs-12
+                                a(href="javascript:;")
+                                    i.icon-roller
+                                    span Велюровый валик
+                                    .tools-item-about
+                                        .tools-item-about-desc
+                                            img(src="./img/tools/3.png" alt="#")
+                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных.
+                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных наливных полов: правила выбора размера шипов.
+                            .tools-item.col-sm-6.col-xs-12
+                                a(href="javascript:;")
+                                    img(src="./img/foot.svg" width='47')
+                                    span Мокро/краскоступы
+                                    .tools-item-about
+                                        .tools-item-about-desc
+                                            img(src="./img/tools/4.jpg" alt="#")
+                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных.
+                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных наливных полов: правила выбора размера шипов.
+                            .tools-item.col-sm-6.col-xs-12
+                                a(href="javascript:;")
+                                    i.icon-trowel
+                                    span Плоский шпатель
+                                    .tools-item-about
+                                        .tools-item-about-desc
+                                            img(src="./img/tools/5.jpg" alt="#")
+                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных.
+                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных наливных полов: правила выбора размера шипов.
+                            .tools-item.col-sm-6.col-xs-12
+                                a(href="javascript:;")
+                                    i.icon-hand
+                                    span Ваши замечатальные руки
+                                    .tools-item-about
+                                        .tools-item-about-desc
+                                            img(src="./img/video.png" alt="#")
+                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных.
+                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных наливных полов: правила выбора размера шипов.
+                        p: b Оборудование
+                        .tools-block.row
+                            .tools-item.col-sm-6.col-xs-12
+                                a(href="javascript:;")
+                                    img(src="./img/mixer.svg" width='47')
+                                    span Промышленный
+                                        br
+                                        | ручной миксер
+                                    .tools-item-about
+                                        .tools-item-about-desc
+                                            img(src="./img/tools/6.jpg" alt="#")
+                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных.
+                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных наливных полов: правила выбора размера шипов.
+                            .tools-item.col-sm-6.col-xs-12
+                                a(href="javascript:;")
+                                    i.icon-vacuum-cleaner
+                                    span Промышленный пылесос
+                                    .tools-item-about
+                                        .tools-item-about-desc
+                                            img(src="./img/tools/7.jpg" alt="#")
+                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных.
+                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных наливных полов: правила выбора размера шипов.
+                        .video-info
+                            .video-block: a(href="https://www.youtube.com/embed/irRKhNBX5qs" data-fancybox)
+                                i.icon-play
+                                img(src="./img/video.png" alt="#")
+                            .video-desc
+                                p: b Мы собрали всю информацию о&nbsp;деталях укладки пола
+                                p  Как сделать результат отличным? Какие есть нюансы? Какой инструмент использовать и зачем?
+                                a(href="#").btn.btn-black-transparent Читать >
+        #production.production.block
+            .container
+                .production-inline
+                    .production-desc
+                        h2 Производство
+                        p Наш завод находится в Санкт-Петербурге.
+                        p В рецептурах используем импортные смолы, добавки и российские сыпучие компоненты. Это позволяет нам не уступать по качеству европейским конкурентам и быстрее реагировать на просьбы клиентов.
+                        p Мы любим природу, поэтому сделали производство безотходным.
+                        p.prod-title: b Колеровка
+                        .desc-line
+                            .desc-line-item
+                                p Колеруем материалы по каталогу RAL от 6 комплектов. Ограничение связано с минимальной загрузкой промышленного миксера.
+                                p Заказ выполним за 3–5 рабочих дней.
+                            .desc-line-item.row
+                                i.icon-color
+                                p Колеруем по&nbsp;каталогу
+                                    br
+                                    | RAL
+                        p.prod-title: b Наличие на складе
+                        .desc-line
+                            .desc-line-item
+                                p На складе всегда в наличие материал серого цвета RAL 7040. В любое время можно купить от 1-го комплекта. Убирать полы придется реже, цвет скрывает грязь.
+                                p На складе всегда есть остатки разных цветов. Звоните и мы постараемся найти нужный цвет.
+                            .desc-line-item
+                                p Всегда в наличии универсальный цвет
+                                p.desc-color-item RAL 7040
+                        a(data-src="#modal-send-color" href="javascript:;" data-fancybox).btn.btn-black-transparent Узнать о наличии материала на складе
+                    .production-image
+                        img(src="./img/production.png" alt="#")
+                        p: b Наше производство сертифицировано
+                            br
+                            | по&nbsp;ISO (9001:2015)
+                        .production-sertificat
+                            a(href="./img/production-sert.pdf" target="_blank")
+                                img(src="./img/production-sert.jpg" alt="#")
+                                span Открыть оригинал
+                                    i.icon-zoom
+        #delivery.delivery.block
+            .container
+                .delivery-inline.row
+                    .delivery-desc
+                        h2 Доставляем по России, Казахстану и Белоруссии
+                        p.delivery-title: b Сроки и стоимость доставки
+                        p.dotted
+                            span Отдаленные регионы
+                            span от 15 дней
+                        p.dotted
+                            span Европейская часть России
+                            span 5 – 7 дней
+                        p.dotted
+                            span Москва
+                            span 2 дня
+                        p.dotted
+                            span Санкт-Петербург
+                            span На следующий день, после оплаты
+                        p(style='margin-top: 30px;') Бесплатная доставка до терминала ТК «Деловые линии» в Санкт-Петербурге.
+                        p Адресная доставка по Санкт-Петербургу 2 000 руб.
+                        a(data-src="#modal-delivery" href="javascript:;" data-fancybox).btn.btn-red-transparent Узнать стоимость и сроки доставки в мой город
+                        p.delivery-title: b Габариты и упаковка
+                        p.lg-text На паллет помещается 24 комплекта Teping Пол 205 C.
+                            br
+                            | В 1 куб.м. – 24 комплекта Тэпинг Пол 205 С, общей массой  - 414,40 кг. В зависимости от количества комплектов груз может быть поставлен на паллеты или ехать отдельно с обрешёткой.
+                        .delivery-line.row.between-xs
+                            .delivery-item
+                                p Один комплект Teping Пол 205 С содержит в себе
+                                .delivery-image
+                                    p
+                                        i.icon-bank
+                                        | Основа
+                                        span 11,8 кг
+                                    p.plus +
+                                    p
+                                        i.icon-bank.small
+                                        | Отвердитель
+                                        span(style="margin-left: -20px") 3 кг
+                            .delivery-item
+                                p На один паллет 1х1 м, помещается 24 комплекта Teping Пол 205 С
+                                .delivery-image
+                                    p
+                                        b х 24
+                                        | Комплекта
+                                        span 414.40 кг
+                    .delivery-map
+                        .image-item
+                            img(src='./img/car.jpg' alt="#")
+                        .image-item
+                            img(src='./img/delivery-map.png' alt="#")
+        #letters.letters.block
+            h2.text-center Благодарственные письма TNP Group
+            .letters-slider
+                .slide
+                     a(href="./img/letters/1.pdf" target="_blank").letters-image
+                        img(src="./img/letters/1.jpg" alt="#")
+                        span Открыть оригинал
+                            i.icon-zoom
+                .slide
+                     a(href="./img/letters/2.pdf" target="_blank").letters-image
+                        img(src="./img/letters/2.jpg" alt="#")
+                        span Открыть оригинал
+                            i.icon-zoom
+                .slide
+                     a(href="./img/letters/3.pdf" target="_blank").letters-image
+                        img(src="./img/letters/3.jpg" alt="#")
+                        span Открыть оригинал
+                            i.icon-zoom
+                .slide
+                     a(href="./img/letters/4.pdf" target="_blank").letters-image
+                        img(src="./img/letters/4.jpg" alt="#")
+                        span Открыть оригинал
+                            i.icon-zoom
+                .slide
+                     a(href="./img/letters/5.pdf" target="_blank").letters-image
+                        img(src="./img/letters/5.png" alt="#")
+                        span Открыть оригинал
+                            i.icon-zoom
+                .slide
+                     a(href="./img/letters/6.pdf" target="_blank").letters-image
+                        img(src="./img/letters/6.jpg" alt="#")
+                        span Открыть оригинал
+                            i.icon-zoom
+                .slide
+                     a(href="./img/letters/7.pdf" target="_blank").letters-image
+                        img(src="./img/letters/7.jpg" alt="#")
+                        span Открыть оригинал
+                            i.icon-zoom
+        .callback
+            .container
+                .callback-block
+                    img(src="./img/callback.png" alt="#")
+                    h2.text-center Не нашли, что искали?
+                    a(data-fancybox data-src="#modal-question" href="").btn.btn-green Задать вопрос

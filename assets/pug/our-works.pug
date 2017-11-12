@@ -1,0 +1,37 @@
+extends includes/_layout
+
+block content
+    main
+    .works.block
+        .container
+            .works-inline
+                .works__desc
+                    h2 Проекты
+                    p Наши клиенты представляют совершенно разные по размеру и направлениям деятельности компании, от малого бизнеса до транснациональных корпораций. Сейчас в нашей базе уже 6940*  клиентов
+                    p * на июль 2017 года
+                    .works__file.download-file
+                        i.icon-pdf
+                        .download-file__caption
+                            p Референц-лист TNP Group
+                            a(href="#") скачать .pdf
+                .works__partners.partners.row
+                    .partners__item
+                        img(src="./img/index/partners/1.png")
+                    .partners__item
+                        img(src="./img/index/partners/2.png")
+                    .partners__item
+                        img(src="./img/index/partners/3.png")
+                    .partners__item
+                        img(src="./img/index/partners/4.png")
+                    .partners__item
+                        img(src="./img/index/partners/5.png")
+                    .partners__item
+                        img(src="./img/index/partners/6.png")
+                    .partners__item
+                        img(src="./img/index/partners/7.png")
+                    .partners__item
+                        img(src="./img/index/partners/8.png")
+            include includes/_works-list
+            .pagination
+                a(href="#").pagination__more-btn Показать ещё
+                p.paginations__show-counter Показано 10 из 100

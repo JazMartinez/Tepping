@@ -1,0 +1,158 @@
+.footer-top {
+  padding: 40px 0;
+  background-color: #1e1e1e;
+}
+
+.footer-item {
+
+  & + .footer-item {
+    margin-left: 80px;
+  }
+
+  &:first-of-type + .footer-item {
+    margin-left: 108px;
+  }
+
+  ul {
+    li {
+      a {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.71;
+        color: $color-white;
+
+        &:hover {
+          color: $color-red;
+        }
+      }
+
+      & + li {
+        margin-top: 4px;
+      }
+
+      &.item-lg {
+        a {
+          font-size: 14px;
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+      }
+
+      &.item-lg + li {
+        margin-top: 25px;
+      }
+
+    }
+  }
+}
+
+.footer-contacts {
+  margin-top: 20px;
+
+  p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & + p {
+      margin-top: 8px;
+    }
+
+    a:hover {
+      border: none;
+    }
+
+    .phone {
+      display: block;
+      margin-bottom: 27px;
+      line-height: .8;
+
+      font-size: 36px;
+      font-weight: 300;
+      color: $color-white;
+    }
+
+    .mail {
+      display: block;
+      margin-top: 30px;
+      font-size: 16px;
+      font-weight: 300;
+      color: $color-white;
+
+      &:hover {
+        color: $color-red;
+      }
+    }
+  }
+}
+
+.social-line {
+  margin-top: 75px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  .social-item {
+
+    i {
+      color: #ffffff;
+      font-size: 18px;
+      transition: all .3s ease-out;
+    }
+
+    &:hover {
+      i {
+        color: $color-red;
+      }
+    }
+
+    & + .social-item {
+      margin-left: 20px;
+    }
+  }
+}
+
+.footer-logo {
+  a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  i {
+    font-size: 29px;
+    color: $color-red;
+    margin-left: 20px;
+  }
+}
+
+.footer-partners {
+  max-width: 560px;
+  justify-content: space-between;
+  align-items: stretch;
+
+  .partners__item {
+    margin-top: 45px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.partners-text {
+  font-size: 18px;
+}
+
+.footer-bottom {
+  padding: 13px 0 11px;
+  background-color: #171717;
+
+  p {
+    font-size: 14px;
+    color: #7d7d7d;
+  }
+}
