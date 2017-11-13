@@ -86,9 +86,7 @@ $(document).ready(function () {
                     reqular = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
                     if (inputValue.length > 2 && reqular.test(inputValue)) {
                         inputSuccess($(this));
-                    }
-
-                    else {
+                    } else {
                         inputError($(this), 'Введите данные в формате mail@mail.ru')
                     }
                     break;
@@ -97,9 +95,7 @@ $(document).ready(function () {
 
                     if (inputValue.length > 2 && reqular.test(inputValue)) {
                         inputSuccess($(this));
-                    }
-
-                    else {
+                    } else {
                         inputError($(this), 'Допустимо использовать только числа')
                     }
                     break;
@@ -108,9 +104,7 @@ $(document).ready(function () {
 
                     if (inputValue.length > 2 && reqular.test(inputValue)) {
                         inputSuccess($(this));
-                    }
-
-                    else {
+                    } else {
                         inputError($(this), 'Допустимо использовать только числа')
                     }
                     break;
@@ -119,9 +113,7 @@ $(document).ready(function () {
 
                     if (inputValue.length > 2 && reqular.test(inputValue)) {
                         inputSuccess($(this));
-                    }
-
-                    else {
+                    } else {
                         inputError($(this), 'Допустимо использовать символы только русского или английского алфавита, тире и апостроф')
                     }
                     break;
@@ -130,9 +122,7 @@ $(document).ready(function () {
 
                     if (inputValue.length > 2 && reqular.test(inputValue)) {
                         inputSuccess($(this));
-                    }
-
-                    else {
+                    } else {
                         inputError($(this), 'Допустимо использовать символы только русского или английского алфавита, тире и апостроф')
                     }
                     break;
@@ -349,12 +339,8 @@ $(document).ready(function () {
     $('[data-fancybox^="works"]').fancybox({
         loop: true,
         toolbar: false,
-        buttons : [
-            //'slideShow',
+        buttons: [
             'fullScreen',
-            //'thumbs',
-            //'download',
-            //'share',
             'close'
         ]
     });
