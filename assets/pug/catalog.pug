@@ -1,11 +1,11 @@
 extends includes/_layout
 
 block content
-    main#main-content
+    main
         .catalog
             .container
                 .catalog-inline
-                    aside.sidebar.block
+                    aside.sidebar
                         nav.sidebar-menu
                             p.sidebar-menu__title: strong Каталог
                             ul
@@ -13,141 +13,197 @@ block content
                                     i.icon-bucket2
                                     span Наливные полы
                                 li.sidebar-menu__item: a(href="#")
-                                    i.icon-bucket2
+                                    i.icon-roll-paint
                                     span Краски для бетона
                                 li.sidebar-menu__item: a(href="#")
-                                    i.icon-bucket2
-                                    span Покрытия для детских и спортивных площадок
-                                li.sidebar-menu__item: a(href="#")
-                                    i.icon-bucket2
+                                    i.icon-playground-2
+                                    span Покрытия для детских и&nbsp;спортивных&nbsp;площадок
+                                li.sidebar-menu__item.sidebar-menu__item_top: a(href="#")
+                                    i.icon-NG
                                     span Teping НГ КМ0
                                 li.sidebar-menu__item: a(href="#")
-                                    i.icon-bucket2
+                                    i.icon-hempel
                                     span Hempel
-                        .download-file
+                        .download-file.sidebar__file
                             i.icon-pdf
                             .download-file__caption
                                 p Референц-лист TNP Group
                                 a(href="#") скачать .pdf
-                        .solutuins-link
-                            .solutuins-link__image
-                                img(src="./img/")
-                            p.solutuins-link__title: strong Готовые решения
+                        .solutions-link
+                            .solutions-link__image
+                                img(src="./img/product-item.png" alt="Готовые решения")
+                            p.solutions-link__title: strong Готовые решения
                             p Надёжный эпоксидный пол для любых типов объектов. Высокая износостойкость, устойчивость к воздействию нефтехимии
                             a(href="#").btn.btn-red-transparent
                                 | Посмотреть готовые решения
                                 i.icon-arrow-2
                     section.content.block
-                        h2 Наливные полы
+                        h2.catalog-title Наливные полы
                         .catalog-item
                             p.catalog-item__title
-                                i.icon-stock
+                                i.icon-menu-item-7
                                 span Teping Пол 205 C
                                 span.catalog-item__tag Хит
                             .catalog-item__inline
                                 p Надёжный эпоксидный пол для любых типов объектов. Высокая износостойкость, устойчивость к воздействию нефтехимии, отличный внешний вид. Двухкомпонентный, колеровка по RAL
                                 .catalog-item__info
                                     .catalog-item__price-list
-                                        p за комплект: 5 475 руб.
+                                        p!='за комплект: <strong>5 475 руб.</strong>'
                                         p масса комплекта: 14,8 кг
                                     .catalog-item__price
                                         p за кг
                                         p.price 370 ₽
                         .catalog-item
                             p.catalog-item__title
-                                i.icon-stock
+                                i.icon-menu-item-8
                                 span Teping Пол 205 C
                                 span.catalog-item__tag Хит
                             .catalog-item__inline
                                 p Надёжный эпоксидный пол для любых типов объектов. Высокая износостойкость, устойчивость к воздействию нефтехимии, отличный внешний вид. Двухкомпонентный, колеровка по RAL
                                 .catalog-item__info
                                     .catalog-item__price-list
-                                        p за комплект: 5 475 руб.
+                                        p!='за комплект: <strong>5 475 руб.</strong>'
                                         p масса комплекта: 14,8 кг
                                     .catalog-item__price
                                         p за кг
                                         p.price 370 ₽
                         .catalog-item
                             p.catalog-item__title
-                                i.icon-stock
+                                i.icon-menu-item-5
                                 span Teping Пол 205 C
                                 span.catalog-item__tag Хит
                             .catalog-item__inline
                                 p Надёжный эпоксидный пол для любых типов объектов. Высокая износостойкость, устойчивость к воздействию нефтехимии, отличный внешний вид. Двухкомпонентный, колеровка по RAL
                                 .catalog-item__info
                                     .catalog-item__price-list
-                                        p за комплект: 5 475 руб.
+                                        p!='за комплект: <strong>5 475 руб.</strong>'
                                         p масса комплекта: 14,8 кг
                                     .catalog-item__price
                                         p за кг
                                         p.price 370 ₽
                         .catalog-item
                             p.catalog-item__title
-                                i.icon-stock
+                                i.icon-menu-item-3
                                 span Teping Пол 205 C
                                 span.catalog-item__tag Хит
                             .catalog-item__inline
                                 p Надёжный эпоксидный пол для любых типов объектов. Высокая износостойкость, устойчивость к воздействию нефтехимии, отличный внешний вид. Двухкомпонентный, колеровка по RAL
                                 .catalog-item__info
                                     .catalog-item__price-list
-                                        p за комплект: 5 475 руб.
+                                        p!='за комплект: <strong>5 475 руб.</strong>'
                                         p масса комплекта: 14,8 кг
                                     .catalog-item__price
                                         p за кг
                                         p.price 370 ₽
                         .catalog-item
                             p.catalog-item__title
-                                i.icon-stock
+                                i.icon-menu-item-9
                                 span Teping Пол 205 C
                                 span.catalog-item__tag Хит
                             .catalog-item__inline
                                 p Надёжный эпоксидный пол для любых типов объектов. Высокая износостойкость, устойчивость к воздействию нефтехимии, отличный внешний вид. Двухкомпонентный, колеровка по RAL
                                 .catalog-item__info
                                     .catalog-item__price-list
-                                        p за комплект: 5 475 руб.
+                                        p!='за комплект: <strong>5 475 руб.</strong>'
                                         p масса комплекта: 14,8 кг
                                     .catalog-item__price
                                         p за кг
                                         p.price 370 ₽
-                        h2 Краски для бетона
+                        h2.catalog-title Краски для бетона
                         .catalog-item
                             p.catalog-item__title
-                                i.icon-stock
+                                i.icon-menu-item-7
                                 span Teping Пол 205 C
                                 span.catalog-item__tag Хит
                             .catalog-item__inline
                                 p Надёжный эпоксидный пол для любых типов объектов. Высокая износостойкость, устойчивость к воздействию нефтехимии, отличный внешний вид. Двухкомпонентный, колеровка по RAL
                                 .catalog-item__info
                                     .catalog-item__price-list
-                                        p за комплект: 5 475 руб.
-                                        p масса комплекта: 14,8 кг
-                                    .catalog-item__price
-                                        p за кг
-                                        p.price 370 ₽
-                        .catalog-item
-                            p.catalog-item__title
-                                i.icon-stock
-                                span Teping Пол 205 C
-                                span.catalog-item__tag Хит
-                            .catalog-item__inline
-                                p Надёжный эпоксидный пол для любых типов объектов. Высокая износостойкость, устойчивость к воздействию нефтехимии, отличный внешний вид. Двухкомпонентный, колеровка по RAL
-                                .catalog-item__info
-                                    .catalog-item__price-list
-                                        p за комплект: 5 475 руб.
+                                        p!='за комплект: <strong>5 475 руб.</strong>'
                                         p масса комплекта: 14,8 кг
                                     .catalog-item__price
                                         p за кг
                                         p.price 370 ₽
                         .catalog-item
                             p.catalog-item__title
-                                i.icon-stock
+                                i.icon-menu-item-8
                                 span Teping Пол 205 C
                                 span.catalog-item__tag Хит
                             .catalog-item__inline
                                 p Надёжный эпоксидный пол для любых типов объектов. Высокая износостойкость, устойчивость к воздействию нефтехимии, отличный внешний вид. Двухкомпонентный, колеровка по RAL
                                 .catalog-item__info
                                     .catalog-item__price-list
-                                        p за комплект: 5 475 руб.
+                                        p!='за комплект: <strong>5 475 руб.</strong>'
+                                        p масса комплекта: 14,8 кг
+                                    .catalog-item__price
+                                        p за кг
+                                        p.price 370 ₽
+                        .catalog-item
+                            p.catalog-item__title
+                                i.icon-menu-item-5
+                                span Teping Пол 205 C
+                                span.catalog-item__tag Хит
+                            .catalog-item__inline
+                                p Надёжный эпоксидный пол для любых типов объектов. Высокая износостойкость, устойчивость к воздействию нефтехимии, отличный внешний вид. Двухкомпонентный, колеровка по RAL
+                                .catalog-item__info
+                                    .catalog-item__price-list
+                                        p!='за комплект: <strong>5 475 руб.</strong>'
+                                        p масса комплекта: 14,8 кг
+                                    .catalog-item__price
+                                        p за кг
+                                        p.price 370 ₽
+                        .catalog-item
+                            p.catalog-item__title
+                                i.icon-menu-item-3
+                                span Teping Пол 205 C
+                                span.catalog-item__tag Хит
+                            .catalog-item__inline
+                                p Надёжный эпоксидный пол для любых типов объектов. Высокая износостойкость, устойчивость к воздействию нефтехимии, отличный внешний вид. Двухкомпонентный, колеровка по RAL
+                                .catalog-item__info
+                                    .catalog-item__price-list
+                                        p!='за комплект: <strong>5 475 руб.</strong>'
+                                        p масса комплекта: 14,8 кг
+                                    .catalog-item__price
+                                        p за кг
+                                        p.price 370 ₽
+                        .catalog-item
+                            p.catalog-item__title
+                                i.icon-menu-item-9
+                                span Teping Пол 205 C
+                                span.catalog-item__tag Хит
+                            .catalog-item__inline
+                                p Надёжный эпоксидный пол для любых типов объектов. Высокая износостойкость, устойчивость к воздействию нефтехимии, отличный внешний вид. Двухкомпонентный, колеровка по RAL
+                                .catalog-item__info
+                                    .catalog-item__price-list
+                                        p!='за комплект: <strong>5 475 руб.</strong>'
+                                        p масса комплекта: 14,8 кг
+                                    .catalog-item__price
+                                        p за кг
+                                        p.price 370 ₽
+                        .catalog-item
+                            p.catalog-item__title
+                                i.icon-menu-item-6
+                                span Teping Пол 205 C
+                                span.catalog-item__tag Хит
+                            .catalog-item__inline
+                                p Надёжный эпоксидный пол для любых типов объектов. Высокая износостойкость, устойчивость к воздействию нефтехимии, отличный внешний вид. Двухкомпонентный, колеровка по RAL
+                                .catalog-item__info
+                                    .catalog-item__price-list
+                                        p!='за комплект: <strong>5 475 руб.</strong>'
+                                        p масса комплекта: 14,8 кг
+                                    .catalog-item__price
+                                        p за кг
+                                        p.price 370 ₽
+                        .catalog-item
+                            p.catalog-item__title
+                                i.icon-menu-item-2
+                                span Teping Пол 205 C
+                                span.catalog-item__tag Хит
+                            .catalog-item__inline
+                                p Надёжный эпоксидный пол для любых типов объектов. Высокая износостойкость, устойчивость к воздействию нефтехимии, отличный внешний вид. Двухкомпонентный, колеровка по RAL
+                                .catalog-item__info
+                                    .catalog-item__price-list
+                                        p!='за комплект: <strong>5 475 руб.</strong>'
                                         p масса комплекта: 14,8 кг
                                     .catalog-item__price
                                         p за кг
