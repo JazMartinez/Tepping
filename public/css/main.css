@@ -7524,7 +7524,7 @@ Catalog
   flex-basis: 1060px;
   padding: 45px 60px; }
 
-.sidebar-menu__title {
+.sidebar__title {
   font-size: 18px;
   margin: 0 0 30px 50px; }
 
@@ -8019,3 +8019,5 @@ p.dotted {
       font-size: 14px;
       color: #7b7b7b;
       margin-right: 6px; }
+
+/*---- About ----*/

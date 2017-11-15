@@ -193,65 +193,7 @@ block content
         include includes/_calculator
         #objects.objects
             h2.text-center Объекты с Teping Пол 205 C
-            .objects-slider
-                .slide
-                    .objects-image
-                        img(src="./img/gallery/1.jpg" alt="#")
-                        .objects-desc
-                            .desc-item.light
-                                p Пешие дорожки в Сочи. Олимпиада 2014 Чем меньше показатель - тем более стойкий материал.
-                                p Teping Пол 205 С
-                                    span 234 м
-                                        sup 2
-                            .desc-item
-                                a(data-src="#modal-send-price" href="javascript:;" data-fancybox).btn.btn-white-transparent Сколько стоит сделать также?
-                .slide
-                    .objects-image
-                        img(src="./img/gallery/2.jpg" alt="#")
-                        .objects-desc
-                            .desc-item.light
-                                p Пешие дорожки в Сочи. Олимпиада 2014 Чем меньше показатель - тем более стойкий материал.
-                                p Teping Пол 205 С
-                                    span 234 м
-                                        sup 2
-                            .desc-item
-                                a(data-src="#modal-send-price" href="javascript:;" data-fancybox).btn.btn-white-transparent Сколько стоит сделать также?
-                .slide
-                    .objects-image
-                        img(src="./img/gallery/3.jpg" alt="#")
-                        .objects-desc
-                            .desc-item.light
-                                p Пешие дорожки в Сочи. Олимпиада 2014 Чем меньше показатель - тем более стойкий материал.
-                                p Teping Пол 205 С
-                                    span 234 м
-                                        sup 2
-                            .desc-item
-                                a(data-src="#modal-send-price" href="javascript:;" data-fancybox).btn.btn-white-transparent Сколько стоит сделать также?
-                .slide
-                    .objects-image
-                        img(src="./img/gallery/4.jpg" alt="#")
-                        .objects-desc
-                            .desc-item.light
-                                p Пешие дорожки в Сочи. Олимпиада 2014 Чем меньше показатель - тем более стойкий материал.
-                                p Teping Пол 205 С
-                                    span 234 м
-                                        sup 2
-                            .desc-item
-                                a(data-src="#modal-send-price" href="javascript:;" data-fancybox).btn.btn-white-transparent Сколько стоит сделать также?
-                .slide
-                    .objects-image
-                        img(src="./img/gallery/5.jpg" alt="#")
-                        .objects-desc
-                            .desc-item.light
-                                p Пешие дорожки в Сочи. Олимпиада 2014 Чем меньше показатель - тем более стойкий материал.
-                                p Teping Пол 205 С
-                                    span 234 м
-                                        sup 2
-                            .desc-item
-                                a(data-src="#modal-send-price" href="javascript:;" data-fancybox).btn.btn-white-transparent Сколько стоит сделать также?
-
-
-
+            include includes/_objects-slider
         #materials.materials.block
             .container
                 .materials-inline.row
@@ -548,9 +490,4 @@ block content
                         img(src="./img/letters/7.jpg" alt="#")
                         span Открыть оригинал
                             i.icon-zoom
-        .callback
-            .container
-                .callback-block
-                    img(src="./img/callback.png" alt="#")
-                    h2.text-center Не нашли, что искали?
-                    a(data-fancybox data-src="#modal-question" href="").btn.btn-green Задать вопрос
+        include includes/_callback
