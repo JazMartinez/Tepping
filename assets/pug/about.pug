@@ -1,0 +1,45 @@
+extends includes/_layout
+
+block content
+    main
+        .delivery.block
+            .container
+                .delivery-inline.row
+                    .delivery-desc
+                        h2 Доставляем по России, Казахстану и Белоруссии
+                        p.delivery-title: b Сроки и стоимость доставки
+                        p.dotted
+                            span Отдаленные регионы
+                            span от 15 дней
+                        p.dotted
+                            span Европейская часть России
+                            span 5 – 7 дней
+                        p.dotted
+                            span Москва
+                            span 2 дня
+                        p.dotted
+                            span Санкт-Петербург
+                            span На следующий день, после оплаты
+                        p(style='margin: 30px 0 10px;'): b Стоимость доставки
+                        p Бесплатная доставка до терминала ТК «Деловые линии» в Санкт-Петербурге. Адресная доставка по Санкт-Петербургу 2 000 руб. Мы можем  включить доставку в счет, либо вы можете оплатить доставку при получении товара в транспортной компании.
+                        p Адресная доставка по Санкт-Петербургу 2 000 руб.
+                        a(data-src="#modal-delivery" href="javascript:;" data-fancybox).btn.btn-red-transparent Узнать стоимость и сроки доставки в мой город
+                        p.delivery-title: b Габариты и упаковка
+                        p.lg-text На паллет помещается 24 комплекта Teping Пол 205 C.
+                            br
+                            | В 1 куб.м. – 24 комплекта Тэпинг Пол 205 С, общей массой  - 414,40 кг. В зависимости от количества комплектов груз может быть поставлен на паллеты или ехать отдельно с обрешёткой.
+                        .delivery-line.row.delivery-line_witout-arrow.top-xs
+                            .delivery-item.delivery-item_picture
+                                img(src="./img/product-item.png" alt="#")
+                            .delivery-item
+                                .delivery-image
+                                    p
+                                        b х 24
+                                        | Комплекта
+                                        span 414.40 кг
+                                p Например: на один паллет 1х1 м, помещается 24 комплекта Teping Пол 205 С
+                    .delivery-map
+                        .image-item
+                            img(src='./img/car.jpg' alt="#")
+                        .image-item
+                            img(src='./img/delivery-map.png' alt="#")
