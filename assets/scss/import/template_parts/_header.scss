@@ -115,6 +115,12 @@ header {
       }
     }
 
+    &.drop-menu-item > .link-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
+
     &:hover {
       &.drop-menu-item > a {
         background: #ffffff;
@@ -129,9 +135,10 @@ header {
 
       &.drop-menu-item > .drop-menu {
         display: block;
-        //opacity: 1;
-        //visibility: visible;
-        //transform: translateY(0);
+      }
+
+      &.drop-menu-item > .link-menu {
+        display: flex;
       }
     }
   }
@@ -211,6 +218,7 @@ header {
     }
 
     &:hover {
+      & > .link-menu,
       & > .drop-menu-lvl-2 {
         /*opacity: 1;*/
         display: flex;
@@ -219,6 +227,74 @@ header {
 
       & > a {
         color: $color-red;
+      }
+    }
+  }
+}
+
+.link-menu {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  width: 580px;
+
+  li {
+    border: {
+      left: 1px solid #ebebeb;
+      top: 1px solid #ebebeb;
+    }
+  ;
+  }
+
+  a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding: 0 20px;
+    color: $color-black;
+
+    width: 100%;
+    height: 90px;
+    background: #fff;
+    margin-bottom: -1px;
+
+    font-size: 14px;
+
+    border: {
+      bottom: 1px solid #ebebeb;
+    }
+  ;
+
+    &:hover {
+      background: $color-green;
+      color: #ffffff;
+
+      i {
+        color: #ffffff;
+      }
+    }
+
+    i {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 46px;
+      margin-right: 20px;
+
+      font-size: 46px;
+      color: $color-black;
+      transition: all .3s ease-out;
+
+      &.icon-parking,
+      &.icon-medical,
+      &.icon-trade,
+      &.icon-stock,
+      &.icon-lightning {
+        font-size: 33px;
       }
     }
   }
@@ -237,72 +313,8 @@ header {
   transition: all .3s ease-out;
 
   &.link-menu {
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-
-    width: 580px;
     background: #f4f4f4;
     padding: 20px;
-
-    li {
-      border: {
-        left: 1px solid #ebebeb;
-        top: 1px solid #ebebeb;
-      }
-    ;
-    }
-
-    a {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-
-      padding: 0 20px;
-      color: $color-black;
-
-      width: 100%;
-      height: 90px;
-      background: #fff;
-      margin-bottom: -1px;
-
-      font-size: 14px;
-
-      border: {
-        bottom: 1px solid #ebebeb;
-      }
-    ;
-
-      &:hover {
-        background: $color-green;
-        color: #ffffff;
-
-        i {
-          color: #ffffff;
-        }
-      }
-
-      i {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        width: 46px;
-        margin-right: 20px;
-
-        font-size: 46px;
-        color: $color-black;
-        transition: all .3s ease-out;
-
-        &.icon-parking,
-        &.icon-medical,
-        &.icon-trade,
-        &.icon-stock,
-        &.icon-lightning {
-          font-size: 33px;
-        }
-      }
-    }
   }
 
   &.inner-menu {
