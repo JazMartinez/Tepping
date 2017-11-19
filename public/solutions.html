@@ -404,93 +404,159 @@
           <div class="container">
             <div class="catalog-inline">
               <aside class="sidebar">
-                <ul class="breadcrumbs-line row">
-                  <li><a href="#">Главная</a></li>
-                  <li class="separator"><a href="#">></a></li>
-                  <li><a href="#">Готовые решения</a></li>
-                </ul>
-                <form class="filter">
-                  <p class="sidebar__title"><strong>Фильтр</strong></p>
-                  <div class="filter-group filter-group_scroll">
-                    <p class="filter-group__title">Тип объекта</p>
-                    <label class="filter-group__label">
-                      <input class="filter-group__checkbox" type="checkbox"><span class="filter-group__new-checkbox"></span><span class="filter-group__caption">Складское помещение</span>
-                    </label>
-                    <label class="filter-group__label">
-                      <input class="filter-group__checkbox" type="checkbox"><span class="filter-group__new-checkbox"></span><span class="filter-group__caption">Паркинг, гараж</span>
-                    </label>
-                    <label class="filter-group__label">
-                      <input class="filter-group__checkbox" type="checkbox"><span class="filter-group__new-checkbox"></span><span class="filter-group__caption">Производство</span>
-                    </label>
-                    <label class="filter-group__label">
-                      <input class="filter-group__checkbox" type="checkbox"><span class="filter-group__new-checkbox"></span><span class="filter-group__caption">Торговый центр</span>
-                    </label>
-                    <label class="filter-group__label">
-                      <input class="filter-group__checkbox" type="checkbox"><span class="filter-group__new-checkbox"></span><span class="filter-group__caption">Общественное здание</span>
-                    </label>
-                    <label class="filter-group__label">
-                      <input class="filter-group__checkbox" type="checkbox"><span class="filter-group__new-checkbox"></span><span class="filter-group__caption">Здравоохранение</span>
-                    </label>
-                  </div>
-                  <div class="filter-group">
-                    <p class="filter-group__title">Цена за м<sup>2</sup></p>
-                    <label class="filter-group__label">
-                      <input class="filter-group__checkbox" type="checkbox"><span class="filter-group__new-checkbox"></span><span class="filter-group__caption">от 99 до 275 руб.</span>
-                    </label>
-                    <label class="filter-group__label">
-                      <input class="filter-group__checkbox" type="checkbox"><span class="filter-group__new-checkbox"></span><span class="filter-group__caption">от 275 до 570 руб.</span>
-                    </label>
-                    <label class="filter-group__label">
-                      <input class="filter-group__checkbox" type="checkbox"><span class="filter-group__new-checkbox"></span><span class="filter-group__caption">от 570 до 1000 руб.</span>
-                    </label>
-                    <label class="filter-group__label">
-                      <input class="filter-group__checkbox" type="checkbox"><span class="filter-group__new-checkbox"></span><span class="filter-group__caption">от 1000 руб.</span>
-                    </label>
-                  </div>
-                  <div class="filter-group">
-                    <p class="filter-group__title">Интенсивность нагрузок</p>
-                    <label class="filter-group__label">
-                      <input class="filter-group__checkbox" type="checkbox"><span class="filter-group__new-checkbox"></span><span class="filter-group__caption">Легкие</span>
-                    </label>
-                    <label class="filter-group__label">
-                      <input class="filter-group__checkbox" type="checkbox"><span class="filter-group__new-checkbox"></span><span class="filter-group__caption">Тяжелые</span>
-                    </label>
-                  </div>
-                  <div class="filter-group">
-                    <p class="filter-group__title">Эксплуатация</p>
-                    <label class="filter-group__label">
-                      <input class="filter-group__checkbox" type="checkbox"><span class="filter-group__new-checkbox"></span><span class="filter-group__caption">Химическое воздействие</span>
-                    </label>
-                    <label class="filter-group__label">
-                      <input class="filter-group__checkbox" type="checkbox"><span class="filter-group__new-checkbox"></span><span class="filter-group__caption">Отрицательная температура</span>
-                    </label>
-                    <label class="filter-group__label">
-                      <input class="filter-group__checkbox" type="checkbox"><span class="filter-group__new-checkbox"></span><span class="filter-group__caption">Ультрафиолетовое излучение</span>
-                    </label>
-                    <label class="filter-group__label">
-                      <input class="filter-group__checkbox" type="checkbox"><span class="filter-group__new-checkbox"></span><span class="filter-group__caption">Ударные нагрузки</span>
-                    </label>
-                    <label class="filter-group__label">
-                      <input class="filter-group__checkbox" type="checkbox"><span class="filter-group__new-checkbox"></span><span class="filter-group__caption">Влажный бетон</span>
-                    </label>
-                  </div>
-                  <div class="filter-group">
-                    <p class="filter-group__title">Основа</p>
-                    <label class="filter-group__label">
-                      <input class="filter-group__checkbox" type="checkbox"><span class="filter-group__new-checkbox"></span><span class="filter-group__caption">Полиуретановая</span>
-                    </label>
-                    <label class="filter-group__label">
-                      <input class="filter-group__checkbox" type="checkbox"><span class="filter-group__new-checkbox"></span><span class="filter-group__caption">Эпоксидная</span>
-                    </label>
-                  </div>
-                </form>
+                <div class="sidebar__container">
+                  <ul class="sidebar__breadcrumbs breadcrumbs-line row">
+                    <li><a href="#">Главная</a></li>
+                    <li class="separator"><a href="#">></a></li>
+                    <li><a href="#">Готовые решения</a></li>
+                  </ul>
+                  <form class="filter">
+                    <p class="sidebar__title"><strong>Фильтр</strong></p>
+                    <p class="filter-title">Тип объекта</p>
+                    <div class="filter-group filter-group_scroll">
+                      <label class="filter-group__label checkbox">
+                        <input class="checkbox__input" type="checkbox"><span class="checkbox__new-style"></span><span class="checkbox__caption">Складское помещение</span>
+                      </label>
+                      <label class="filter-group__label checkbox">
+                        <input class="checkbox__input" type="checkbox"><span class="checkbox__new-style"></span><span class="checkbox__caption">Паркинг, гараж</span>
+                      </label>
+                      <label class="filter-group__label checkbox">
+                        <input class="checkbox__input" type="checkbox"><span class="checkbox__new-style"></span><span class="checkbox__caption">Производство</span>
+                      </label>
+                      <label class="filter-group__label checkbox">
+                        <input class="checkbox__input" type="checkbox"><span class="checkbox__new-style"></span><span class="checkbox__caption">Торговый центр</span>
+                      </label>
+                      <label class="filter-group__label checkbox">
+                        <input class="checkbox__input" type="checkbox"><span class="checkbox__new-style"></span><span class="checkbox__caption">Общественное здание</span>
+                      </label>
+                      <label class="filter-group__label checkbox">
+                        <input class="checkbox__input" type="checkbox"><span class="checkbox__new-style"></span><span class="checkbox__caption">Здравоохранение</span>
+                      </label>
+                    </div>
+                    <p class="filter-title">Цена за м<sup>2</sup>
+                      <div class="filter-group">
+                        <label class="filter-group__label checkbox">
+                          <input class="checkbox__input" type="checkbox"><span class="checkbox__new-style"></span><span class="checkbox__caption">от 99 до 275 руб.</span>
+                        </label>
+                        <label class="filter-group__label checkbox">
+                          <input class="checkbox__input" type="checkbox"><span class="checkbox__new-style"></span><span class="checkbox__caption">от 275 до 570 руб.</span>
+                        </label>
+                        <label class="filter-group__label checkbox">
+                          <input class="checkbox__input" type="checkbox"><span class="checkbox__new-style"></span><span class="checkbox__caption">от 570 до 1000 руб.</span>
+                        </label>
+                        <label class="filter-group__label checkbox">
+                          <input class="checkbox__input" type="checkbox"><span class="checkbox__new-style"></span><span class="checkbox__caption">от 1000 руб.</span>
+                        </label>
+                      </div>
+                    </p>
+                    <p class="filter-title">Интенсивность нагрузок
+                      <div class="filter-group">
+                        <label class="filter-group__label checkbox">
+                          <input class="checkbox__input" type="checkbox"><span class="checkbox__new-style"></span><span class="checkbox__caption">Легкие</span>
+                        </label>
+                        <label class="filter-group__label checkbox">
+                          <input class="checkbox__input" type="checkbox"><span class="checkbox__new-style"></span><span class="checkbox__caption">Тяжелые</span>
+                        </label>
+                      </div>
+                    </p>
+                    <p class="filter-title">Эксплуатация
+                      <div class="filter-group">
+                        <label class="filter-group__label checkbox">
+                          <input class="checkbox__input" type="checkbox"><span class="checkbox__new-style"></span><span class="checkbox__caption">Химическое воздействие</span>
+                        </label>
+                        <label class="filter-group__label checkbox">
+                          <input class="checkbox__input" type="checkbox"><span class="checkbox__new-style"></span><span class="checkbox__caption">Отрицательная температура</span>
+                        </label>
+                        <label class="filter-group__label checkbox">
+                          <input class="checkbox__input" type="checkbox"><span class="checkbox__new-style"></span><span class="checkbox__caption">Ультрафиолетовое излучение</span>
+                        </label>
+                        <label class="filter-group__label checkbox">
+                          <input class="checkbox__input" type="checkbox"><span class="checkbox__new-style"></span><span class="checkbox__caption">Ударные нагрузки</span>
+                        </label>
+                        <label class="filter-group__label checkbox">
+                          <input class="checkbox__input" type="checkbox"><span class="checkbox__new-style"></span><span class="checkbox__caption">Влажный бетон</span>
+                        </label>
+                      </div>
+                    </p>
+                    <p class="filter-title">Основа
+                      <div class="filter-group">
+                        <label class="filter-group__label checkbox">
+                          <input class="checkbox__input" type="checkbox"><span class="checkbox__new-style"></span><span class="checkbox__caption">Полиуретановая</span>
+                        </label>
+                        <label class="filter-group__label checkbox">
+                          <input class="checkbox__input" type="checkbox"><span class="checkbox__new-style"></span><span class="checkbox__caption">Эпоксидная</span>
+                        </label>
+                      </div>
+                    </p>
+                  </form>
+                </div>
               </aside>
               <section class="content block">
                 <h2 class="catalog-title">Готовые решения для склада</h2>
                 <p>Идеально обеспылит, защитит основание от разрушения. Покрытие стойкое к нефтехимии, истиранию, сильным ударам. Практичное в очищении. Идеально обеспылит, защитит основание от разрушения. Покрытие стойкое к нефтехимии истиранию, сильным ударам. Практичное в очищении.</p>
-                <div class="sorting"></div>
+                <div class="sorting row">
+                  <div class="sorting__category row">
+                    <p>Показывать</p>
+                    <div class="checkbox">
+                      <input class="checkbox__input" type="checkbox"><span class="checkbox__new-style"></span><span class="checkbox__caption">Наливные полы</span>
+                    </div>
+                    <div class="checkbox">
+                      <input class="checkbox__input" type="checkbox"><span class="checkbox__new-style"></span><span class="checkbox__caption">Краски</span>
+                    </div>
+                    <div class="checkbox">
+                      <input class="checkbox__input" type="checkbox"><span class="checkbox__new-style"></span><span class="checkbox__caption">Травмобезопасные покрытия</span>
+                    </div>
+                  </div>
+                  <div class="sorting__type row">
+                    <p>Сортировать</p>
+                    <select class="sorting-select">
+                      <option>по Цене</option>
+                      <option>по Наименованию</option>
+                      <option>по Популярности</option>
+                    </select>
+                  </div>
+                </div>
                 <div class="solution-items">
-                  <div class="solution-item"></div>
+                  <div class="solution-item">
+                    <div class="solution-item__top">
+                      <div class="solution-image"><img src="./img/" alt="#"></div>
+                      <div class="solution-info">
+                        <div class="solution-desc">
+                          <p class="solution-desc__category">Наливной пол</p>
+                          <p class="solution-desc__title">Промышленный эпоксидный пол 3 мм</p>
+                          <p>Надежная эпоксидная система на основе Тэпинг 205 С с&nbsp;грунтом и песком</p>
+                          <div class="solution-char">
+                            <p>Характеристики</p>
+                            <div class="solution-char__icons row">
+                              <div class="solution-char__icon"><a class="solution-char__link" href="javascript:;"><img src="./img/solutions/icon-1.svg"></a>
+                                <div class="solution-char__more">
+                                  <p>Какой аэрационный игольчатый валик лучше использовать при заливке полимерных</p>
+                                </div>
+                              </div>
+                              <div class="solution-char__icon"><a class="solution-char__link" href="javascript:;"><img src="./img/solutions/icon-2.svg"></a>
+                                <div class="solution-char__more">
+                                  <p>Какой аэрационный игольчатый валик лучше использовать при заливке полимерных</p>
+                                </div>
+                              </div>
+                              <div class="solution-char__icon"><a class="solution-char__link" href="javascript:;"><img src="./img/solutions/icon-3.svg"></a>
+                                <div class="solution-char__more">
+                                  <p>Какой аэрационный игольчатый валик лучше использовать при заливке полимерных</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="solution-price">
+                          <div class="solution-price__info">
+                            <p class="solution-price__item">1 660 ₽</p>
+                            <p>за м<sup>2</sup></p>
+                          </div>
+                          <div class="solution-price__btn"><a class="btn btn-black-transparent solution-price__more-btn" href="#">Подробнее<i class="icon-arrow"></i></a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="solution-item__bottom"></div>
+                  </div>
                 </div>
               </section>
             </div>
