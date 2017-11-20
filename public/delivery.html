@@ -476,7 +476,7 @@
                 </ul>
               </div>
               <div class="footer-item">
-                <p class="partners-text">Нашими клиентами стали уже более 6000 компаний, среди них:</p>
+                <p class="partners-text">Ключевые клиенты:</p>
                 <div class="footer-partners row">
                   <div class="partners__item col-md-4"><img src="./img/partners/1.png"></div>
                   <div class="partners__item col-md-4"><img src="./img/partners/2.png"></div>
@@ -838,6 +838,50 @@
               <label class="form-group-input"><span>Имя</span>
                 <input type="text" name="name" placeholder="Андрей">
               </label>
+            </div>
+            <div class="form-group">
+              <label class="form-group-check">
+                <input type="checkbox" name="confirm" checked><span class="check-new-box"></span><span class="check-text">Я согласен с&nbsp;<a href="#">политикой конфиденциальности</a></span>
+              </label>
+            </div>
+            <div class="form-group form-group-btn">
+              <input type="hidden" name="callback">
+              <input type="hidden" name="select-time">
+              <button class="btn btn-green" type="submit" value="">Заказать звонок</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal" id="modal-application">
+          <form class="form-send" method="post">
+            <p><b>Отправить заявку</b></p>
+            <div class="form-group">
+              <label class="form-group-input"><span>Почта</span>
+                <input type="text" name="email" placeholder="Andrey@mail.ru">
+              </label>
+              <p></p>
+            </div>
+            <div class="form-group">
+              <label class="form-group-input"><span>Телефон</span>
+                <input type="tel" name="phone" placeholder="8 934 234 34 33">
+              </label>
+              <p></p>
+            </div>
+            <div class="form-group">
+              <label class="form-group-input"><span>Имя</span>
+                <input type="text" name="name" placeholder="Андрей">
+              </label>
+              <p></p>
+            </div>
+            <div class="form-group">
+              <label class="form-group-input"><span>Площадь</span>
+                <input type="text" name="area" placeholder="100 кв. м.">
+              </label>
+              <p></p>
+            </div>
+            <div class="form-group">
+              <label><span>Комментарий</span>
+                <textarea name="comment" placeholder="Опишите нужный вам цвет, или укажите определенный номер цвета по каталогу RAL"></textarea>
+              </label>
               <div class="form-group">
                 <label class="form-group-check">
                   <input type="checkbox" name="confirm" checked><span class="check-new-box"></span><span class="check-text">Я согласен с&nbsp;<a href="#">политикой конфиденциальности</a></span>
@@ -845,9 +889,57 @@
               </div>
             </div>
             <div class="form-group form-group-btn">
-              <input type="hidden" name="callback">
-              <input type="hidden" name="select-time">
-              <button class="btn btn-green" type="submit" value="">Заказать звонок</button>
+              <input type="hidden" name="info">
+              <button class="btn btn-green" type="submit">Отправить</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal" id="modal-preorder">
+          <form class="form-send" method="post">
+            <p><b>Оформление предварительного заказа</b></p>
+            <div class="order-info">
+              <div class="order-info__image"><img src="./img/product-item.png" alt="#"></div>
+              <div class="order-info__desc">
+                <p class="order-info__title"><i class="icon-title"></i>Пол 205 С</p>
+                <p>Площадь: 540 м<sup>2</sup></p>
+                <p>Толщина покрытия:  3 мм</p>
+                <div class="order-info__price">
+                  <p>Стоимость материалов:</p>
+                  <p class="order-info__cost">399 234 ₽<span>785 руб/м<sup>2</sup></span></p>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-group-input"><span>Почта</span>
+                <input type="text" name="email" placeholder="Andrey@mail.ru">
+              </label>
+              <p></p>
+            </div>
+            <div class="form-group">
+              <label class="form-group-input"><span>Телефон</span>
+                <input type="tel" name="phone" placeholder="8 934 234 34 33">
+              </label>
+              <p></p>
+            </div>
+            <div class="form-group">
+              <label class="form-group-input"><span>Имя</span>
+                <input type="text" name="name" placeholder="Андрей">
+              </label>
+              <p></p>
+            </div>
+            <div class="form-group">
+              <label><span>Комментарий</span>
+                <textarea name="comment" placeholder="Опишите нужный вам цвет, или укажите определенный номер цвета по каталогу RAL"></textarea>
+              </label>
+              <div class="form-group">
+                <label class="form-group-check">
+                  <input type="checkbox" name="confirm" checked><span class="check-new-box"></span><span class="check-text">Я согласен с&nbsp;<a href="#">политикой конфиденциальности</a></span>
+                </label>
+              </div>
+            </div>
+            <div class="form-group form-group-btn">
+              <input type="hidden" name="info">
+              <button class="btn btn-green" type="submit">Заказать</button>
             </div>
           </form>
         </div>

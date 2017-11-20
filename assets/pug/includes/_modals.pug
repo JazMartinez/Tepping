@@ -321,6 +321,43 @@ div(style="display: none;")
                 label.form-group-input
                     span Имя
                     input(type="text" name="name" placeholder="Андрей")
+            .form-group
+                label.form-group-check
+                    input(type='checkbox' name="confirm" checked)
+                    span.check-new-box
+                    span.check-text Я согласен с&nbsp;
+                        a(href="#") политикой конфиденциальности
+            .form-group.form-group-btn
+                input(type="hidden" name="callback")
+                input(type="hidden" name='select-time')
+                button(type="submit" value="").btn.btn-green Заказать звонок
+    #modal-application.modal
+        form(method='post').form-send
+            p: b Отправить заявку
+            .form-group
+                label.form-group-input
+                    span Почта
+                    input(type="text" name="email" placeholder="Andrey@mail.ru")
+                p
+            .form-group
+                label.form-group-input
+                    span Телефон
+                    input(type="tel" name="phone" placeholder="8 934 234 34 33")
+                p
+            .form-group
+                label.form-group-input
+                    span Имя
+                    input(type="text" name="name" placeholder="Андрей")
+                p
+            .form-group
+                label.form-group-input
+                    span Площадь
+                    input(type="text" name="area" placeholder="100 кв. м.")
+                p
+            .form-group
+                label
+                    span Комментарий
+                    textarea(name="comment" placeholder="Опишите нужный вам цвет, или укажите определенный номер цвета по каталогу RAL")
                 .form-group
                     label.form-group-check
                         input(type='checkbox' name="confirm" checked)
@@ -328,6 +365,50 @@ div(style="display: none;")
                         span.check-text Я согласен с&nbsp;
                             a(href="#") политикой конфиденциальности
             .form-group.form-group-btn
-                input(type="hidden" name="callback")
-                input(type="hidden" name='select-time')
-                button(type="submit" value="").btn.btn-green Заказать звонок
+                input(type="hidden" name="info")
+                button(type="submit").btn.btn-green Отправить
+    #modal-preorder.modal
+        form(method='post').form-send
+            p: b Оформление предварительного заказа
+            .order-info
+                .order-info__image
+                    img(src="./img/product-item.png" alt="#")
+                .order-info__desc
+                    p.order-info__title
+                        i.icon-title
+                        | Пол 205 С
+                    p Площадь: 540 м#[sup 2]
+                    p Толщина покрытия:  3 мм
+                    .order-info__price
+                        p Стоимость материалов:
+                        p.order-info__cost
+                            | 399 234 ₽
+                            span 785 руб/м#[sup 2]
+            .form-group
+                label.form-group-input
+                    span Почта
+                    input(type="text" name="email" placeholder="Andrey@mail.ru")
+                p
+            .form-group
+                label.form-group-input
+                    span Телефон
+                    input(type="tel" name="phone" placeholder="8 934 234 34 33")
+                p
+            .form-group
+                label.form-group-input
+                    span Имя
+                    input(type="text" name="name" placeholder="Андрей")
+                p
+            .form-group
+                label
+                    span Комментарий
+                    textarea(name="comment" placeholder="Опишите нужный вам цвет, или укажите определенный номер цвета по каталогу RAL")
+                .form-group
+                    label.form-group-check
+                        input(type='checkbox' name="confirm" checked)
+                        span.check-new-box
+                        span.check-text Я согласен с&nbsp;
+                            a(href="#") политикой конфиденциальности
+            .form-group.form-group-btn
+                input(type="hidden" name="info")
+                button(type="submit").btn.btn-green Заказать
