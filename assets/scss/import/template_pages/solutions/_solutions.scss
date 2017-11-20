@@ -61,6 +61,7 @@ Solutions
   -moz-border-radius: 3px;
   border-radius: 3px;
   border: 1px solid #d0d2dc;
+  background: #ffffff;
   margin-right: 10px;
 
   &:before {
@@ -90,4 +91,25 @@ Solutions
 
 .checkbox__caption {
   font-size: 14px;
+}
+
+.sorting {
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  padding: 0 12px;
+  margin: 40px 0 25px;
+  background: #f8f8f8;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+
+  p {
+    font-size: 16px;
+    margin-right: 20px;
+  }
+
+  .checkbox {
+    margin-right: 20px;
+  }
 }
