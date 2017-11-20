@@ -218,6 +218,10 @@ Works
   color: $color-black;
   font-weight: 400;
   margin-bottom: 10px;
+
+  .solution_pagination & {
+    max-width: 100%;
+  }
 }
 
 .paginations__show-counter {

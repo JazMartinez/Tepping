@@ -23,73 +23,90 @@ function inputError(t, e) {
     t.parent(".form-group-input").next("p").text(e);
 }
 
+function showTooltips(t, e) {
+    var o = $(t), s = $(e);
+    o.click(function(t) {
+        t.preventDefault(), $(this).hasClass("active") ? ($(this).removeClass("active"), 
+        $(this).find(e).fadeOut(400)) : (o.removeClass("active"), s.fadeOut(400), $(this).addClass("active"), 
+        $(this).find(e).fadeIn(400));
+    });
+}
+
 $(document).ready(function() {
-    var t = $(".permissions"), e = $(".permissions .btn");
-    null === localStorage.getItem("permissions") && t.fadeIn(800), e.click(function(e) {
-        e.preventDefault(), localStorage.setItem("permissions", "success"), loadBtn($(this), 2e3), 
+    showTooltips(".tools-item a", ".tools-item-about"), showTooltips(".solution-char__link", ".solution-char__more"), 
+    showTooltips(".icon-question", ".filter-title__more-info");
+    var t, e;
+    $(".solution-price__more-btn").click(function(o) {
+        o.preventDefault(), t = $(this).parents(".solution-item__top"), e = t.next(".solution-item__bottom"), 
+        t.toggleClass("solution-item__top_active"), e.slideToggle(400), t.hasClass("solution-item__top_active") ? ($(this).find("span").text("Cвернуть"), 
+        e.css("display", "flex")) : $(this).find("span").text("Подробнее");
+    });
+    var o = $(".permissions"), s = $(".permissions .btn");
+    null === localStorage.getItem("permissions") && o.fadeIn(800), s.click(function(t) {
+        t.preventDefault(), localStorage.setItem("permissions", "success"), loadBtn($(this), 2e3), 
         setTimeout(function() {
-            t.fadeOut(800);
+            o.fadeOut(800);
         }, 1200);
     });
-    var o, s, a = $(".form-group-input input");
-    a.focusin(function() {
-        $(this).parent(".form-group-input").css("border-bottom-color", "#33A962"), o = $(this).attr("name"), 
-        s = $(this).val(), "phone" === o && "" === s && $(this).val("8");
-    }), a.focusout(function() {
+    var i, a, n = $(".form-group-input input");
+    n.focusin(function() {
+        $(this).parent(".form-group-input").css("border-bottom-color", "#33A962"), i = $(this).attr("name"), 
+        a = $(this).val(), "phone" === i && "" === a && $(this).val("8");
+    }), n.focusout(function() {
         $(this).parent(".form-group-input").css("border-bottom-color", "#dcdcdc");
-    }), a.keyup(function() {
-        o = $(this).attr("name"), s = $(this).val();
+    }), n.keyup(function() {
+        i = $(this).attr("name"), a = $(this).val();
         var t;
-        if ("" !== $(this).val()) switch (o) {
+        if ("" !== $(this).val()) switch (i) {
           case "email":
-            t = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/, s.length > 2 && t.test(s) ? inputSuccess($(this)) : inputError($(this), "Введите данные в формате mail@mail.ru");
+            t = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/, a.length > 2 && t.test(a) ? inputSuccess($(this)) : inputError($(this), "Введите данные в формате mail@mail.ru");
             break;
 
           case "phone":
           case "area":
-            t = /^[0-9]+$/, s.length > 2 && t.test(s) ? inputSuccess($(this)) : inputError($(this), "Допустимо использовать только числа");
+            t = /^[0-9]+$/, a.length > 2 && t.test(a) ? inputSuccess($(this)) : inputError($(this), "Допустимо использовать только числа");
             break;
 
           case "city":
           case "name":
-            t = /^[a-zA-Zа-яА-Я]+$/, s.length > 2 && t.test(s) ? inputSuccess($(this)) : inputError($(this), "Допустимо использовать символы только русского или английского алфавита, тире и апостроф");
+            t = /^[a-zA-Zа-яА-Я]+$/, a.length > 2 && t.test(a) ? inputSuccess($(this)) : inputError($(this), "Допустимо использовать символы только русского или английского алфавита, тире и апостроф");
         }
     });
-    var i, n = $(".calc-step-1"), r = $(".calc-step-2");
+    var r, c = $(".calc-step-1"), l = $(".calc-step-2");
     $(".calc-form-inline .btn").click(function() {
-        "" !== (i = $("input[name=area-step-1]")).val() ? (loadBtn($(this), 2e3), setTimeout(function() {
-            $("input[name=area-step-2]").val(i.val()), n.fadeOut(400), setTimeout(function() {
-                r.fadeIn(400, function() {
+        "" !== (r = $("input[name=area-step-1]")).val() ? (loadBtn($(this), 2e3), setTimeout(function() {
+            $("input[name=area-step-2]").val(r.val()), c.fadeOut(400), setTimeout(function() {
+                l.fadeIn(400, function() {
                     $("html, body").stop().animate({
-                        scrollTop: r.offset().top - 135
+                        scrollTop: l.offset().top - 135
                     }, 800);
-                }), r.addClass("open-step"), $(".objects").addClass("objects-overflow");
+                }), l.addClass("open-step"), $(".objects").addClass("objects-overflow");
             }, 500);
         }, 2e3)) : $(".calc-form > p").text("Введите корректную площадь!");
     });
-    var c = $(".calc-current-color"), l = $(".calc-change-color"), p = $(".color-item"), u = $(".another-group .btn"), d = $("input[name=another-color]"), f = $(".current-color-item, .modal-product-color");
-    c.click(function(t) {
-        t.preventDefault(), $(this).toggleClass("active"), l.slideToggle(400);
-    }), p.click(function(t) {
+    var p = $(".calc-current-color"), u = $(".calc-change-color"), d = $(".color-item"), f = $(".another-group .btn"), m = $("input[name=another-color]"), h = $(".current-color-item, .modal-product-color");
+    p.click(function(t) {
+        t.preventDefault(), $(this).toggleClass("active"), u.slideToggle(400);
+    }), d.click(function(t) {
         t.preventDefault();
         var e = $(this).attr("style");
-        f.removeClass("color-item-dark"), f.removeClass("another-color"), f.attr("style", e), 
-        f.html($(this).html()), $(this).hasClass("color-item-dark") && f.addClass("color-item-dark"), 
-        p.removeClass("active"), $(this).addClass("active"), c.removeClass("active"), l.slideUp(400);
-    }), u.click(function(t) {
-        t.preventDefault(), "" !== d.val() ? ($(".another-group i").animate({
+        h.removeClass("color-item-dark"), h.removeClass("another-color"), h.attr("style", e), 
+        h.html($(this).html()), $(this).hasClass("color-item-dark") && h.addClass("color-item-dark"), 
+        d.removeClass("active"), $(this).addClass("active"), p.removeClass("active"), u.slideUp(400);
+    }), f.click(function(t) {
+        t.preventDefault(), "" !== m.val() ? ($(".another-group i").animate({
             opacity: "1"
         }, 400), loadBtn($(this), 2e3), setTimeout(function() {
-            f.removeClass("color-item-dark"), f.addClass("another-color"), f.text("На заказ"), 
-            p.removeClass("active"), c.removeClass("active"), l.slideUp(400);
+            h.removeClass("color-item-dark"), h.addClass("another-color"), h.text("На заказ"), 
+            d.removeClass("active"), p.removeClass("active"), u.slideUp(400);
         }, 2e3)) : $(".color-another > p:first-of-type").text("Заполните поле ниже!");
     });
-    var m = $(".calc-content-row"), v = $(".calc-type-info-more");
-    m.find(".calc-type-info").click(function() {
+    var v = $(".calc-content-row"), b = $(".calc-type-info-more");
+    v.find(".calc-type-info").click(function() {
         var t = $(this).parents(".calc-content-row"), e = t.find(".calc-type-price").html();
-        t.hasClass("active") ? (m.removeClass("disable"), t.removeClass("active"), t.find(".calc-type-info-more").slideUp(400)) : ($(".info-result-price").html(e), 
-        $(".info-result-price .price-result").prepend("<span>Итого</span>"), m.removeClass("active").addClass("disable"), 
-        v.slideUp(400), t.addClass("active").removeClass("disable"), t.find(".calc-type-info-more").slideDown(400, function() {
+        t.hasClass("active") ? (v.removeClass("disable"), t.removeClass("active"), t.find(".calc-type-info-more").slideUp(400)) : ($(".info-result-price").html(e), 
+        $(".info-result-price .price-result").prepend("<span>Итого</span>"), v.removeClass("active").addClass("disable"), 
+        b.slideUp(400), t.addClass("active").removeClass("disable"), t.find(".calc-type-info-more").slideDown(400, function() {
             $("html, body").stop().animate({
                 scrollTop: t.offset().top - 255
             }, 800);
@@ -101,12 +118,6 @@ $(document).ready(function() {
         var e = $(this).html(), o = $(".select-time-val span").html();
         $(".select-time-val span").html(e), $("input[name=select-time]").val(e), $(this).html(o), 
         $(".select-time-val").removeClass("active"), $(".select-time-change").slideUp(400);
-    });
-    var h = $(".tools-item a"), b = $(".tools-item-about");
-    h.click(function(t) {
-        t.preventDefault(), $(this).hasClass("active") ? ($(this).removeClass("active"), 
-        $(this).find(".tools-item-about").fadeOut(400)) : (h.removeClass("active"), b.fadeOut(400), 
-        $(this).addClass("active"), $(this).find(".tools-item-about").fadeIn(400));
     });
     var C = $(".drop-menu-item");
     C.hover(function() {

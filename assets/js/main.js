@@ -35,7 +35,50 @@ function inputError(element, message) {
     element.parent('.form-group-input').next('p').text(message)
 }
 
+function showTooltips(link, tooltip) {
+    //Tools tooltips
+    var toolsItem = $(link),
+        toolsBlock = $(tooltip);
+
+    toolsItem.click(function (e) {
+        e.preventDefault();
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            $(this).find(tooltip).fadeOut(400);
+        } else {
+            toolsItem.removeClass('active');
+            toolsBlock.fadeOut(400);
+
+            $(this).addClass('active');
+            $(this).find(tooltip).fadeIn(400);
+        }
+    });
+}
+
 $(document).ready(function () {
+    showTooltips('.tools-item a', '.tools-item-about');
+    showTooltips('.solution-char__link', '.solution-char__more');
+    showTooltips('.icon-question', '.filter-title__more-info');
+
+    var solutionBtn = $('.solution-price__more-btn'),
+        solutionTop, solutionBottom;
+
+    solutionBtn.click(function (e) {
+        e.preventDefault();
+        solutionTop = $(this).parents('.solution-item__top');
+        solutionBottom = solutionTop.next('.solution-item__bottom');
+
+        solutionTop.toggleClass('solution-item__top_active');
+        solutionBottom.slideToggle(400);
+
+        if (!solutionTop.hasClass('solution-item__top_active')) {
+            $(this).find('span').text('Подробнее');
+        } else {
+            $(this).find('span').text('Cвернуть');
+            solutionBottom.css('display', 'flex');
+        }
+    });
+
     //Permissions show
     var permissions = $('.permissions'),
         permissionsBtn = $('.permissions .btn'),
@@ -253,24 +296,6 @@ $(document).ready(function () {
 
         $('.select-time-val').removeClass('active');
         $('.select-time-change').slideUp(400);
-    });
-
-    //Tools tooltips
-    var toolsItem = $('.tools-item a'),
-        toolsBlock = $('.tools-item-about');
-
-    toolsItem.click(function (e) {
-        e.preventDefault();
-        if ($(this).hasClass('active')) {
-            $(this).removeClass('active');
-            $(this).find('.tools-item-about').fadeOut(400);
-        } else {
-            toolsItem.removeClass('active');
-            toolsBlock.fadeOut(400);
-
-            $(this).addClass('active');
-            $(this).find('.tools-item-about').fadeIn(400);
-        }
     });
 
     //Main menu hover
