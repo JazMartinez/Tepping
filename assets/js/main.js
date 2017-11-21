@@ -266,7 +266,7 @@ $(document).ready(function () {
             contentRowCurrent.find('.calc-type-info-more').slideUp(400);
         } else {
             $('.info-result-price').html(contentRowPrice);
-            $('.info-result-price .price-result').prepend('<span>Итого</span>');
+            $('.info-result-price .price-result').prepend('<span>Итого стоимость материалов:</span>');
             contentRow.removeClass('active').addClass('disable');
             contentRowMore.slideUp(400);
 

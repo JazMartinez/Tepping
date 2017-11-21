@@ -9,17 +9,29 @@ block content
                         .product-image.for-teping
                             .product-image-block
                                 img(src="./img/product-item.png" alt="")
+                            .product-caption
+                                p.product-caption__a
+                                    span.product-caption__class A
+                                    span Основа#[br]12 кг
+                                p.product-caption__b
+                                    span.product-caption__class В
+                                    span Отвердитель#[br]2,8 кг
                             .product-tags
-                                p.tag-weight 14,8 кг
-                                p.tag-own
-                                    i.icon-like
-                                    span собственное производство
+                                p.tag-weight Масса комплекта 14,8 кг
                         .product-desc
+                            ul.breadcrumbs-line.row
+                                li: a(href="#") Главная
+                                li.separator: a(href="#") >
+                                li: a(href="#") Каталог
+                                li.separator: a(href="#") >
+                                li: a(href="#") Наливные полы
+                                li.separator: a(href="#") >
+                                li: a(href="#") Teping Пол 205 C
                             h1.product-title
                                 i.icon-title
                                 | Пол 205 C
                             p Универсальный эпоксидный наливной пол. Используется&nbsp;в&nbsp;промышленных и жилых помещениях. Выдерживает серьезные механизированные нагрузки. Можно полировать.
-                            ul
+                            ul.product-desc__list
                                 li
                                     i.icon-quote
                                     | Обеспыливает
@@ -71,6 +83,7 @@ block content
                                 .apply-item
                                     i.icon-lightning
                                     p Объекты атомной энергетики, ТЭЦ
+        include includes/_calculator
         #characteristics.characteristics.block
             .container
                 .characteristics-inline.row
@@ -190,7 +203,6 @@ block content
                                     p.sertificats-title Пожарный сертификат соответствия
                                     p Пройдено обязательная сертификация. Класс пожароопасности КМ2
                         a(data-src="#modal-send-sert" href="javascript:;" data-fancybox).btn.btn-black-transparent Скачать сертификаты
-        include includes/_calculator
         #objects.objects
             h2.text-center Объекты с Teping Пол 205 C
             include includes/_objects-slider

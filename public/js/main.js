@@ -105,8 +105,9 @@ $(document).ready(function() {
     v.find(".calc-type-info").click(function() {
         var t = $(this).parents(".calc-content-row"), e = t.find(".calc-type-price").html();
         t.hasClass("active") ? (v.removeClass("disable"), t.removeClass("active"), t.find(".calc-type-info-more").slideUp(400)) : ($(".info-result-price").html(e), 
-        $(".info-result-price .price-result").prepend("<span>Итого</span>"), v.removeClass("active").addClass("disable"), 
-        b.slideUp(400), t.addClass("active").removeClass("disable"), t.find(".calc-type-info-more").slideDown(400, function() {
+        $(".info-result-price .price-result").prepend("<span>Итого стоимость материалов:</span>"), 
+        v.removeClass("active").addClass("disable"), b.slideUp(400), t.addClass("active").removeClass("disable"), 
+        t.find(".calc-type-info-more").slideDown(400, function() {
             $("html, body").stop().animate({
                 scrollTop: t.offset().top - 255
             }, 800);
