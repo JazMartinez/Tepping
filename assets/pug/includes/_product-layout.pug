@@ -10,17 +10,21 @@ html(lang="ru")
         link(rel="stylesheet" href="./css/main.css")
     body
         #wrapper
+
             //header
             header#header
                 include _header
                 include _header-product
+
+            //Content
             block content
-            //footer
-            include _footer
+
+            //Footer
+            footer#footer
+                include _footer
+
+            //Modals
             include _modals
-            a(href="#header").top-link
-                i.icon-arrow
-                span Наверх
         script(src="//code.jquery.com/jquery-3.2.1.min.js")
         script(src="./libs/jquery.fancybox.min.js")
         script(src="./libs/slick.min.js")

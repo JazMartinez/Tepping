@@ -1,0 +1,58 @@
+extends includes/_layout
+
+block content
+    main.single-hempel
+        .category-intro(style="background-image: url('./img/single/hempel_bd.png')")
+            .container
+                .category-intro__desc
+                    ul.breadcrumbs-line.row
+                        li: a(href="#") Главная
+                        li.separator: a(href="#") >
+                        li: a(href="#") Каталог
+                        li.separator: a(href="#") >
+                        li: a(href="#") Наливные полы
+                    .category-logo: img(src="./img/single/hempel_logo.png")
+                    h1.category-title TNP Group официальный партнёр Hempel в России
+                    p Мы работаем с объектами транспортной инфраструктуры.
+                    p Покрытия Hempel обеспечивают техническое решение задач любой сложности. В зависимости от реальных условий эксплуатации Hempel предлагает лакокрасочные системы с акцентом на те или иные потребительские или технологические качества
+                    a(href="#").btn.btn-red.category-intro__btn Заказать покрытие Hempel
+        .category-apply.block
+            .container
+                h2 Отличительные характеристики
+                .category-inline.row
+                    .category-inline__icons.row
+                        .category-inline__icon.col-md-6
+                            i: img(src="./img/single/icons/7.png" alt="#")
+                            p Покрытия с высокой стойкостью #[br]к абразивному износу и ударным нагрузкам
+                        .category-inline__icon.col-md-6
+                            i: img(src="./img/single/icons/6.png" alt="#")
+                            p Химически стойкие покрытия
+                        .category-inline__icon.col-md-6
+                            i: img(src="./img/single/icons/2.png" alt="#")
+                            p Термостойкие покрытия (до 600°C)
+                        .category-inline__icon.col-md-6
+                            i: img(src="./img/single/icons/5.png" alt="#")
+                            p Быстросохнущие покрытия
+                        .category-inline__icon.col-md-6
+                            i: img(src="./img/single/icons/4.png" alt="#")
+                            p Покрытия для плохо подготовленных #[br]и влажных поверхностей
+                        .category-inline__icon.col-md-6
+                            i: img(src="./img/single/icons/1.png" alt="#")
+                            p Материалы низкотемпературного отверждения #[br](до минус 10°C)
+                        .category-inline__icon.col-md-6
+                            i: img(src="./img/single/icons/3.png" alt="#")
+                            p Экологичные эпоксидные покрытия на водной основе
+                        .category-inline__icon.col-md-6
+                            i: img(src="./img/single/icons/8.png" alt="#")
+                            p Антикарбонизационные покрытия для бетона #[br]с высокими эстетическими свойствами
+                    .category-apply-product
+                        img(src="./img/single/hempel_product.png" alt="#")
+        .category-content.block
+            .container
+                .category-catalog-items
+                    h2.catalog-title Системы покрытий Hempel для металлоконструкций
+                    .single-hempel__image: img(src="./img/single/hempel-systems.jpg")
+                    h2.catalog-title Системы покрытий Hempel для железобетонных конструкций
+                    .single-hempel__image: img(src="./img/single/hempel-mosty.jpg")
+        include includes/_letters
+        include includes/_callback
