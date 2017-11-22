@@ -8,6 +8,8 @@
     <meta name="description" content="Изготовление и монтаж лестниц от производителя">
     <link rel="stylesheet" href="./libs/jquery.fancybox.min.css">
     <link rel="stylesheet" href="./css/main.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="./js/map.js"></script>
   </head>
   <body>
     <div id="wrapper">
@@ -440,9 +442,9 @@
                 </div>
               </div>
               <div class="page-contacts__delivery">
-                <div class="page-contacts__map-image"><img src="./img/contacts/"></div>
+                <div class="page-contacts__map-image"><img src="./img/contacts/map-image.png"></div>
                 <h2>Доставляем по России, Казахстану, Белоруссии</h2>
-                <p>Доставляем продукцию напрямую с завода Teping, по всей России, <br>Казахстану и Белоруссии. Пункты самовывоза расположены в более 300 городах. <br>Доставляем заказы с помощью ТК «Деловые Линии». <br>Также можем доставить другой компанией</p><a class="btn btn-black-transparent" href="#">Узнать стоимость и сроки доставки в мой город</a>
+                <p>Доставляем продукцию напрямую с завода Teping, по всей России, <br>Казахстану и Белоруссии. Пункты самовывоза расположены в более 300 городах. <br>Доставляем заказы с помощью ТК «Деловые Линии». <br>Также можем доставить другой компанией</p><a class="btn btn-black-transparent" data-src="#modal-delivery" href="javascript:;" data-fancybox>Узнать стоимость и сроки доставки в мой город</a>
               </div>
             </div>
           </div>
@@ -451,7 +453,9 @@
           <div class="map-block__caption">
             <p>г. Санкт-Петербург</p>
           </div>
-          <div class="map-block__item"></div>
+          <div class="map-block__item" id="contact-map">
+            <script>ymaps.ready(initMap);</script>
+          </div>
         </div>
         <div class="department block">
           <div class="container">
@@ -536,7 +540,7 @@
                         </div>
                       </div>
                       <div class="department__item">
-                        <div class="department__image"><img src="./img/department/1.jpg" alt="#"></div>
+                        <div class="department__image"><img src="./img/department/7.jpg" alt="#"></div>
                         <div class="department__desc">
                           <div class="department__name">
                             <p><strong>Ксения Уланчикова</strong></p>

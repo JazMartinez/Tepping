@@ -1,5 +1,8 @@
 extends includes/_layout
 
+block head
+    include includes/_map-scripts
+
 block content
     main
         .page-contacts
@@ -53,15 +56,16 @@ block content
                                             p Референц-лист TNP Group
                                             a(href="#") скачать .pdf
                     .page-contacts__delivery
-                        .page-contacts__map-image: img(src="./img/contacts/")
+                        .page-contacts__map-image: img(src="./img/contacts/map-image.png")
                         h2 Доставляем по России, Казахстану, Белоруссии
                         p Доставляем продукцию напрямую с завода Teping, по всей России, #[br]Казахстану и Белоруссии. Пункты самовывоза расположены в более 300 городах. #[br]Доставляем заказы с помощью ТК «Деловые Линии». #[br]Также можем доставить другой компанией
-                        a(href="#").btn.btn-black-transparent Узнать стоимость и сроки доставки в мой город
+                        a(data-src="#modal-delivery" href="javascript:;" data-fancybox).btn.btn-black-transparent Узнать стоимость и сроки доставки в мой город
         .map-block
             .map-block__caption: p г. Санкт-Петербург
-            .map-block__item
+            #contact-map.map-block__item
+                script!= 'ymaps.ready(initMap);'
         include components/department/_department
-        - var departmentData = [{'src':'./img/department/1.jpg', 'name':'Константин Куница', 'position':'Коммерческий директор', 'phone':'+7 (812) 421-79-69', 'email':'kd@tnpgroup.ru'}, {'src':'./img/department/2.jpg', 'name':'Ирина Хайкичева', 'position':'Менеджер отдела продаж', 'phone':'+7 (812) 421-79-69', 'email':'info4@tnpgroup.ru'}, {'src':'./img/department/3.jpg', 'name':'Наталья Захарова', 'position':'Менеджер отдела продаж ', 'phone':'+7 (812) 421-79-69', 'email':'info11@tnpgroup.ru '}, {'src':'./img/department/4.jpg', 'name':'Анна Яшихина', 'position':'Менеджер отдела продаж', 'phone':'+7 (812) 421-79-69', 'email':'info7@tnpgroup.ru'}, {'src':'./img/department/5.jpg', 'name':'Лариса Сторожук', 'position':'Менеджер отдела продаж', 'phone':'+7 (812) 421-79-69', 'email':'info5@tnpgroup.ru'}, {'src':'./img/department/6.jpg', 'name':'Анна Балащук ', 'position':'Координатор отдела продаж', 'phone':'+7 (812) 421-79-69', 'email':'kd@tnpgroup.ru'}, {'src':'./img/department/1.jpg', 'name':'Ксения Уланчикова', 'position':'Координатор отдела продаж', 'phone':'+7 (812) 421-79-69', 'email':'info4@tnpgroup.ru'}]
+        - var departmentData = [{'src':'./img/department/1.jpg', 'name':'Константин Куница', 'position':'Коммерческий директор', 'phone':'+7 (812) 421-79-69', 'email':'kd@tnpgroup.ru'}, {'src':'./img/department/2.jpg', 'name':'Ирина Хайкичева', 'position':'Менеджер отдела продаж', 'phone':'+7 (812) 421-79-69', 'email':'info4@tnpgroup.ru'}, {'src':'./img/department/3.jpg', 'name':'Наталья Захарова', 'position':'Менеджер отдела продаж ', 'phone':'+7 (812) 421-79-69', 'email':'info11@tnpgroup.ru '}, {'src':'./img/department/4.jpg', 'name':'Анна Яшихина', 'position':'Менеджер отдела продаж', 'phone':'+7 (812) 421-79-69', 'email':'info7@tnpgroup.ru'}, {'src':'./img/department/5.jpg', 'name':'Лариса Сторожук', 'position':'Менеджер отдела продаж', 'phone':'+7 (812) 421-79-69', 'email':'info5@tnpgroup.ru'}, {'src':'./img/department/6.jpg', 'name':'Анна Балащук ', 'position':'Координатор отдела продаж', 'phone':'+7 (812) 421-79-69', 'email':'kd@tnpgroup.ru'}, {'src':'./img/department/7.jpg', 'name':'Ксения Уланчикова', 'position':'Координатор отдела продаж', 'phone':'+7 (812) 421-79-69', 'email':'info4@tnpgroup.ru'}]
         .department.block
             .container
                 h2 Отдел продаж
