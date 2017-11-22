@@ -2,3 +2,69 @@ extends includes/_layout
 
 block content
     main
+        .page-contacts
+            .container
+                .page-contacts-inline
+                    .page-contacts__info
+                        h2 Контакты
+                        .page-contacts-column
+                            .page-contacts-inline.page-contacts-inline_between
+                                .page-contacts__phones
+                                    p Бесплатно по России
+                                    p.page-contacts__phone 8 (800) 555-1927
+                                    p Принимаем заказы по электронной почте
+                                    p.page-contacts__mail order@tnpgroup.ru
+                                    a(href="javascript:;" data-fancybox data-src="#modal-application").btn.btn-red-transparent Написать сообщение
+                                .page-contacts__address
+                                    .city-info
+                                        p.city-info__item Санкт-Петербург
+                                            span +7 (812) 643 42 47
+                                        p.city-info__address
+                                            span
+                                                i.icon-pin-map-TNP
+                                                | Офис
+                                            span пл. Карла Фаберже 8, лит. B, офис №807
+                                        p.city-info__address
+                                            span
+                                                i.icon-pin-map-TNP
+                                                | Склад и производство
+                                            span Уткин прос пект 15, лит. Е
+                                        a(href="#") Скачать схему проезда
+                                    .city-info
+                                        p.city-info__item Москва
+                                            span +7 (495) 666 56 22
+                                        p.city-info__address
+                                            span
+                                                i.icon-pin-map-TNP
+                                                | Пункт выдачи заказов
+                                            span ул. Лобненская, д.18
+                                        a(href="#") Скачать схему проезда
+                            .page-contacts-footer
+                                .social-line.social-line_contacts.row
+                                    a(href="#").social-item: i.icon-vk
+                                    a(href="#").social-item: i.icon-im
+                                    a(href="#").social-item: i.icon-fb
+                                    a(href="#").social-item: i.icon-yb
+                                .page-contacts-inline
+                                    p ООО "ТНП"  ОГРН: 1157847061888  ИНН: 7806090034  КПП: 780601001
+                                    .download-file
+                                        i.icon-pdf
+                                        .download-file__caption
+                                            p Референц-лист TNP Group
+                                            a(href="#") скачать .pdf
+                    .page-contacts__delivery
+                        .page-contacts__map-image: img(src="./img/contacts/")
+                        h2 Доставляем по России, Казахстану, Белоруссии
+                        p Доставляем продукцию напрямую с завода Teping, по всей России, #[br]Казахстану и Белоруссии. Пункты самовывоза расположены в более 300 городах. #[br]Доставляем заказы с помощью ТК «Деловые Линии». #[br]Также можем доставить другой компанией
+                        a(href="#").btn.btn-black-transparent Узнать стоимость и сроки доставки в мой город
+        .map-block
+            .map-block__caption: p г. Санкт-Петербург
+            .map-block__item
+        include components/department/_department
+        - var departmentData = [{'src':'./img/department/1.jpg', 'name':'Константин Куница', 'position':'Коммерческий директор', 'phone':'+7 (812) 421-79-69', 'email':'kd@tnpgroup.ru'}, {'src':'./img/department/2.jpg', 'name':'Ирина Хайкичева', 'position':'Менеджер отдела продаж', 'phone':'+7 (812) 421-79-69', 'email':'info4@tnpgroup.ru'}, {'src':'./img/department/3.jpg', 'name':'Наталья Захарова', 'position':'Менеджер отдела продаж ', 'phone':'+7 (812) 421-79-69', 'email':'info11@tnpgroup.ru '}, {'src':'./img/department/4.jpg', 'name':'Анна Яшихина', 'position':'Менеджер отдела продаж', 'phone':'+7 (812) 421-79-69', 'email':'info7@tnpgroup.ru'}, {'src':'./img/department/5.jpg', 'name':'Лариса Сторожук', 'position':'Менеджер отдела продаж', 'phone':'+7 (812) 421-79-69', 'email':'info5@tnpgroup.ru'}, {'src':'./img/department/6.jpg', 'name':'Анна Балащук ', 'position':'Координатор отдела продаж', 'phone':'+7 (812) 421-79-69', 'email':'kd@tnpgroup.ru'}, {'src':'./img/department/1.jpg', 'name':'Ксения Уланчикова', 'position':'Координатор отдела продаж', 'phone':'+7 (812) 421-79-69', 'email':'info4@tnpgroup.ru'}]
+        .department.block
+            .container
+                h2 Отдел продаж
+                .department-inline.row
+                    each item in departmentData
+                        +departmentItems(item)

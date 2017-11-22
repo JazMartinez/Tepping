@@ -1,0 +1,15 @@
+mixin departmentItems(departmentData)
+    - imgPath = departmentData.src
+    - name = departmentData.name
+    - position = departmentData.position
+    - phone = departmentData.phone
+    - email = departmentData.email
+    .department__item
+        .department__image: img(src=imgPath alt="#")
+        .department__desc
+            .department__name
+                p: strong= name
+                p= position
+            .department__contacts
+                p= phone
+                p= email
