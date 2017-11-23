@@ -143,6 +143,21 @@ Product block
           margin: 0 8px;
         }
       }
+
+      &.product-price__not-item {
+        span {
+          font-size: 30px;
+        }
+      }
+    }
+
+    & + p {
+      margin-top: 10px;
+    }
+
+    a {
+      display: block;
+      font-size: 16px;
     }
   }
 
@@ -160,11 +175,26 @@ Product block
   }
 }
 
+.product__for-ng .product-title {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: -100px;
+    top: 50%;
+    width: 73px;
+    height: 73px;
+    background: url("../img/product-item_icon.png") no-repeat center;
+    transform: translateY(-50%);
+  }
+}
+
 .product-desc-btns {
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
-  margin-top: 40px;
+  margin-top: 20px;
 
   .btn {
 
@@ -187,6 +217,7 @@ Product block
   align-items: center;
   justify-content: flex-start;
   margin-bottom: 30px;
+  width: 600px;
 }
 
 .product-apply {

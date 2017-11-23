@@ -10,19 +10,15 @@ block content
         .product
             .container
                 .product-inline
-                    .product-info
-                        .product-image.for-teping
+                    .product-info.product__for-ng
+                        .product-image
                             .product-image-block
-                                img(src="./img/product-item.png" alt="")
-                            .product-caption
-                                p.product-caption__a
-                                    span.product-caption__class A
-                                    span Основа#[br]12 кг
-                                p.product-caption__b
-                                    span.product-caption__class В
-                                    span Отвердитель#[br]2,8 кг
+                                img(src="./img/product-item-2.png" alt="")
                             .product-tags
-                                p.tag-weight Масса комплекта 14,8 кг
+                                p.tag-weight 14,8 кг
+                                p.tag-own
+                                    i.icon-like
+                                    span собственное производство
                         .product-desc
                             ul.breadcrumbs-line.row
                                 li: a(href="#") Главная
@@ -34,23 +30,21 @@ block content
                                 li: a(href="#") Teping Пол 205 C
                             h1.product-title
                                 i.icon-title
-                                | Пол 205 C
-                            p Универсальный эпоксидный наливной пол. Используется&nbsp;в&nbsp;промышленных и жилых помещениях. Выдерживает серьезные механизированные нагрузки. Можно полировать.
+                                | НГ (негорючее покрытие класса КМ0)
+                            p Универсальная негорючая  краска. Применение материала Тэпинг® НГ КМ0 при отделке стен и потолков позволит полностью соблюсти требования Федерального закона от 22.07.2008 N 123-ФЗ (ред. от 23.06.2014)
+                            p: a(href="#") Технический регламент о требованиях пожарной безопасности
                             ul.product-desc__list
                                 li
                                     i.icon-quote
-                                    | Обеспыливает
+                                    | Безопасность эвакуационных путей
                                 li
                                     i.icon-quote
-                                    | Защитает  пол
+                                    | Сертифицирован
                                 li
                                     i.icon-quote
-                                    | Декоративный
-                            p.product-price
-                                span 367
-                                    i.icon-rub
-                                | за кг
-                            p 5 475 ₽ за комплект 14,8 кг.
+                                    | Для стен и потолков
+                            p.product-price.product-price__not-item
+                                span Цена по запросу
                             .product-desc-btns
                                 a(href="#calculator").btn.btn-black-transparent
                                     i.icon-calculator
@@ -61,33 +55,24 @@ block content
                         .apply-inline.row
                             .apply-column.col-md-6.col-xs-12
                                 .apply-item
-                                    i.icon-production
-                                    p Производства
+                                    i.icon-office
+                                    p Высотные здания
+                                .apply-item
+                                    i.icon-book
+                                    p Образовательные учреждения
                                 .apply-item
                                     i.icon-parking
-                                    p Паркинги, гаражи
-                                .apply-item
-                                    i.icon-stock
-                                    p Склады
-                                .apply-item
-                                    i.icon-office
-                                    p Квартиры и офисы
+                                    p Кинотеатры
                                 .apply-item
                                     i.icon-metro
-                                    p Аэропорты, вокзалы, метро
+                                    p Вестибюли метрополитена
                             .apply-column.col-md-6.col-xs-12
                                 .apply-item
                                     i.icon-book
-                                    p Школы, ВУЗы,  дет. сады
+                                    p Пути эвакуации
                                 .apply-item
                                     i.icon-trade
-                                    p Торговые комплексы
-                                .apply-item
-                                    i.icon-medical
-                                    p Здравоохранение, фармацевтика
-                                .apply-item
-                                    i.icon-lightning
-                                    p Объекты атомной энергетики, ТЭЦ
+                                    p Стадионы, ледовые арены
         include includes/_calculator
         #characteristics.characteristics.block
             .container
