@@ -42,50 +42,45 @@ block content
                                 li
                                     i.icon-quote
                                     | Колеруем по каталогу RAL
-                            p: strong Колеруем по каталогу RAL
+                            p: strong Доступные цвета
                             .product-colors
                                 .product-colors__item
-                                    span.product-colors__color
-                                    p.product-colors__caption
-                                    p.product-colors__price
+                                    .product-colors__caption
+                                        span.product-colors__color.product-colors__color_white
+                                        p Белый
+                                    p.product-colors__price 4 785
                                         i.icon-rub
                                 .product-colors__item
+                                    .product-colors__caption
+                                        span.product-colors__color.product-colors__color_yellow
+                                        p Желтый
+                                    p.product-colors__price 5 250
+                                        i.icon-rub
                                 .product-colors__item
+                                    .product-colors__caption
+                                        span.product-colors__color.product-colors__color_red
+                                        p Красный
+                                    p.product-colors__price 5 850
+                                        i.icon-rub
+                                p.product-colors__text за ведро 25 кг
                             .product-desc-btns
                                 a(data-src="#modal-order" href="javascript:;" data-fancybox).btn.btn-red Заказать
                     .product-apply
-                        p.apply-title: b Применяется на объектах
+                        p.apply-title: b Области применения
                         .apply-inline.row
                             .apply-column.col-md-6.col-xs-12
                                 .apply-item
                                     i.icon-production
-                                    p Производства
+                                    p Дороги
                                 .apply-item
                                     i.icon-parking
-                                    p Паркинги, гаражи
+                                    p Парковки
                                 .apply-item
-                                    i.icon-stock
-                                    p Склады
-                                .apply-item
-                                    i.icon-office
-                                    p Квартиры и офисы
+                                    i.icon-sportground
+                                    p Спортивные площадки
                                 .apply-item
                                     i.icon-metro
-                                    p Аэропорты, вокзалы, метро
-                            .apply-column.col-md-6.col-xs-12
-                                .apply-item
-                                    i.icon-book
-                                    p Школы, ВУЗы,  дет. сады
-                                .apply-item
-                                    i.icon-trade
-                                    p Торговые комплексы
-                                .apply-item
-                                    i.icon-medical
-                                    p Здравоохранение, фармацевтика
-                                .apply-item
-                                    i.icon-lightning
-                                    p Объекты атомной энергетики, ТЭЦ
-        include includes/_calculator
+                                    p Детские площадки
         #characteristics.characteristics.block
             .container
                 .characteristics-inline.row

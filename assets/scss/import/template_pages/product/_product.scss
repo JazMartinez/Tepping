@@ -161,6 +161,12 @@ Product block
     }
   }
 
+  .product-colors__text {
+    max-width: 256px;
+    text-align: right;
+    font-size: 16px;
+  }
+
   .product-desc__list {
     margin: 40px 0 35px;
 
@@ -173,6 +179,59 @@ Product block
       }
     }
   }
+}
+
+.product-colors {
+  margin: 15px 0;
+}
+
+.product-colors__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 256px;
+  margin: 10px 0;
+}
+
+.product-colors__caption {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 18px;
+}
+
+.product-desc .product-colors__price {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+
+  i {
+    font-size: 22px;
+    margin-left: 4px;
+  }
+}
+
+.product-colors__color {
+  display: block;
+  width: 29px;
+  height: 29px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  margin-right: 20px;
+}
+
+.product-colors__color_white {
+  border: 1px solid #8f8f8f;
+  background: #fff;
+}
+
+.product-colors__color_yellow {
+  background: #e3d61f;
+}
+
+.product-colors__color_red {
+  background: #d24a43;
 }
 
 .product__for-ng .product-title {

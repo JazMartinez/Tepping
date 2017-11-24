@@ -2,3 +2,42 @@ extends includes/_layout
 
 block content
     main
+        include includes/_production
+        .works.block
+            .container
+                h2 Наши клиенты
+                .works-inline
+                    .works__desc
+                        p Наши клиенты представляют совершенно разные по размеру и направлениям деятельности компании, от малого бизнеса до транснациональных корпораций. Сейчас в нашей базе уже 6940*  клиентов
+                        p * на июль 2017 года
+                        .works__file.download-file
+                            i.icon-pdf
+                            .download-file__caption
+                                p Референц-лист TNP Group
+                                a(href="#") скачать .pdf
+                    .works__partners.partners.row
+                        .partners__item
+                            img(src="./img/index/partners/1.png")
+                        .partners__item
+                            img(src="./img/index/partners/2.png")
+                        .partners__item
+                            img(src="./img/index/partners/3.png")
+                        .partners__item
+                            img(src="./img/index/partners/4.png")
+                        .partners__item
+                            img(src="./img/index/partners/5.png")
+                        .partners__item
+                            img(src="./img/index/partners/6.png")
+                        .partners__item
+                            img(src="./img/index/partners/7.png")
+                        .partners__item
+                            img(src="./img/index/partners/8.png")
+                include includes/_works-list
+        include components/department/_department
+        - var departmentData = [{'src':'./img/department/1.jpg', 'name':'Константин Куница', 'position':'Коммерческий директор', 'phone':'+7 (812) 421-79-69', 'email':'kd@tnpgroup.ru'}, {'src':'./img/department/2.jpg', 'name':'Ирина Хайкичева', 'position':'Менеджер отдела продаж', 'phone':'+7 (812) 421-79-69', 'email':'info4@tnpgroup.ru'}, {'src':'./img/department/3.jpg', 'name':'Наталья Захарова', 'position':'Менеджер отдела продаж ', 'phone':'+7 (812) 421-79-69', 'email':'info11@tnpgroup.ru '}, {'src':'./img/department/4.jpg', 'name':'Анна Яшихина', 'position':'Менеджер отдела продаж', 'phone':'+7 (812) 421-79-69', 'email':'info7@tnpgroup.ru'}, {'src':'./img/department/5.jpg', 'name':'Лариса Сторожук', 'position':'Менеджер отдела продаж', 'phone':'+7 (812) 421-79-69', 'email':'info5@tnpgroup.ru'}, {'src':'./img/department/6.jpg', 'name':'Анна Балащук ', 'position':'Координатор отдела продаж', 'phone':'+7 (812) 421-79-69', 'email':'kd@tnpgroup.ru'}, {'src':'./img/department/7.jpg', 'name':'Ксения Уланчикова', 'position':'Координатор отдела продаж', 'phone':'+7 (812) 421-79-69', 'email':'info4@tnpgroup.ru'}]
+        .department.block
+            .container
+                h2 Отдел продаж
+                .department-inline.row
+                    each item in departmentData
+                        +departmentItems(item)
