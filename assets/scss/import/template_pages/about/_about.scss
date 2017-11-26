@@ -1,185 +1,233 @@
-/*----
-Delivery
- ----*/
-.delivery-inline {
+.about-company__row {
+  display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch;
 }
 
-.delivery-desc {
-  width: 720px;
+.about-company__desc {
+  max-width: 852px;
+  flex-basis: 852px;
 
-  h2 {
-    margin-bottom: 60px;
+  &:first-of-type {
+    padding-right: 110px;
   }
 
-  .btn {
-    width: 463px;
-    margin: 30px 0 60px;
-  }
-
-  .lg-text {
-    font-size: 18px;
+  &:last-of-type {
+    padding-left: 75px;
   }
 }
 
-.delivery-title {
-  margin-bottom: 24px;
-}
-
-p.dotted {
+.about-company__header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 15px;
-
-  span {
-    white-space: nowrap;
-
-    &:first-of-type {
-      display: flex;
-      align-items: flex-end;
-
-      overflow: hidden;
-      width: 270px;
-      margin-right: 10px;
-
-      &:after {
-        content: '............................................................................................';
-        margin-left: 6px;
-      }
-    }
-  }
-
-  &:last-of-type + p {
-    margin-top: 30px;
-  }
+  margin-bottom: 30px;
 }
 
-/*.lg-text {
-  max-width: 570px;
-}*/
-
-.delivery-line {
-  max-width: 650px;
-  position: relative;
-  margin-top: 50px;
-
-  &:before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 74px;
-    width: 23px;
-    height: 13px;
-    background: url("../img/delivery-arrow.png") no-repeat center;
-    transform: translateX(-50%);
-  }
-}
-
-.delivery-item {
+.about-company__image {
+  margin-left: -60px;
+  height: 160px;
   width: auto;
-  max-width: 260px;
-
-  .delivery-image {
-    align-items: stretch;
-  }
-
-  & + .delivery-item {
-    margin-left: 100px;
-
-    .delivery-image {
-      align-items: flex-start;
-      justify-content: flex-end;
-      background: url("../img/plate.png") no-repeat 14px 12px;
-
-      i {
-        font-size: 73px;
-      }
-    }
-  }
-}
-
-.delivery-item_picture {
-  max-width: 330px;
-  margin-top: 20px;
-  margin-left: -50px;
 
   img {
-    max-height: 160px;
+    height: 100%;
     object-fit: contain;
   }
+}
 
-  & + .delivery-item {
-    max-width: 330px;
+.about-company__title {
+  text-align: left;
+  margin-left: 30px;
+
+  i {
+    font-size: 40px;
+    color: $color-red;
+    vertical-align: middle;
+    margin-left: 8px;
   }
 }
 
-.delivery-item_picture + .delivery-item {
-  margin-left: 60px;
-}
-
-.delivery-line_witout-arrow:before {
-  display: none;
-}
-
-.delivery-image {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-
-  width: 100%;
-  max-width: 260px;
-  padding: 14px 33px 20px;
-  height: 156px;
-  border-radius: 5px;
-  background-color: #ffffff;
-  border: solid 1px #e8e8e8;
-
-  & + p {
-    margin-top: 10px;
-  }
-
+.about-company__desc {
   p {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-
-    font-size: 14px;
-    font-weight: 500;
-
-    margin: 0 3px;
+    margin-bottom: 16px;
+    font-size: 18px;
 
     i {
-      font-size: 69px;
-      margin-bottom: 4px;
-
-      &.small {
-        font-size: 49px;
-        margin-left: -20px;
-      }
+      font-size: 20px;
+      color: $color-red;
+      vertical-align: middle;
+      margin-left: 8px;
     }
 
-    & > span {
-      margin-top: 4px;
-      padding: 3px 6px;
-      border-radius: 10px;
-      background-color: #d5d5d5;
-    }
-
-    & > b {
-      font-size: 40.2px;
-      font-weight: 300;
+    img {
+      vertical-align: middle;
     }
   }
 
-  p.plus {
-    justify-content: center;
+  .about-company__count {
+    font-size: 42px;
+  }
+
+  a {
+    border-bottom-color: inherit;
+
+    &:hover {
+      border-bottom-color: transparent;
+    }
+  }
+
+  .production__title {
+    width: 105px;
+    flex-basis: 105px;
+  }
+
+  .director__name {
+    margin-bottom: 0;
   }
 }
 
-.delivery-map {
-  width: 900px;
-  margin-left: 50px;
+.director__about {
+  position: relative;
+  margin: 35px 0;
+
+  p {
+    font-style: italic;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 32px;
+    height: 26px;
+    background: url("../img/about/quotes.png") no-repeat center;
+  }
+
+  &:before {
+    top: -10px;
+    left: -45px;
+    transform: rotate(180deg);
+  }
+
+  &:after {
+    right: -20px;
+    bottom: -10px;
+  }
+}
+
+.about-company-director {
+  width: 100vw;
+  max-width: 888px;
+  -webkit-border-radius: 30px 0 0 30px;
+  -moz-border-radius: 30px 0 0 30px;
+  border-radius: 30px 0 0 30px;
+}
+
+.director {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 770px;
+  padding: 30px 0 30px 90px;
+}
+
+.director__image {
+  margin-left: 30px;
+}
+
+.about-company__video {
+  margin-left: 60px;
+
+  p {
+    font-size: 14px;
+  }
+}
+
+.about-matherial {
+  h2 {
+    display: flex;
+    align-items: center;
+
+    i {
+      color: $color-red;
+      font-size: 36px;
+      margin-left: 10px;
+    }
+  }
+}
+
+.director__desc {
+  padding: 25px 0;
+}
+
+.about-matherial__row {
+  margin-left: -30px;
+  margin-right: -30px;
+}
+
+.about-matherial__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0 30px;
+  margin-top: 50px;
+}
+
+.about-matherial__icon {
+  margin-right: 18px;
+}
+
+.about-matherial__desc {
+  strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #4c8edf;
+    font-weight: 500;
+  }
+}
+
+.about-guarantee__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-guarantee__items {
+  max-width: 740px;
+}
+
+.about-guarantee__item {
+  margin-top: 45px;
+}
+
+.about-guarantee__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.about-guarantee__icon {
+  margin-right: 18px;
+  min-width: 84px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-guarantee__desc {
+  strong {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+}
+
+.about-guarantee__image {
+  max-width: 850px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 850px
 }

@@ -1,7 +1,7 @@
 /*----
 Fonts
 ----*/
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Roboto:100,100i,300,300i,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Roboto:300,300i,400,500,700');
 
 /*----
 Custom libraries
@@ -43,8 +43,8 @@ Template pages
 @import "import/template_pages/catalog/catalog";
 @import "import/template_pages/catalog/media";
 
-/*---- About ----*/
-@import "import/template_pages/about/about";
+/*---- Delivery ----*/
+@import "import/template_pages/delivery/delivery";
 
 /*---- Tech pages ----*/
 @import "import/template_pages/tech_page/tech-page";
@@ -57,3 +57,6 @@ Template pages
 
 /*---- Contacts page ----*/
 @import "import/template_pages/contacts/contacts";
+
+/*---- About ----*/
+@import "import/template_pages/about/about";

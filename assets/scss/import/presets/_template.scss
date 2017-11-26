@@ -407,6 +407,17 @@ h2 {
   }
 }
 
+.btn-blue-transparent {
+  background: #fff;
+  border-color: #4b8abb;
+  color: #4b8abb;
+
+  &:hover {
+    color: #ffffff;
+    background: #4b8abb;
+  }
+}
+
 /*---- Slider arrows ----*/
 .slick-arrow {
   position: absolute;
@@ -446,4 +457,12 @@ h2 {
       transform: rotate(-180deg);
     }
   }
+}
+
+.wrapper__grey {
+  background: #f6f6f6 !important;
+}
+
+.wrapper__white {
+  background: #ffffff !important;
 }

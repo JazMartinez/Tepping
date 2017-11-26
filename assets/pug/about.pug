@@ -2,8 +2,120 @@ extends includes/_layout
 
 block content
     main
+        .about-company.block
+            .container
+                .about-company__row
+                    .about-company__desc
+                        .about-company__header
+                            .about-company__image: img(src="./img/product-item.png" alt="#")
+                            h2.about-company__title
+                                | TNP Group – производитель #[br]полимерных полов
+                                i.icon-title
+                        p Мы работаем с 2007 года и находимся в Санкт-Петербурге. Наша компания производит наливные полимерные полы и краски под торговой маркой #[i.icon-title]#[br]Все права на бренд принадлежат нашей компании.
+                        p: a(href="#") Посмотреть патент
+                        p TNP Group является официальным партнером #[img(src="./img/about/hempel__min-logo.png")] в России. Мы поставляем антикоррозийные покрытия для транспортной инфраструктуры.
+                        p: strong Чем мы полезны?
+                        .production-line
+                            .production__title: p #[span.about-company__count 10]#[br] лет
+                            .production__desc-line: p Уже 10 лет мы производим и поставляем материалы для обеспыливания и защиты бетона, травмобезопасные покрытия для детских и спортивных площадок.
+                        .production-line
+                            .production__title: p #[span.about-company__count 89]#[br] объектов
+                            .production__desc-line: p Наша компания самостоятельно выполнила работы на 89 объектах, в том числе на 3-х Олимпийских объектах в Сочи 2014. Этот опыт позволяет четко понимать, что необходимо для решения конкретной задачи.
+                        .production-line
+                            .production__title: p #[span.about-company__count 7 000]#[br] компаний
+                            .production__desc-line: p Более 7 000 компаний из России, Белоруссии и Казахстана работают с нашими материалами. Это и малый бизнес и транснациональные компании. Надеемся, что и вы рассмотрите нас в качестве партнера.
+                        .production-line
+                            .production__title
+                            .production__desc-line
+                                .download-file
+                                    i.icon-pdf
+                                    .download-file__caption
+                                        p Референц-лист TNP Group
+                                        a(href="#") скачать .pdf
+                    .about-company__desc
+                        .about-company-director.wrapper__grey
+                            .director
+                                .director__desc
+                                    p.director__name: strong Генеральный директор TNP Group
+                                    p Юшко Роман Юрьевич
+                                    .director__about
+                                        p В своей работе мы ставим на первое место отношения. Надежные материалы и современное производство без стабильного сервиса – путь в никуда.
+                                        p Перед каждым сотрудником я ставлю задачу: стать приятным и полезным партнером. Со многими клиентами у моих коллег сложились дружеские отношения. И это самое важное. Только так можно эффективно работать и доверять друг другу.
+                                        p Если вы не довольны общением или вашу задачу просто не смогли решить, прошу написать мне. Обещаю отреагировать в течение 1 рабочего дня.
+                                    a(href="#").btn.btn-blue-transparent
+                                        i.icon-pen
+                                        | Написать генеральному директору
+                                .director__image: img(src="./img/about/roman.jpg" alt="#")
+                        .about-company__video.intro-video
+                            .intro-video__block
+                                a(href="https://www.youtube.com/embed/irRKhNBX5qs" data-fancybox)
+                                    i.icon-play
+                                    img(src="./img/video.png" alt="#")
+                            p Наливной пол наносится на деревянное основание, на керамическую плитку, на цементную стяжку или даже
+        .about-matherial.wrapper__grey.block
+            .container
+                h2 Материалы
+                    i.icon-title
+                .about-matherial__row.row
+                    .col-md-4.col-sm-6.col-xs-12
+                        .about-matherial__item
+                            .about-matherial__icon: img(src="./img/about/icons/1.png" alt="#")
+                            .about-matherial__desc
+                                p: strong Наливные полимерные полы
+                                p Эпоксидные и полиуретановые, стойкие к истиранию, эластичные, ударопрочные, кислото и щелочестойкие, экологичные, антистатические, паропрпоницаемые. Для жилых и промышленных объектов.
+                    .col-md-4.col-sm-6.col-xs-12
+                        .about-matherial__item
+                            .about-matherial__icon: img(src="./img/about/icons/2.png" alt="#")
+                            .about-matherial__desc
+                                p: strong Краски для бетона и металла
+                                p Защитные, обеспыливающие, эпоксидные, полиуретановые, алкид-уретановые, химостойкие, паропроницаемые, антикоррозийные.
+                    .col-md-4.col-sm-6.col-xs-12
+                        .about-matherial__item
+                            .about-matherial__icon: img(src="./img/about/icons/3.png" alt="#")
+                            .about-matherial__desc
+                                p: strong Покрытия для детских и спортивных площадок
+                                p Травмобезопасные, для улицы и залов, в рулонах и бесшовные.
+                    .col-md-4.col-sm-6.col-xs-12
+                        .about-matherial__item
+                            .about-matherial__icon: img(src="./img/about/icons/4.png" alt="#")
+                            .about-matherial__desc
+                                p: strong Лаки
+                                p Надёжный защитный уретановый лак. На выбор матовый или глянцевый.
+                    .col-md-4.col-sm-6.col-xs-12
+                        .about-matherial__item
+                            .about-matherial__icon: img(src="./img/about/icons/5.png" alt="#")
+                            .about-matherial__desc
+                                p: strong Разметка
+                                p Износостойкая краска для разметки дорожного полотна и спортивных площадок
+                    .col-md-4.col-sm-6.col-xs-12
+                        .about-matherial__item
+                            .about-matherial__icon: img(src="./img/about/icons/6.png" alt="#")
+                            .about-matherial__desc
+                                p: strong Негорючая краска НГ КМ0
+                                p Универсальная негорючая краска класса КМ0 для внутренней и наружной отделки стен и потолков
+        .about-guarantee.block
+            .container
+                h2 Мы гарантируем
+                .about-guarantee__row
+                    .about-guarantee__items
+                        .about-guarantee__item
+                            .about-guarantee__icon: img(src="./img/about/guarantee-icons/1.png" alt="#")
+                            .about-guarantee__desc
+                                p: strong Контроль каждой партии на производстве
+                                p Мы не отгрузим вам материал без проверки. Для этого требуется 1 день.
+                        .about-guarantee__item
+                            .about-guarantee__icon: img(src="./img/about/guarantee-icons/2.png" alt="#")
+                            .about-guarantee__desc
+                                p: strong Отгрузим в течении 1 дня
+                                p Складские позиции всегда в наличие. Производство и отгрузка заказной продукции займет 3-5 рабочих дней. Сроки будут названы менеджером в момент заказа.
+                        .about-guarantee__item
+                            .about-guarantee__icon: img(src="./img/about/guarantee-icons/3.png" alt="#")
+                            .about-guarantee__desc
+                                p: strong Порядок с документами
+                                p Отгрузочных документы и заверенные сертификаты вы получите вместе с материалом.
+                    .about-guarantee__image: img(src='./img/about/guarantee.png' alt="#")
         include includes/_production
-        .works.block
+        .works.block.wrapper__white
             .container
                 h2 Наши клиенты
                 .works-inline
@@ -35,7 +147,7 @@ block content
                 include includes/_works-list
         include components/department/_department
         - var departmentData = [{'src':'./img/department/1.jpg', 'name':'Константин Куница', 'position':'Коммерческий директор', 'phone':'+7 (812) 421-79-69', 'email':'kd@tnpgroup.ru'}, {'src':'./img/department/2.jpg', 'name':'Ирина Хайкичева', 'position':'Менеджер отдела продаж', 'phone':'+7 (812) 421-79-69', 'email':'info4@tnpgroup.ru'}, {'src':'./img/department/3.jpg', 'name':'Наталья Захарова', 'position':'Менеджер отдела продаж ', 'phone':'+7 (812) 421-79-69', 'email':'info11@tnpgroup.ru '}, {'src':'./img/department/4.jpg', 'name':'Анна Яшихина', 'position':'Менеджер отдела продаж', 'phone':'+7 (812) 421-79-69', 'email':'info7@tnpgroup.ru'}, {'src':'./img/department/5.jpg', 'name':'Лариса Сторожук', 'position':'Менеджер отдела продаж', 'phone':'+7 (812) 421-79-69', 'email':'info5@tnpgroup.ru'}, {'src':'./img/department/6.jpg', 'name':'Анна Балащук ', 'position':'Координатор отдела продаж', 'phone':'+7 (812) 421-79-69', 'email':'kd@tnpgroup.ru'}, {'src':'./img/department/7.jpg', 'name':'Ксения Уланчикова', 'position':'Координатор отдела продаж', 'phone':'+7 (812) 421-79-69', 'email':'info4@tnpgroup.ru'}]
-        .department.block
+        .department.block.wrapper__grey
             .container
                 h2 Отдел продаж
                 .department-inline.row
