@@ -1,0 +1,54 @@
+extends includes/_layout
+
+block content
+    main
+        .articles.block
+            .articles-container
+                h2 Новости и статьи
+            .container_fluid
+                .row
+                    .col-md-3.col-sm-6.col-xs-12
+                        .top-article
+                            h2.top-article__title Устройство пола
+                            p.top-article__desc Оптимально разработанные эксплуатационные свойства наливного пола, направленные на самых требовательных клиентов, позволяют получить долговечное
+                            a(href="#").btn.btn-white-transparent Читать
+                    .col-md-3.col-sm-6.col-xs-12
+                        .top-article.top-article_dark
+                            h2.top-article__title Что нужно знать о полах для квартиры
+                            p.top-article__desc Оптимально разработанные эксплуатационные свойства наливного пола, направленные на самых требовательных клиентов, позволяют получить долговечное
+                            a(href="#").btn.btn-black-transparent Читать
+                    .col-md-3.col-sm-6.col-xs-12
+                        a(href="javascript:;").tabs-tag-link
+                            h2.tabs-tag-link__title Технологии
+                                i.icon-arrow-2
+                            p.tabs-tag-link__desc Оптимально разработанные эксплуатационные свойства наливного пола, направленные на самых
+                        a(href="javascript:;").tabs-tag-link
+                            h2.tabs-tag-link__title Новости
+                                i.icon-arrow-2
+                            p.tabs-tag-link__desc Оптимально разработанные эксплуатационные свойства наливного пола, направленные на самых
+                    .col-md-3.col-sm-6.col-xs-12
+                        .top-article
+                            h2.top-article__title Подготовка основания
+                            p.top-article__desc Высококачественное износостойкое защитно-декоративное напольное покрытие
+                            a(href="#").btn.btn-white-transparent Читать
+            .articles-container
+                .tabs
+                    a(href="javascript:;").tabs__item Технологии
+                    a(href="javascript:;").tabs__item Новости
+                    a(href="javascript:;").tabs__item Акции
+                    a(href="javascript:;").tabs__item Экономика
+                    a(href="javascript:;").tabs__item.tabs__item_all Все статьи
+                .articles-list
+                    article.articles-item
+                        .articles-item__desc
+                            .article-attributes
+                                p.article-attributes__date 10 октябрь 2018
+                                p.article-attributes__tags Технологии, Новости
+                            h2.articles-item__title Устройство пола
+                            p.articles-item__text оптимально разработанные эксплуатационные свойства наливного пола, направленные на самых требовательных клиентов, позволяют получить долговечное
+                        .articles-item__more
+                            a(href="#").btn.btn-black-transparent Читать
+                                i.icon-arrow-2
+                .pagination.solution_pagination
+                    a(href="#").pagination__more-btn Показать ещё
+                    p.paginations__show-counter Показано 10 из 100
