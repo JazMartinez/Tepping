@@ -119,6 +119,7 @@ header {
       position: absolute;
       top: 100%;
       left: 0;
+      transform: translateY(-10px);
     }
 
     &:hover {
@@ -135,10 +136,16 @@ header {
 
       &.drop-menu-item > .drop-menu {
         display: block;
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
       }
 
       &.drop-menu-item > .link-menu {
         display: flex;
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
       }
     }
   }
@@ -150,13 +157,15 @@ header {
   left: 0;
 
   min-width: 355px;
+  min-height: 580px;
   background: #ffffff;
 
-  display: none;
-  //opacity: 0;
-  //visibility: hidden;
-  //transform: translateY(-20px);
-  transition: all .3s ease-out;
+  display: block;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all .5s ease-out;
   z-index: 20;
 
   & > li {
@@ -220,9 +229,9 @@ header {
     &:hover {
       & > .link-menu,
       & > .drop-menu-lvl-2 {
-        /*opacity: 1;*/
-        display: flex;
-        //transform: translateX(0);
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0);
       }
 
       & > a {
@@ -233,12 +242,17 @@ header {
 }
 
 .link-menu {
-  display: none;
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 
   width: 580px;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s ease-out;
+  z-index: 20;
 
   li {
     border: {
@@ -305,11 +319,11 @@ header {
   top: 0;
   bottom: 0;
   left: 100%;
+  display: flex;
 
-  /*opacity: 0;*/
-  display: none;
-  //transform: translateX(-10%);
-
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-10px);
   transition: all .3s ease-out;
 
   &.link-menu {
@@ -423,77 +437,117 @@ header {
     }
 
     & > .menu-catalog-item {
-      display: flex;
+      visibility: visible;
+      opacity: 1;
+      transform: translateX(0);
     }
   }
 
 }
 
 .menu-catalog-item {
-  display: none;
+  display: block;
   position: absolute;
   left: 100%;
-  top: 0;
-  bottom: 0;
+  top: -1px;
+  bottom: -1px;
   width: 360px;
   background: #f4f4f4;
-  padding: 0 45px;
 
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-10px);
   transition: all .3s ease-out;
+}
 
-  .menu-catalog-item-image {
-    width: 203px;
-    height: 151px;
-    margin-left: -70px;
+.menu-product {
+  color: $color-black;
+  text-decoration: none;
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
+  &:hover {
+    color: $color-black;
   }
+}
 
-  .menu-catalog-item-title {
-    margin-top: 25px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.menu-product__picture {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
 
-    font-size: 19.5px;
-    font-weight: 500;
-
-    i {
-      font-size: 24px;
-      color: $color-red;
-      margin-right: 10px;
-    }
-
-    small {
-      display: block;
-      width: 100%;
-      margin-top: 8px;
-
-      font-size: 16px;
-      font-weight: 300;
-      line-height: 1;
-    }
-  }
-
-  .menu-catalog-item-desc {
-    margin: 25px 0;
-
-    li + li {
-      margin-top: 6px;
-    }
-  }
-
-  .btn {
+  img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
+}
+
+.menu-product__desc {
+  margin-top: -60px;
+  padding: 0 15px 10px 25px;
+}
+
+.menu-product__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.menu-product__image_left {
+  margin-left: -45px;
+}
+
+.menu-product__price {
+  font-size: 32px;
+
+  i {
+    font-size: 24px;
+  }
+
+  span {
+    font-size: 14px;
+  }
+}
+
+.menu-product__name {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 6px;
+
+  font-size: 19px;
+  font-weight: 500;
+
+  .icon-NG-color {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: url("../img/menu-product/ng-icon.png") no-repeat center;
+    margin-right: 6px;
+  }
+
+  .icon-title {
+    color: $color-red;
+    font-size: 26px;
+    margin-right: 6px;
+  }
+}
+
+.menu-product__list {
+  margin: 15px 0;
+
+  i {
+    font-size: 16px;
+    margin-right: 12px;
+  }
+
+  li + li {
+    margin-top: 6px;
+  }
+}
+
+.menu-product__text {
+  font-size: 14px;
 }
 
 /*---- Header middle ----*/

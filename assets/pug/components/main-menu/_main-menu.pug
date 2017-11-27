@@ -1,0 +1,84 @@
+mixin mainMenu(menuItems)
+    nav: ul.main-menu
+        each item in menuItems
+            if item.dropMenu
+                li.drop-menu-item
+                    a(href=item.src)= item.title
+                        i.icon-arrow
+                    ul.drop-menu
+                        each dropItem in item.dropMenu
+                            if dropItem.linkMenu
+                                li.link-item
+                                    a(href=dropItem.src)
+                                        i(class=dropItem.icon)
+                                        =dropItem.title
+                                    ul.drop-menu-lvl-2.link-menu
+                                        each linkItem in dropItem.linkMenu
+                                            li.col-sm-6.col-xs-12: a(href=linkItem.src)
+                                                i(class=linkItem.icon)
+                                                =linkItem.title
+                            else if dropItem.innerMenu
+                                li.inner-item
+                                    a(href=dropItem.src)= dropItem.title
+                                    ul.drop-menu-lvl-2.inner-menu
+                                        each innerItem in dropItem.innerMenu
+                                            if innerItem.type
+                                                li.inner-title= innerItem.title
+                                            else
+                                                li
+                                                    a(href=innerItem.src)
+                                                        i(class=innerItem.icon)
+                                                        =innerItem.title
+                                                    if innerItem.catalogItem
+                                                        - var product = innerItem.catalogItem
+                                                        .menu-catalog-item
+                                                            a(href=product.src).menu-product
+                                                                .menu-product__picture: img(src=product.bgImage)
+                                                                .menu-product__desc
+                                                                    .menu-product__row
+                                                                        .menu-product__image.menu-product__image_left: img(src=product.productImage)
+                                                                        p.menu-product__price= product.price
+                                                                            | &nbsp;
+                                                                            i.icon-rub
+                                                                            span &nbsp;кг
+                                                                    p.menu-product__name!= product.name
+                                                                    p.menu-product__text= product.description
+                                                                    ul.menu-product__list
+                                                                        each list in product.list
+                                                                            li
+                                                                                i.icon-quote
+                                                                                = list
+                            else if dropItem.catalogItem
+                                - var product = dropItem.catalogItem
+                                li
+                                    a(href=dropItem.src)= dropItem.title
+                                    ul.drop-menu-lvl-2.menu-catalog-item
+                                        a(href=product.src).menu-product
+                                            .menu-product__picture: img(src=product.bgImage)
+                                            .menu-product__desc
+                                                .menu-product__row
+                                                    .menu-product__image: img(src=product.productImage)
+                                                    p.menu-product__price= product.price
+                                                        | &nbsp;
+                                                        i.icon-rub
+                                                        span &nbsp;кг
+                                                p.menu-product__name!= product.name
+                                                p.menu-product__text= product.description
+                                                ul.menu-product__list
+                                                    each list in product.list
+                                                        li
+                                                            i.icon-quote
+                                                            = list
+                            else
+                                li: a(href=dropItem.src)= dropItem.title
+            else if item.linkMenu
+                li.drop-menu-item
+                    a(href=item.src)= item.title
+                        i.icon-arrow
+                    ul.link-menu
+                        each linkItem in item.linkMenu
+                            li.col-sm-6.col-xs-12: a(href=linkItem.src)
+                                i(class=linkItem.icon)
+                                =linkItem.title
+            else
+                li: a(href=item.src)= item.title
