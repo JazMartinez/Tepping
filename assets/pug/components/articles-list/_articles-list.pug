@@ -1,0 +1,13 @@
+mixin articlesList(dataList)
+    .articles-list
+        each item in dataList
+            article.articles-item
+                .articles-item__desc
+                    .article-attributes
+                        p.article-attributes__date= item.date
+                        p.article-attributes__tags= item.tags
+                    h2.articles-item__title= item.title
+                    p.articles-item__text= item.text
+                .articles-item__more
+                    a(href="#").btn.btn-black-transparent Читать
+                        i.icon-arrow-2
