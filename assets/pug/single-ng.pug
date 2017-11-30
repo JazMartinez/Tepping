@@ -1,9 +1,11 @@
 extends includes/_layout
 
 block header
-    include includes/_header-product
+    include components/header-product/_header-product
     - var bgPath = "./img/bg_2.jpg";
-    +productHeader(bgPath)
+    - var headerLinks = [{src: '#characteristics', title: 'Характеристики'}, {src: '#objects', title: 'Галерея'}, {src: '#materials', title: 'Инструкция'}, {src: '#production', title: 'Производство'}, {src: '#delivery', title: 'Доставка'}, {src: '#letters', title: 'Отзывы'}, {src: '#calculator', title: 'Рассчитать стоимость', icon: 'icon-calculator'}];
+    - var showBtn = true;
+    +productHeader(bgPath, headerLinks, showBtn)
 
 block content
     main#main-content

@@ -1,0 +1,21 @@
+mixin productHeader(bgPath, links, showBtn)
+    .header-middle(style={background: "url(" + bgPath + ") no-repeat center / cover"})
+        .container
+
+    .header-bottom
+        .container
+            .header-inline.row
+                .header-item
+                    p.header-product-title
+                        i.icon-title
+                        | Пол 205 C
+                    nav: ul.second-menu
+                        each link in links
+                            if link.icon
+                                li: a(href=link.src)
+                                    i(class=link.icon)
+                                    =link.title
+                            else
+                                li: a(href=link.src)=link.title
+                if showBtn
+                    .header-item: a(data-src="#modal-order" href="javascript:;" data-fancybox).btn.btn-red.btn-small Заказать

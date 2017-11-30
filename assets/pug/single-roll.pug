@@ -1,0 +1,319 @@
+extends includes/_layout
+
+block header
+    include components/header-product/_header-product
+    - var bgPath = "./img/bg_4.jpg";
+    - var headerLinks = [{src: '#objects', title: 'Галерея'}, {src: '#materials', title: 'Инструкция'}, {src: '#delivery', title: 'Доставка'}, {src: '#letters', title: 'Отзывы'}, {src: '#calculator', title: 'Рассчитать стоимость', icon: 'icon-calculator'}];
+    - var showBtn = true;
+    +productHeader(bgPath, headerLinks, showBtn)
+
+block content
+    main#main-content
+        .product
+            .container
+                .product-inline.for-roll
+                    .product-image
+                        .product-image-block
+                            img(src="./img/product-item-4.png" alt="")
+                    .product-desc
+                        ul.breadcrumbs-line.row
+                            li: a(href="#") Главная
+                            li.separator: a(href="#") >
+                            li: a(href="#") Каталог
+                            li.separator: a(href="#") >
+                            li: a(href="#") Наливные полы
+                            li.separator: a(href="#") >
+                            li: a(href="#") Teping Пол 205 C
+                        h1.product-title
+                            i.icon-title
+                            | Roll
+                        p Бесшовное покрытие для детских и спортивных площадок. #[br]Для травмобезопасных игр и занятий спортом!
+                        ul.product-desc__list
+                            li
+                                i.icon-quote
+                                | Травмобезопасное покрытие
+                            li
+                                i.icon-quote
+                                | Высокая стойкость к ударам и износу
+                            li
+                                i.icon-quote
+                                | Экологически чистое покрытие
+                        p.product-price
+                            small от
+                            span &nbsp;655
+                                i.icon-rub
+                            | за м#[sup 2]
+                        .product-desc-btns
+                            a(href="#calculator").btn.btn-black-transparent
+                                i.icon-calculator
+                                | Рассчитать стоимость
+                            a(data-src="#modal-order" href="javascript:;" data-fancybox).btn.btn-red Заказать
+                    .product-apply
+                        p.apply-title: b Применяется на объектах
+                        .apply-inline.row
+                            .apply-column.col-md-6.col-xs-12
+                                .apply-item
+                                    i.icon-production
+                                    p Спортзалы
+                                .apply-item
+                                    i.icon-parking
+                                    p Детские игровые комнаты
+                                .apply-item
+                                    i.icon-stock
+                                    p Зоны отдыха
+                                .apply-item
+                                    i.icon-office
+                                    p Ледовые катки
+        .modifications.block
+            .modifications__row.modifications__row_column_2
+                .modifications__item.mod
+                    .mod__header
+                        .mod__image: img(src="./img/modifications/1.png" alt="#")
+                        p.mod__title Teping Roll EPDM 15%
+                    .mod__body
+                        .mod__desc
+                            p Покрытие на основе резиновой крошки и цветных EPDM гранул (не менее 15%). Имеет привлекательный дизайн, широкий диапазон цветовых решений, обладает превосходными противоскользящими свойствами.
+                        .mod-params.mod-params_inline
+                            .mod-params__item
+                                p.mod-params__caption Доступные цвета
+                                .mod-params__colors
+                                    a(href="javascript:;" data-color="yellow").mod-params__color-item
+                                    a(href="javascript:;" data-color="blue").mod-params__color-item
+                                    a(href="javascript:;" data-color="green").mod-params__color-item
+                                    a(href="javascript:;" data-color="white").mod-params__color-item
+                                    a(href="javascript:;" data-color="red").mod-params__color-item
+                            .mod-params__item
+                                p.mod-params__caption Толщина
+                                p.mod-params__weight 4 мм - 10 мм
+                            .mod-params__item
+                                p.mod-params__caption Стоимость за м#[sup 2]
+                                p.mod-params__price 875
+                                    i.icon-rub
+                    .modifications__footer
+                        a(data-src="#modal-delivery" href="javascript:;" data-fancybox).btn.btn-red Рассчитать стоимость
+        #objects.objects
+            h2.text-center Объекты с Teping Пол 205 C
+            include includes/_objects-slider
+        #materials.materials.block
+            .container
+                .materials-inline.row
+                    .steps-block
+                        h2 Этапы укладки
+                        .steps-item
+                            p.step-count 1
+                            .step-desc
+                                p: b Шлифование и обеспыливание
+                                p Необходимо снять слой цементного молочка и пыли. Это обеспечит необходимое сцепление материала.
+                        .steps-item
+                            p.step-count 2
+                            .step-desc
+                                p: b Грунтование
+                                p Используйте Тэпинг Р 1155 Грунт.  Запечатывает поры, пропитывает верхний слой основания.
+                        .steps-item
+                            p.step-count 3
+                            .step-desc
+                                p: b Нанесение промежуточного слоя
+                                p Окончательно выравниваем и запечатываем поры, заполняем рытвины. Дополнительно упрочняем основание.
+                        .steps-item
+                            p.step-count 4
+                            .step-desc
+                                p: b Нанесение финишного слоя
+                                p Толщина от 1 до 3 мм. Придает декоративный вид полу и нужную фактуру.
+                        .steps-btns
+                            a(href="./insruction.pdf" target="_blank").btn.btn-red-transparent
+                                i.icon-pdf
+                                | Скачать инструкцию
+                            a(href="https://www.youtube.com/embed/irRKhNBX5qs" data-fancybox).btn.btn-black-transparent
+                                i.icon-play
+                                | Смотреть видео инструкцию
+                        .step-change
+                            p: b Какую толщину выбрать?
+                            .change-thicknees-item
+                                i.icon-calc-item-1
+                                p.count 2 – 3
+                                    small мм
+                                p Пешеходные нагрузки
+                            .change-thicknees-item
+                                i.icon-calc-item-4
+                                p.count 3 – 5
+                                    small мм
+                                p Промышленные механизированные нагрузки
+                            .change-thicknees-item
+                                i.icon-calc-item-6
+                                p.count 5 – 10
+                                    small мм
+                                p Сверхтяжелые интенсивные нагрузки
+                        p: b Справлюсь ли я?
+                        p Мы сделали всё для удобства работы. Материал специально поставляется в комплектах. В большое ведро выливаем содержимое малого. Ошибиться с пропорциями сложно.
+                        p В ведре мы оставили место для добавления кварцевого песка. Дополнительная тара не понадобится.&nbsp;
+                            a(href='#') Поэтапная инструкция&nbsp;
+                            | поможет.
+                    .material-block
+                        h2 Вам понадобится
+                        p: b Материалы
+                        .material-item
+                            i.icon-banks
+                                span.path1
+                                span.path2
+                                span.path3
+                                span.path4
+                                span.path5
+                                span.path6
+                                span.path7
+                                span.path8
+                                span.path9
+                            p Наливной пол Teping Пол 205 С
+                        .material-item
+                            i.icon-banks
+                                span.path1
+                                span.path2
+                                span.path3
+                                span.path4
+                                span.path5
+                                span.path6
+                                span.path7
+                                span.path8
+                                span.path9
+                            p Грунтовка&nbsp;
+                                a(href="#") Тэпинг Р 1155 Грунт
+                        .material-item
+                            i.icon-bag-20kg
+                            p Кварцевый песок фракции 0,1 – 0,3 мм.
+                        p: b Инструменты
+                        .tools-block.row
+                            .tools-item.col-sm-6.col-xs-12
+                                a(href="javascript:;")
+                                    i.icon-roller-needle
+                                    span Игольчатый валик
+                                    .tools-item-about
+                                        .tools-item-about-desc
+                                            img(src="./img/tools/1.jpg" alt="#")
+                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных.
+                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных наливных полов: правила выбора размера шипов.
+                            .tools-item.col-sm-6.col-xs-12
+                                a(href="javascript:;")
+                                    i.icon-notched-trowel
+                                    span Зубчатый шпатель
+                                    .tools-item-about
+                                        .tools-item-about-desc
+                                            img(src="./img/tools/2.jpg" alt="#")
+                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных.
+                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных наливных полов: правила выбора размера шипов.
+                            .tools-item.col-sm-6.col-xs-12
+                                a(href="javascript:;")
+                                    i.icon-roller
+                                    span Велюровый валик
+                                    .tools-item-about
+                                        .tools-item-about-desc
+                                            img(src="./img/tools/3.png" alt="#")
+                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных.
+                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных наливных полов: правила выбора размера шипов.
+                            .tools-item.col-sm-6.col-xs-12
+                                a(href="javascript:;")
+                                    img(src="./img/foot.svg" width='47')
+                                    span Мокро/краскоступы
+                                    .tools-item-about
+                                        .tools-item-about-desc
+                                            img(src="./img/tools/4.jpg" alt="#")
+                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных.
+                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных наливных полов: правила выбора размера шипов.
+                            .tools-item.col-sm-6.col-xs-12
+                                a(href="javascript:;")
+                                    i.icon-trowel
+                                    span Плоский шпатель
+                                    .tools-item-about
+                                        .tools-item-about-desc
+                                            img(src="./img/tools/5.jpg" alt="#")
+                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных.
+                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных наливных полов: правила выбора размера шипов.
+                            .tools-item.col-sm-6.col-xs-12
+                                a(href="javascript:;")
+                                    i.icon-hand
+                                    span Ваши замечатальные руки
+                                    .tools-item-about
+                                        .tools-item-about-desc
+                                            img(src="./img/video.png" alt="#")
+                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных.
+                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных наливных полов: правила выбора размера шипов.
+                        p: b Оборудование
+                        .tools-block.row
+                            .tools-item.col-sm-6.col-xs-12
+                                a(href="javascript:;")
+                                    img(src="./img/mixer.svg" width='47')
+                                    span Промышленный
+                                        br
+                                        | ручной миксер
+                                    .tools-item-about
+                                        .tools-item-about-desc
+                                            img(src="./img/tools/6.jpg" alt="#")
+                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных.
+                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных наливных полов: правила выбора размера шипов.
+                            .tools-item.col-sm-6.col-xs-12
+                                a(href="javascript:;")
+                                    i.icon-vacuum-cleaner
+                                    span Промышленный пылесос
+                                    .tools-item-about
+                                        .tools-item-about-desc
+                                            img(src="./img/tools/7.jpg" alt="#")
+                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных.
+                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных наливных полов: правила выбора размера шипов.
+                        .video-info
+                            .video-block: a(href="https://www.youtube.com/embed/irRKhNBX5qs" data-fancybox)
+                                i.icon-play
+                                img(src="./img/video.png" alt="#")
+                            .video-desc
+                                p: b Мы собрали всю информацию о&nbsp;деталях укладки пола
+                                p  Как сделать результат отличным? Какие есть нюансы? Какой инструмент использовать и зачем?
+                                a(href="#").btn.btn-black-transparent Читать >
+        #delivery.delivery.block
+            .container
+                .delivery-inline.row
+                    .delivery-desc
+                        h2 Доставляем по России, Казахстану и Белоруссии
+                        p.delivery-title: b Сроки и стоимость доставки
+                        p.dotted
+                            span Отдаленные регионы
+                            span от 15 дней
+                        p.dotted
+                            span Европейская часть России
+                            span 5 – 7 дней
+                        p.dotted
+                            span Москва
+                            span 2 дня
+                        p.dotted
+                            span Санкт-Петербург
+                            span На следующий день, после оплаты
+                        p(style='margin-top: 30px;') Бесплатная доставка до терминала ТК «Деловые линии» в Санкт-Петербурге.
+                        p Адресная доставка по Санкт-Петербургу 2 000 руб.
+                        a(data-src="#modal-delivery" href="javascript:;" data-fancybox).btn.btn-red-transparent Узнать стоимость и сроки доставки в мой город
+                        p.delivery-title: b Габариты и упаковка
+                        p.lg-text На паллет помещается 24 комплекта Teping Пол 205 C.
+                            br
+                            | В 1 куб.м. – 24 комплекта Тэпинг Пол 205 С, общей массой  - 414,40 кг. В зависимости от количества комплектов груз может быть поставлен на паллеты или ехать отдельно с обрешёткой.
+                        .delivery-line.row.between-xs
+                            .delivery-item
+                                p Один комплект Teping Пол 205 С содержит в себе
+                                .delivery-image
+                                    p
+                                        i.icon-bank
+                                        | Основа
+                                        span 11,8 кг
+                                    p.plus +
+                                    p
+                                        i.icon-bank.small
+                                        | Отвердитель
+                                        span(style="margin-left: -20px") 3 кг
+                            .delivery-item
+                                p На один паллет 1х1 м, помещается 24 комплекта Teping Пол 205 С
+                                .delivery-image
+                                    p
+                                        b х 24
+                                        | Комплекта
+                                        span 414.40 кг
+                    .delivery-map
+                        .image-item
+                            img(src='./img/car.jpg' alt="#")
+                        .image-item
+                            img(src='./img/delivery-map.png' alt="#")
+        include includes/_letters
+        include includes/_callback
