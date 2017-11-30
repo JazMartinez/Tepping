@@ -48,6 +48,7 @@ Product block
 
     span {
       display: flex;
+      font-size: 14px;
     }
   }
 
@@ -750,7 +751,7 @@ Guide block
     font-size: 16px;
 
     &.count {
-      width: 95px;
+      width: 105px;
       margin-right: 25px;
       font-size: 24px;
       font-weight: 100;
@@ -1303,13 +1304,22 @@ Callback button
 /*----
 Modificztions
  ----*/
+.modifications {
+  margin: 30px 0 0;
+  padding-bottom: 40px;
+
+  h2 {
+    margin-bottom: 15px;
+  }
+}
+
 .modifications__row {
   display: flex;
   justify-content: center;
   align-items: stretch;
-  padding: 30px 0;
+  padding: 20px 0;
 
-  &:nth-child(2n-1) {
+  &:nth-of-type(2n) {
     background: #f6f8f9;
   }
 }
@@ -1318,11 +1328,34 @@ Modificztions
   display: block;
   max-width: 532px;
   margin: 0 30px;
-  padding: 20px 35px;
-  border: 1px solid #d0d0d0;
+  padding: 20px 30px;
+  border: 1px solid transparent;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  transition: all .3s ease-out;
+
+  &:hover {
+    border-color: #d0d0d0;
+
+    .mod__footer {
+      height: 60px;
+    }
+  }
+
+  &.active {
+    .mod__min-image {
+      img {
+        opacity: 0 !important;
+      }
+    }
+
+    .mod__scale-image {
+      img {
+        opacity: .9;
+      }
+    }
+  }
 }
 
 .mod__header {
@@ -1334,32 +1367,93 @@ Modificztions
 
 .mod__image {
   position: relative;
+  width: 255px;
+  height: 95px;
+  z-index: 10;
+  transition: all .3s ease-out;
+
+  &:hover {
+    cursor: pointer;
+
+    .mod__min-image {
+      span {
+        opacity: 1;
+        top: 40%;
+        z-index: 10;
+      }
+
+      img {
+        opacity: .6;
+      }
+    }
+  }
+}
+
+.mod__min-image {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: flex-end;
 
-  width: 255px;
-  height: 95px;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
-  z-index: 10;
+
+  img {
+    max-width: 433px;
+    max-height: 264px;
+    object-fit: contain;
+    transition: all .3s ease-out;
+  }
+
+  span {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    font-size: 30px;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: all .3s ease-out;
+  }
+
+  &.for-settings {
+    max-width: 240px;
+    margin-right: 15px;
+    border: 4px solid #e8e8e8;
+
+    img {
+      max-width: 233px;
+    }
+  }
+}
+
+.mod__min-image_end {
+  align-items: flex-end;
+}
+
+.mod__min-image_center {
+  align-items: center;
+}
+
+.mod__scale-image {
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 50;
+  transform: translateX(-50%);
+  transition: all .3s ease-out;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
 
   img {
     width: 433px;
     height: 264px;
     object-fit: contain;
-    transition: all .3s ease-out;
-  }
-
-  &:after {
-
-  }
-
-  &:hover {
-    cursor: pointer;
-
-    img {
-      opacity: .6;
-    }
   }
 }
 
@@ -1383,6 +1477,7 @@ Modificztions
   b {
     color: $color-green;
     font-weight: 500;
+    margin-left: 4px;
   }
 
   &:before {
@@ -1396,6 +1491,10 @@ Modificztions
   }
 }
 
+.mod-params {
+  margin-bottom: 10px;
+}
+
 .mod__desc {
   padding: 15px 0;
   border-bottom: 1px solid #d0d0d0;
@@ -1403,6 +1502,19 @@ Modificztions
   p {
     font-size: 16px;
   }
+
+  .mod-params__colors {
+    margin-top: 20px;
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+.modifications-container {
+  width: 100%;
+  max-width: 1060px;
+  margin: 0 auto;
 }
 
 .mod-params_inline {
@@ -1412,19 +1524,23 @@ Modificztions
   margin-top: 15px;
 }
 
-.mod-params__item {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 .mod-params__caption {
   font-size: 14px;
 }
 
 .mod-params__weight {
   font-size: 14px;
-  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.mod-params__setting {
+  font-size: 14px;
+  margin-top: 10px;
+  padding: 2px 6px;
+  background: #e8e8e8;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 
 .mod-params__price {
@@ -1436,4 +1552,96 @@ Modificztions
     font-size: 23px;
     margin-left: 6px;
   }
+
+  b {
+    font-size: 14px;
+    font-weight: 300;
+  }
+}
+
+.mod__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 0;
+  overflow: hidden;
+  transition: all .3s ease-out;
+
+  .btn {
+    max-width: 285px;
+  }
+}
+
+.mod-params__colors {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  margin-left: -2px;
+  margin-right: -2px;
+
+  p {
+    margin-right: 15px;
+  }
+}
+
+.mod-params__color-item {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid transparent;
+  margin: 0 2px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  transition: all .3s ease-out;
+
+  &[data-color="yellow"] {
+    background: #f0c207
+  }
+  &[data-color="blue"] {
+    background: #317ffc
+  }
+  &[data-color="green"] {
+    background: #04b536
+  }
+  &[data-color="white"] {
+    background: #e8e8e8
+  }
+  &[data-color="red"] {
+    background: #f93b0b
+  }
+  &[data-color="black"] {
+    background: #000000
+  }
+  &[data-color="purple"] {
+    background: #c87eca
+  }
+  &[data-color="dark-green"] {
+    background: #116b2b
+  }
+  &[data-color="light-blue"] {
+    background: #10b9df
+  }
+
+  &.mod-params__color-item_current {
+    border-color: #d7e9f1;
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.glass {
+  position: absolute;
+  width: 124px;
+  height: 124px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 9px 1px rgba(0, 0, 0, .3);
+  box-shadow: 0 0 9px 1px rgba(0, 0, 0, .3);
+  border: solid 5px #fff;
+  border-radius: 50%;
+  cursor: crosshair;
+  display: none;
+  z-index: 60;
 }

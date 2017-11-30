@@ -1,9 +1,9 @@
 function onScroll(t) {
     var e = $(window).scrollTop();
     $(".second-menu li a").each(function() {
-        var t = $(this), o = $(t.attr("href"));
-        o.offset().top - 100 <= e + 63 + 74 && o.offset().top - 100 + o.height() > e ? ($(".second-menu li a").removeClass("active"), 
-        t.addClass("active"), o.addClass("active")) : (o.removeClass("active"), t.removeClass("active"));
+        var t = $(this), s = $(t.attr("href"));
+        s.offset().top - 100 <= e + 63 + 74 && s.offset().top - 100 + s.height() > e ? ($(".second-menu li a").removeClass("active"), 
+        t.addClass("active"), s.addClass("active")) : (s.removeClass("active"), t.removeClass("active"));
     });
 }
 
@@ -24,10 +24,10 @@ function inputError(t, e) {
 }
 
 function showTooltips(t, e) {
-    var o = $(t), s = $(e);
-    o.click(function(t) {
+    var s = $(t), o = $(e);
+    s.click(function(t) {
         t.preventDefault(), $(this).hasClass("active") ? ($(this).removeClass("active"), 
-        $(this).find(e).fadeOut(400)) : (o.removeClass("active"), s.fadeOut(400), $(this).addClass("active"), 
+        $(this).find(e).fadeOut(400)) : (s.removeClass("active"), o.fadeOut(400), $(this).addClass("active"), 
         $(this).find(e).fadeIn(400));
     });
 }
@@ -36,77 +36,77 @@ $(document).ready(function() {
     showTooltips(".tools-item a", ".tools-item-about"), showTooltips(".solution-char__link", ".solution-char__more"), 
     showTooltips(".icon-question", ".filter-title__more-info");
     var t, e;
-    $(".solution-price__more-btn").click(function(o) {
-        o.preventDefault(), t = $(this).parents(".solution-item__top"), e = t.next(".solution-item__bottom"), 
+    $(".solution-price__more-btn").click(function(s) {
+        s.preventDefault(), t = $(this).parents(".solution-item__top"), e = t.next(".solution-item__bottom"), 
         t.toggleClass("solution-item__top_active"), e.slideToggle(400), t.hasClass("solution-item__top_active") ? ($(this).find("span").text("Cвернуть"), 
         e.css("display", "flex")) : $(this).find("span").text("Подробнее");
     });
-    var o = $(".permissions"), s = $(".permissions .btn");
-    null === localStorage.getItem("permissions") && o.fadeIn(800), s.click(function(t) {
+    var s = $(".permissions"), o = $(".permissions .btn");
+    null === localStorage.getItem("permissions") && s.fadeIn(800), o.click(function(t) {
         t.preventDefault(), localStorage.setItem("permissions", "success"), loadBtn($(this), 2e3), 
         setTimeout(function() {
-            o.fadeOut(800);
+            s.fadeOut(800);
         }, 1200);
     });
-    var i, a, n = $(".form-group-input input");
+    var a, i, n = $(".form-group-input input");
     n.focusin(function() {
-        $(this).parent(".form-group-input").css("border-bottom-color", "#33A962"), i = $(this).attr("name"), 
-        a = $(this).val(), "phone" === i && "" === a && $(this).val("8");
+        $(this).parent(".form-group-input").css("border-bottom-color", "#33A962"), a = $(this).attr("name"), 
+        i = $(this).val(), "phone" === a && "" === i && $(this).val("8");
     }), n.focusout(function() {
         $(this).parent(".form-group-input").css("border-bottom-color", "#dcdcdc");
     }), n.keyup(function() {
-        i = $(this).attr("name"), a = $(this).val();
+        a = $(this).attr("name"), i = $(this).val();
         var t;
-        if ("" !== $(this).val()) switch (i) {
+        if ("" !== $(this).val()) switch (a) {
           case "email":
-            t = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/, a.length > 2 && t.test(a) ? inputSuccess($(this)) : inputError($(this), "Введите данные в формате mail@mail.ru");
+            t = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/, i.length > 2 && t.test(i) ? inputSuccess($(this)) : inputError($(this), "Введите данные в формате mail@mail.ru");
             break;
 
           case "phone":
           case "area":
-            t = /^[0-9]+$/, a.length > 2 && t.test(a) ? inputSuccess($(this)) : inputError($(this), "Допустимо использовать только числа");
+            t = /^[0-9]+$/, i.length > 2 && t.test(i) ? inputSuccess($(this)) : inputError($(this), "Допустимо использовать только числа");
             break;
 
           case "city":
           case "name":
-            t = /^[a-zA-Zа-яА-Я]+$/, a.length > 2 && t.test(a) ? inputSuccess($(this)) : inputError($(this), "Допустимо использовать символы только русского или английского алфавита, тире и апостроф");
+            t = /^[a-zA-Zа-яА-Я]+$/, i.length > 2 && t.test(i) ? inputSuccess($(this)) : inputError($(this), "Допустимо использовать символы только русского или английского алфавита, тире и апостроф");
         }
     });
-    var r, c = $(".calc-step-1"), l = $(".calc-step-2");
+    var l, c = $(".calc-step-1"), r = $(".calc-step-2");
     $(".calc-form-inline .btn").click(function() {
-        "" !== (r = $("input[name=area-step-1]")).val() ? (loadBtn($(this), 2e3), setTimeout(function() {
-            $("input[name=area-step-2]").val(r.val()), c.fadeOut(400), setTimeout(function() {
-                l.fadeIn(400, function() {
+        "" !== (l = $("input[name=area-step-1]")).val() ? (loadBtn($(this), 2e3), setTimeout(function() {
+            $("input[name=area-step-2]").val(l.val()), c.fadeOut(400), setTimeout(function() {
+                r.fadeIn(400, function() {
                     $("html, body").stop().animate({
-                        scrollTop: l.offset().top - 135
+                        scrollTop: r.offset().top - 135
                     }, 800);
-                }), l.addClass("open-step"), $(".objects").addClass("objects-overflow");
+                }), r.addClass("open-step"), $(".objects").addClass("objects-overflow");
             }, 500);
         }, 2e3)) : $(".calc-form > p").text("Введите корректную площадь!");
     });
-    var p = $(".calc-current-color"), u = $(".calc-change-color"), d = $(".color-item"), f = $(".another-group .btn"), m = $("input[name=another-color]"), h = $(".current-color-item, .modal-product-color");
-    p.click(function(t) {
-        t.preventDefault(), $(this).toggleClass("active"), u.slideToggle(400);
-    }), d.click(function(t) {
+    var d = $(".calc-current-color"), p = $(".calc-change-color"), u = $(".color-item"), m = $(".another-group .btn"), h = $("input[name=another-color]"), f = $(".current-color-item, .modal-product-color");
+    d.click(function(t) {
+        t.preventDefault(), $(this).toggleClass("active"), p.slideToggle(400);
+    }), u.click(function(t) {
         t.preventDefault();
         var e = $(this).attr("style");
-        h.removeClass("color-item-dark"), h.removeClass("another-color"), h.attr("style", e), 
-        h.html($(this).html()), $(this).hasClass("color-item-dark") && h.addClass("color-item-dark"), 
-        d.removeClass("active"), $(this).addClass("active"), p.removeClass("active"), u.slideUp(400);
-    }), f.click(function(t) {
-        t.preventDefault(), "" !== m.val() ? ($(".another-group i").animate({
+        f.removeClass("color-item-dark"), f.removeClass("another-color"), f.attr("style", e), 
+        f.html($(this).html()), $(this).hasClass("color-item-dark") && f.addClass("color-item-dark"), 
+        u.removeClass("active"), $(this).addClass("active"), d.removeClass("active"), p.slideUp(400);
+    }), m.click(function(t) {
+        t.preventDefault(), "" !== h.val() ? ($(".another-group i").animate({
             opacity: "1"
         }, 400), loadBtn($(this), 2e3), setTimeout(function() {
-            h.removeClass("color-item-dark"), h.addClass("another-color"), h.text("На заказ"), 
-            d.removeClass("active"), p.removeClass("active"), u.slideUp(400);
+            f.removeClass("color-item-dark"), f.addClass("another-color"), f.text("На заказ"), 
+            u.removeClass("active"), d.removeClass("active"), p.slideUp(400);
         }, 2e3)) : $(".color-another > p:first-of-type").text("Заполните поле ниже!");
     });
-    var v = $(".calc-content-row"), b = $(".calc-type-info-more");
+    var v = $(".calc-content-row"), g = $(".calc-type-info-more");
     v.find(".calc-type-info").click(function() {
         var t = $(this).parents(".calc-content-row"), e = t.find(".calc-type-price").html();
         t.hasClass("active") ? (v.removeClass("disable"), t.removeClass("active"), t.find(".calc-type-info-more").slideUp(400)) : ($(".info-result-price").html(e), 
         $(".info-result-price .price-result").prepend("<span>Итого стоимость материалов:</span>"), 
-        v.removeClass("active").addClass("disable"), b.slideUp(400), t.addClass("active").removeClass("disable"), 
+        v.removeClass("active").addClass("disable"), g.slideUp(400), t.addClass("active").removeClass("disable"), 
         t.find(".calc-type-info-more").slideDown(400, function() {
             $("html, body").stop().animate({
                 scrollTop: t.offset().top - 255
@@ -116,14 +116,14 @@ $(document).ready(function() {
         t.preventDefault(), $(this).toggleClass("active"), $(this).next(".select-time-change").slideToggle(400);
     }), $(".select-time-item").click(function(t) {
         t.preventDefault();
-        var e = $(this).html(), o = $(".select-time-val span").html();
-        $(".select-time-val span").html(e), $("input[name=select-time]").val(e), $(this).html(o), 
+        var e = $(this).html(), s = $(".select-time-val span").html();
+        $(".select-time-val span").html(e), $("input[name=select-time]").val(e), $(this).html(s), 
         $(".select-time-val").removeClass("active"), $(".select-time-change").slideUp(400);
     });
-    var C = $(".drop-menu-item");
-    C.hover(function() {
+    var b = $(".drop-menu-item");
+    b.hover(function() {
         $("#wrapper").addClass("menu-active");
-    }), C.on("mouseleave", function() {
+    }), b.on("mouseleave", function() {
         $("#wrapper").removeClass("menu-active");
     }), $(".acordeon-item-header").click(function(t) {
         t.preventDefault(), $(this).hasClass("active") ? ($(this).removeClass("active"), 
@@ -181,18 +181,65 @@ $(document).ready(function() {
     }), $('a[href^="#"]').bind("click", function(t) {
         t.preventDefault();
         var e = $(this);
-        return $("html, body").stop().animate({
+        $("html, body").stop().animate({
             scrollTop: $(e.attr("href")).offset().top - 130
-        }, 1e3), !1;
+        }, 1e3);
+    });
+    var C, w = $(".mod__min-image");
+    w.click(function() {
+        (C = $(this).next(".mod__scale-image")).hasClass("active") ? (C.slideUp(400).removeClass("active"), 
+        $(this).parents(".mod").removeClass("active")) : ($(".mod").removeClass("active"), 
+        w.next(".mod__scale-image").removeClass("active"), C.slideDown(400).addClass("active"), 
+        $(this).parents(".mod").addClass("active"));
+    });
+    var k, x = 0, y = 0, _ = {
+        x: 0,
+        y: 0
+    }, T = {
+        magniflier: $(".mod__scale")
+    };
+    if (T.magniflier.length) {
+        var S = document.createElement("div");
+        S.setAttribute("class", "glass"), T.glass = $(S), $("body").append(S);
+    }
+    var A = function(t) {
+        var e = k.offset();
+        _.x = t.pageX - e.left, _.y = t.pageY - e.top, _.x < k.width() && _.y < k.height() && _.x > 0 && _.y > 0 ? D(t) : T.glass.fadeOut(400);
+    }, D = function(t) {
+        var e = -1 * Math.round(_.x / k.width() * x - T.glass.width() / 2) + "px " + -1 * Math.round(_.y / k.height() * y - T.glass.height() / 2) + "px", s = t.pageX - T.glass.width() / 2, o = t.pageY - T.glass.height() / 2;
+        T.glass.css({
+            left: s,
+            top: o,
+            backgroundPosition: e
+        });
+    };
+    $(".mod, .objects").on("mousemove", function() {
+        $(this).hasClass("active") || (T.glass.fadeOut(100), w.next(".mod__scale-image").removeClass("active"), 
+        $(".mod").removeClass("active"));
+    }), $(T.magniflier).on("mousemove", function() {
+        T.glass.fadeIn(100);
+        var t = (k = $(this)).attr("src");
+        if (t && T.glass.css({
+            "background-image": "url(" + t + ")",
+            "background-repeat": "no-repeat"
+        }), !k.data("native_width")) {
+            var e = new Image();
+            return e.onload = function() {
+                x = e.width, y = e.height, k.data("native_width", x), k.data("native_height", y), 
+                A.apply(this, arguments), T.glass.on("mousemove", A);
+            }, void (e.src = t);
+        }
+        x = k.data("native_width"), y = k.data("native_height"), A.apply(this, arguments), 
+        T.glass.on("mousemove", A);
     });
 }), $(function() {
-    var t, e = $(".header-bottom"), o = $(this).scrollTop(), s = $(".header-middle").outerHeight();
-    o > s && e.css({
+    var t, e = $(".header-bottom"), s = $(this).scrollTop(), o = $(".header-middle").outerHeight();
+    s > o && e.css({
         top: $(".header-top").outerHeight()
     }), $(window).scroll(function() {
-        o = $(this).scrollTop(), $(".calc-step-2").hasClass("open-step") && (t = $(".objects").offset().top, 
-        o > t - $(window).outerHeight() / 3 ? $(".objects").removeClass("objects-overflow") : $(".objects").addClass("objects-overflow")), 
-        o + 0 < s ? (e.css({
+        s = $(this).scrollTop(), $(".calc-step-2").hasClass("open-step") && (t = $(".objects").offset().top, 
+        s > t - $(window).outerHeight() / 3 ? $(".objects").removeClass("objects-overflow") : $(".objects").addClass("objects-overflow")), 
+        s + 0 < o ? (e.css({
             top: "100%",
             position: "absolute"
         }).removeClass("header-fixed"), $(".top-link").css("opacity", "0")) : (e.css({

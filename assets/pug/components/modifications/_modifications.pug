@@ -1,0 +1,58 @@
+mixin modifications(mods, position, header, headerFixed)
+    .modifications.block
+        if header
+            if headerFixed
+                .modifications-container: h2=header
+            else
+                .container: h2=header
+        each row in mods
+            .modifications__row.modifications__row_column_2
+                each mod in row.row
+                    .modifications__item.mod
+                        .mod__header
+                            .mod__image
+                                if mod.settings
+                                    .mod__min-image(class='mod__min-image_' + position + ' for-settings')
+                                        img(src=mod.src alt="#")
+                                        span: i.icon-zoom
+                                else
+                                    .mod__min-image(class='mod__min-image_' + position)
+                                        img(src=mod.src alt="#")
+                                        span: i.icon-zoom
+                                .mod__scale-image: img(src=mod.src alt="#").mod__scale
+                            p.mod__title!=mod.title
+                        .mod__body
+                            if mod.settings
+                                .mod__desc
+                                    p=mod.description
+                                    .mod-params__colors
+                                        p Доступные цвета
+                                        each color in mod.colors
+                                            a(href="javascript:;" data-color=color).mod-params__color-item
+                                .mod-params.mod-params_inline
+                                    each setting in mod.settings
+                                        .mod-params__item
+                                            p.mod-params__caption= setting.name
+                                            p.mod-params__setting!=setting.value
+                                    .mod-params__item
+                                        p.mod-params__caption Стоимость за м#[sup 2]
+                                        p.mod-params__price!=mod.price
+                                            i.icon-rub
+                            else
+                                .mod__desc
+                                    p=mod.description
+                                .mod-params.mod-params_inline
+                                    .mod-params__item
+                                        p.mod-params__caption Доступные цвета
+                                        .mod-params__colors
+                                            each color in mod.colors
+                                                a(href="javascript:;" data-color=color).mod-params__color-item
+                                    .mod-params__item
+                                        p.mod-params__caption Толщина
+                                        p.mod-params__weight=mod.weight
+                                    .mod-params__item
+                                        p.mod-params__caption Стоимость за м#[sup 2]
+                                        p.mod-params__price!=mod.price
+                                            i.icon-rub
+                        .mod__footer
+                            a(data-src="#modal-order" href="javascript:;" data-fancybox).btn.btn-red Рассчитать стоимость

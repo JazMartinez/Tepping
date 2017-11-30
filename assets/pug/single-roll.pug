@@ -3,7 +3,7 @@ extends includes/_layout
 block header
     include components/header-product/_header-product
     - var bgPath = "./img/bg_4.jpg";
-    - var headerLinks = [{src: '#objects', title: 'Галерея'}, {src: '#materials', title: 'Инструкция'}, {src: '#delivery', title: 'Доставка'}, {src: '#letters', title: 'Отзывы'}, {src: '#calculator', title: 'Рассчитать стоимость', icon: 'icon-calculator'}];
+    - var headerLinks = [{src: '#objects', title: 'Галерея'}, {src: '#materials', title: 'Инструкция'}, {src: '#delivery', title: 'Доставка'}, {src: '#letters', title: 'Отзывы'}];
     - var showBtn = true;
     +productHeader(bgPath, headerLinks, showBtn)
 
@@ -44,53 +44,28 @@ block content
                                 i.icon-rub
                             | за м#[sup 2]
                         .product-desc-btns
-                            a(href="#calculator").btn.btn-black-transparent
-                                i.icon-calculator
-                                | Рассчитать стоимость
+                            a(href="#calculator").btn.btn-black-transparent Рассчитать стоимость
                             a(data-src="#modal-order" href="javascript:;" data-fancybox).btn.btn-red Заказать
                     .product-apply
                         p.apply-title: b Применяется на объектах
                         .apply-inline.row
                             .apply-column.col-md-6.col-xs-12
                                 .apply-item
-                                    i.icon-production
+                                    i.icon-gym
                                     p Спортзалы
                                 .apply-item
-                                    i.icon-parking
+                                    i.icon-playground
                                     p Детские игровые комнаты
                                 .apply-item
-                                    i.icon-stock
+                                    i.icon-rest-zone
                                     p Зоны отдыха
                                 .apply-item
-                                    i.icon-office
+                                    i.icon-skates
                                     p Ледовые катки
-        .modifications.block
-            .modifications__row.modifications__row_column_2
-                .modifications__item.mod
-                    .mod__header
-                        .mod__image: img(src="./img/modifications/1.png" alt="#")
-                        p.mod__title Teping Roll EPDM 15%
-                    .mod__body
-                        .mod__desc
-                            p Покрытие на основе резиновой крошки и цветных EPDM гранул (не менее 15%). Имеет привлекательный дизайн, широкий диапазон цветовых решений, обладает превосходными противоскользящими свойствами.
-                        .mod-params.mod-params_inline
-                            .mod-params__item
-                                p.mod-params__caption Доступные цвета
-                                .mod-params__colors
-                                    a(href="javascript:;" data-color="yellow").mod-params__color-item
-                                    a(href="javascript:;" data-color="blue").mod-params__color-item
-                                    a(href="javascript:;" data-color="green").mod-params__color-item
-                                    a(href="javascript:;" data-color="white").mod-params__color-item
-                                    a(href="javascript:;" data-color="red").mod-params__color-item
-                            .mod-params__item
-                                p.mod-params__caption Толщина
-                                p.mod-params__weight 4 мм - 10 мм
-                            .mod-params__item
-                                p.mod-params__caption Стоимость за м#[sup 2]
-                                p.mod-params__price 875
-                                    i.icon-rub
-                    .modifications__footer
-                        a(data-src="#modal-delivery" href="javascript:;" data-fancybox).btn.btn-red Рассчитать стоимость
+        include components/modifications/_modifications
+        - var mods = [{row: [{src: './img/modifications/1.png', title: 'Teping Roll EPDM 15%', description: 'Покрытие на основе резиновой крошки и цветных EPDM гранул (не менее 15%). Имеет привлекательный дизайн, широкий диапазон цветовых решений, обладает превосходными противоскользящими свойствами.', colors: ['yellow', 'blue', 'green', 'white', 'red'], weight: '4 мм - 10 мм', price: '875' }, { src: './img/modifications/1.png', title: 'Teping Roll <b> + Цвет</b>', description: 'Цветное покрытие на основе резиновой крошки фракцией от 1,5 до 5 мм и цветного полиуретанового связующего. Обладает высокой износостойкостью, водопроницаемостью.', colors: ['red', 'dark-green'], weight: '6 мм - 24 мм', price: '<b> от</b>1 512' } ] }, { row: [ { src: './img/modifications/1.png', title: 'Teping Roll S', description: 'Плотное покрытие чёрного цвета на основе резиновой крошки (фракция 0,6 - 2,5 мм). Имеет гладкую поверхность, обладает высокой эластичностью и износостойкостью, влагостоек.', colors: ['black'], weight: '2 мм - 24 мм', price: '905' }, { src: './img/modifications/1.png', title: 'Teping Roll S <b> + Цвет</b>', description: 'Цветное покрытие на основе резиновой крошки (фракция 0,6 - 2,5 мм) и цветного полиуретанового связующего. Имеет гладкую поверхность, высокую и износостойкостью. ', colors: ['red', 'dark-green'], weight: '8 мм - 44 мм', price: '<b> от</b>1 550' } ] }, { row: [ { src: './img/modifications/1.png', title: 'Teping Roll EPDM 15%', description: 'Покрытие на основе резиновой крошки и цветных EPDM гранул (не менее 15%). Имеет привлекательный дизайн, широкий диапазон цветовых решений, обладает превосходными противоскользящими свойствами.', colors: ['yellow', 'blue', 'green', 'white', 'red'], weight: '4 мм - 10 мм', price: '875' }, { src: './img/modifications/1.png', title: 'Teping Roll EPDM <b> 100%</b>', description: 'Покрытие на основе цветной EPDM-крошки. Экологически чистое, не содержит вредных для здоровья компонентов, гипоаллергенно. Отличается особой прочностью, УФ-стойкостью на протяжении всего срока эксплуатации.', colors: ['yellow', 'white', 'light-blue', 'green', 'red', 'purple'], weight: '3 мм - 10 мм', price: '1 700' } ] }, { row: [ { src: './img/modifications/1.png', title: 'Teping Roll Tile', description: 'Двухслойное покрытие с высокой износостойкостью, водопроницаемостью. Выпускается как в рулонах, так и в плитках. Верхний слой (8 мм) из окрашенной резиновой крошки, нижний - из черной резиновой крошки.', colors: ['black'], weight: '16 мм - 20 мм', price: '1 919' }, { src: './img/modifications/1.png', title: 'Teping Roll Base', description: 'Цветное покрытие на основе резиновой крошки (фракция 0,6 - 2,5 мм) и цветного полиуретанового связующего. Имеет гладкую поверхность, высокую и износостойкостью. ', colors: ['red', 'dark-green'], weight: '8 мм - 40 мм', price: '<b> от</b>1 550' } ] } ];
+        - var header = 'Модификации Teping Roll';
+        +modifications(mods, 'end', header, true)
         #objects.objects
             h2.text-center Объекты с Teping Пол 205 C
             include includes/_objects-slider
@@ -102,18 +77,13 @@ block content
                         .steps-item
                             p.step-count 1
                             .step-desc
-                                p: b Шлифование и обеспыливание
-                                p Необходимо снять слой цементного молочка и пыли. Это обеспечит необходимое сцепление материала.
+                                p: b Подготовка поверхности
+                                p Бетонное основание необходимо отшлифовать с целью удаления цементного молочка, после чего тщательно обеспылить с помощью промышленного пылесоса. Это необходимо для обеспечения надёжной адгезии материала к поверхности.
                         .steps-item
                             p.step-count 2
                             .step-desc
                                 p: b Грунтование
-                                p Используйте Тэпинг Р 1155 Грунт.  Запечатывает поры, пропитывает верхний слой основания.
-                        .steps-item
-                            p.step-count 3
-                            .step-desc
-                                p: b Нанесение промежуточного слоя
-                                p Окончательно выравниваем и запечатываем поры, заполняем рытвины. Дополнительно упрочняем основание.
+                                p Грунтовочная смесь наносится с помощью велюрового валика, а в труднодоступных местах – с помощью кисти.
                         .steps-item
                             p.step-count 4
                             .step-desc
@@ -129,20 +99,20 @@ block content
                         .step-change
                             p: b Какую толщину выбрать?
                             .change-thicknees-item
-                                i.icon-calc-item-1
-                                p.count 2 – 3
+                                i.icon-gym
+                                p.count 4 – 8
                                     small мм
-                                p Пешеходные нагрузки
+                                p Спортивные залы
                             .change-thicknees-item
-                                i.icon-calc-item-4
-                                p.count 3 – 5
+                                i.icon-gym
+                                p.count 8 – 16
                                     small мм
-                                p Промышленные механизированные нагрузки
+                                p Детские игровые зоны
                             .change-thicknees-item
-                                i.icon-calc-item-6
-                                p.count 5 – 10
+                                i.icon-gym
+                                p.count 10 – 14
                                     small мм
-                                p Сверхтяжелые интенсивные нагрузки
+                                p Зоны для хождения на коньках #[br]на ледовых катках
                         p: b Справлюсь ли я?
                         p Мы сделали всё для удобства работы. Материал специально поставляется в комплектах. В большое ведро выливаем содержимое малого. Ошибиться с пропорциями сложно.
                         p В ведре мы оставили место для добавления кварцевого песка. Дополнительная тара не понадобится.&nbsp;
@@ -176,29 +146,8 @@ block content
                                 span.path9
                             p Грунтовка&nbsp;
                                 a(href="#") Тэпинг Р 1155 Грунт
-                        .material-item
-                            i.icon-bag-20kg
-                            p Кварцевый песок фракции 0,1 – 0,3 мм.
                         p: b Инструменты
                         .tools-block.row
-                            .tools-item.col-sm-6.col-xs-12
-                                a(href="javascript:;")
-                                    i.icon-roller-needle
-                                    span Игольчатый валик
-                                    .tools-item-about
-                                        .tools-item-about-desc
-                                            img(src="./img/tools/1.jpg" alt="#")
-                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных.
-                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных наливных полов: правила выбора размера шипов.
-                            .tools-item.col-sm-6.col-xs-12
-                                a(href="javascript:;")
-                                    i.icon-notched-trowel
-                                    span Зубчатый шпатель
-                                    .tools-item-about
-                                        .tools-item-about-desc
-                                            img(src="./img/tools/2.jpg" alt="#")
-                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных.
-                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных наливных полов: правила выбора размера шипов.
                             .tools-item.col-sm-6.col-xs-12
                                 a(href="javascript:;")
                                     i.icon-roller
@@ -233,28 +182,6 @@ block content
                                     .tools-item-about
                                         .tools-item-about-desc
                                             img(src="./img/video.png" alt="#")
-                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных.
-                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных наливных полов: правила выбора размера шипов.
-                        p: b Оборудование
-                        .tools-block.row
-                            .tools-item.col-sm-6.col-xs-12
-                                a(href="javascript:;")
-                                    img(src="./img/mixer.svg" width='47')
-                                    span Промышленный
-                                        br
-                                        | ручной миксер
-                                    .tools-item-about
-                                        .tools-item-about-desc
-                                            img(src="./img/tools/6.jpg" alt="#")
-                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных.
-                                            p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных наливных полов: правила выбора размера шипов.
-                            .tools-item.col-sm-6.col-xs-12
-                                a(href="javascript:;")
-                                    i.icon-vacuum-cleaner
-                                    span Промышленный пылесос
-                                    .tools-item-about
-                                        .tools-item-about-desc
-                                            img(src="./img/tools/7.jpg" alt="#")
                                             p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных.
                                             p Какой аэрационный игольчатый валик лучше использовать при заливке полимерных наливных полов: правила выбора размера шипов.
                         .video-info
